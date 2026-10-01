@@ -1,0 +1,19 @@
+# secrets / local settings — never commit
+settings.local.json
+*.key
+*.env
+.env*
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# downloaded data (large, re-downloadable via psidata/)
+psidata/*/Raw*/
+psidata/*/Science*/
+psidata/download_log.tsv
+
+# OS / editor
+.DS_Store
+Thumbs.db
