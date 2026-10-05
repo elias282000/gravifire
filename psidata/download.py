@@ -1,34 +1,48 @@
 #!/usr/bin/env python3
-"""GRAVIFIRE PSI dataset downloader.
+"""GRAVIFIRE PSI dataset downloader (v2 — uses the website's own download API).
 
-Downloads from NASA's Physical Sciences Informatics repository:
-  - science set (tables, spreadsheets, documents, papers) for ALL studies
-  - raw data (zips, videos, everything) for the studies listed in RAW_STUDIES
+How this works (reverse-engineered from psi.nasa.gov):
+  1. POST /geode-py/ws/files/v2  -> full file tree for a study version,
+     including each file's internal id and per-file version.
+  2. GET  /geode-py/ws/studies/{pid}/download?file={id}&version={file_version}
+     &studyVersion={study_version}&redirect=false  -> S3 presigned URL.
+  3. GET presigned URL -> file bytes.
 
-Progress: live per-file bar + overall stats. Fully resumable: files whose
-size on disk matches the manifest are skipped.
+Downloads:
+  - science set (tables, docs, papers, metadata) for ALL studies
+  - raw data (videos, zip archives) for RAW_STUDIES (SAFFIRE-I & II)
+
+Progress: one overall bar (bytes, rate, ETA) + per-file done/FAIL lines.
+Resumable: completed files (size matches) are skipped; partial downloads
+resume via HTTP Range. Re-run any time to continue where it left off.
 
 Usage:
-    python3 download.py                 # full run (science set + SAFFIRE raw)
-    python3 download.py --science-only  # just the ~800 MB science set
-    python3 download.py --study PSI-98  # single study
+    python3 download.py                  # full run: science set (all) + raw (SAFFIRE I/II)
+    python3 download.py --science-only   # just the small science set (~0.1 GB)
+    python3 download.py --study PSI-98   # single study
+    python3 download.py --jobs=6         # more parallel downloads (default 4)
+
+A few NASA-side dead links exist (see dead_files.txt); they fail fast and are
+logged to download_log.tsv — nothing can be done about those server-side.
 """
 import json
 import os
 import sys
+import threading
 import time
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 
 BASE = "https://psi.nasa.gov/geode-py/ws"
 ROOT = os.path.dirname(os.path.abspath(__file__))
-MANIFESTS = os.path.join(ROOT, "manifests")
 LOG_PATH = os.path.join(ROOT, "download_log.tsv")
+UA = {"User-Agent": "gravifier/1.0"}
 
 SCIENCE_STUDIES = ["PSI-25", "PSI-26", "PSI-98", "PSI-99"]
-RAW_STUDIES = ["PSI-98", "PSI-99"]  # SAFFIRE-I and SAFFIRE-II
-SCIENCE_EXTS = {".csv", ".xlsx", ".pdf", ".docx", ".pptx", ".jpg", ".rtf", ".txt", ".png"}
-RAW_EXTS = {".zip", ".mp4", ".avi", ".mov", ".csv", ".xlsx", ".hdf", ".h5", ".txt", ".dat", ".jpg", ".png"}
+RAW_STUDIES = {"PSI-98", "PSI-99"}  # SAFFIRE-I and SAFFIRE-II
+STUDY_VERSION = {"PSI-25": 4, "PSI-26": 4, "PSI-98": 4, "PSI-99": 5}
+RAW_CATEGORY = "Raw Data"
 CHUNK = 1024 * 512
 BAR_WIDTH = 30
 
@@ -40,69 +54,99 @@ def human(n):
         n /= 1024
 
 
-def manifest_files(pid):
-    """Latest-state file map for a study from its version history."""
-    with open(os.path.join(MANIFESTS, f"{pid}.json")) as fh:
-        d = json.load(fh)
-    files = {}
-    for v in d["versions"]:
-        for key in ("added", "changed"):
-            for f in v.get(key) or []:
-                files[f["s3_path"] or f["remote_path"]] = f
-        for f in (v.get("removed") or []):
-            files.pop(f["s3_path"] or f["remote_path"], None)
-    return files
-
-
-def build_plan(pid, want_raw):
-    """Return ordered list of (dest_path, basename, expected_size)."""
-    files = manifest_files(pid)
-    plan, seen = [], set()
-    for path, f in sorted(files.items()):
-        name = f["file_name"] or os.path.basename(path)
-        if name in seen or f.get("restricted"):
-            continue
-        ext = os.path.splitext(name)[1].lower()
-        category = path.split("/")[2] if path.count("/") >= 2 else "misc"
-        if category == "metadata" or ext in SCIENCE_EXTS or (want_raw and category == "Raw Data"):
-            seen.add(name)
-            dest = os.path.join(ROOT, pid, category, name)
-            plan.append((dest, name, f.get("file_size") or 0))
-    return plan
-
-
-def get_presigned(pid, name, retries=3):
-    q = urllib.parse.urlencode({"file": name, "redirect": "false"})
-    url = f"{BASE}/studies/{pid}/download?{q}"
+def http_json(url, body=None, retries=3):
     for attempt in range(retries):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "gravifier/1.0"})
-            with urllib.request.urlopen(req, timeout=60) as r:
-                body = r.read().decode()
-            if body.startswith("http"):
-                return body
-            raise RuntimeError(f"no presigned URL: {body[:100]}")
-        except Exception as e:
+            data = json.dumps(body).encode() if body is not None else None
+            headers = dict(UA)
+            if data:
+                headers["Content-Type"] = "application/json"
+            req = urllib.request.Request(url, data=data, headers=headers)
+            with urllib.request.urlopen(req, timeout=120) as r:
+                return json.loads(r.read())
+        except Exception:
             if attempt == retries - 1:
                 raise
             time.sleep(2 * (attempt + 1))
 
 
-def fetch(url, dest, size, stats, retries=3):
+def get_tree(pid):
+    sv = STUDY_VERSION[pid]
+    d = http_json(f"{BASE}/files/v2", {
+        "folder": "", "fileType": "study",
+        "studyId": pid, "version": sv, "obfuscationcode": None,
+    })
+    leaves = []
+
+    def walk(nodes, path):
+        for n in nodes:
+            key = n.get("key") or ""
+            kids = n.get("files") or []
+            name = str(n.get("displayName") or "") or (key.rstrip("/").split("/")[-1] if key else "")
+            if kids:
+                walk(kids, path + [name])
+            elif name and n.get("id"):
+                cat = key.split("/")[2] if key.count("/") >= 2 else "misc"
+                leaves.append({
+                    "name": name, "category": cat, "key": key,
+                    "id": n.get("id"), "version": n.get("version") or 1,
+                    "size": n.get("bytes_size") or 0,
+                    "restricted": bool(n.get("restricted")),
+                })
+
+    walk(d.get("files") or [], [])
+    return leaves, sv
+
+
+def build_plan(pid, want_raw):
+    files, sv = get_tree(pid)
+    plan = []
+    for f in files:
+        if f["restricted"] or not f["id"]:
+            continue
+        if f["category"] == RAW_CATEGORY:
+            science_ext = f["name"].lower().endswith((".csv", ".xlsx", ".jpg", ".png", ".txt"))
+            if not (want_raw or science_ext):
+                continue
+        dest = os.path.join(ROOT, pid, f["category"], f["name"])
+        plan.append((dest, f, sv))
+    return plan
+
+
+def presign(pid, f, sv, retries=3):
+    q = urllib.parse.urlencode({
+        "file": f["id"], "version": f["version"],
+        "studyVersion": sv, "redirect": "false",
+    })
+    body = None
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(f"{BASE}/studies/{pid}/download?{q}", headers=UA)
+            with urllib.request.urlopen(req, timeout=60) as r:
+                body = r.read().decode()
+            if body.startswith("http"):
+                return body
+            raise RuntimeError(f"no presigned URL: {body[:100]}")
+        except Exception:
+            if attempt == retries - 1:
+                raise RuntimeError(f"presign failed: {body or 'request error'}")
+            time.sleep(2 * (attempt + 1))
+
+
+def fetch(url, dest, size, on_bytes, retries=3, progress=False):
+    """Stream one file to dest; calls on_bytes(n) for every chunk read."""
     tmp = dest + ".part"
     for attempt in range(retries):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "gravifier/1.0"})
+            req = urllib.request.Request(url, headers=UA)
             done = os.path.getsize(tmp) if os.path.exists(tmp) else 0
             if done and size and done >= size:  # .part already complete
                 os.replace(tmp, dest)
-                print()
                 return done
             if done:
                 req.add_header("Range", f"bytes={done}-")
-            with urllib.request.urlopen(req, timeout=120) as r, open(tmp, "ab" if done else "wb") as fh:
-                mode_append = r.status == 206
-                if done and not mode_append:
+            with urllib.request.urlopen(req, timeout=180) as r, open(tmp, "ab" if done else "wb") as fh:
+                if done and r.status != 206:  # server ignored Range; restart
                     fh.seek(0)
                     done = 0
                 t0 = time.time()
@@ -112,85 +156,100 @@ def fetch(url, dest, size, stats, retries=3):
                         break
                     fh.write(chunk)
                     done += len(chunk)
-                    stats.bytes += len(chunk)
-                    dt = max(time.time() - t0, 1e-6)
-                    frac = done / size if size else 1.0
-                    bar = "#" * int(frac * BAR_WIDTH) + "-" * (BAR_WIDTH - int(frac * BAR_WIDTH))
-                    print(f"\r    [{bar}] {human(done):>10} / {human(size) if size else '?':>10} "
-                          f"{human(done / dt):>10}/s   ", end="", flush=True)
+                    on_bytes(len(chunk))
+                    if progress:
+                        frac = done / size if size else 1.0
+                        filled = int(frac * BAR_WIDTH)
+                        bar = "#" * filled + "-" * (BAR_WIDTH - filled)
+                        rate = done / max(time.time() - t0, 1e-6)
+                        print(f"\r    [{bar}] {human(done):>10} / {human(size) if size else '?':>10}"
+                              f" {human(rate):>10}/s   ", end="", flush=True)
             os.replace(tmp, dest)
-            print()
             return os.path.getsize(dest)
         except Exception:
             if attempt == retries - 1:
-                if os.path.exists(tmp):
-                    os.remove(tmp)
                 raise
             time.sleep(3 * (attempt + 1))
-
-
-class Stats:
-    def __init__(self):
-        self.bytes = 0
-        self.t0 = time.time()
-
-    def rate(self):
-        dt = max(time.time() - self.t0, 1e-6)
-        return self.bytes / dt
 
 
 def main():
     args = sys.argv[1:]
     science_only = "--science-only" in args
+    jobs_arg = [a for a in args if a.startswith("--jobs")]
+    n_workers = int(jobs_arg[0].split("=")[1]) if jobs_arg and "=" in jobs_arg[0] else 4
     only = [a for a in args if a.startswith("PSI-")]
     studies = only or SCIENCE_STUDIES
 
-    # Build the full plan first so overall totals are known up front.
-    jobs = []  # (pid, dest, name, size)
+    jobs = []  # (pid, dest, file, study_version)
     for pid in studies:
         want_raw = (not science_only) and pid in RAW_STUDIES
         plan = build_plan(pid, want_raw)
-        sz = sum(s for _, _, s in plan)
-        print(f"{pid}: {len(plan)} files ({human(sz)}){' + raw' if want_raw else ''}")
-        jobs += [(pid, d, n, s) for d, n, s in plan]
+        sz = sum(f["size"] for _, f, _ in plan)
+        n_raw = sum(1 for _, f, _ in plan if f["category"] == RAW_CATEGORY)
+        print(f"{pid}: {len(plan)} files ({human(sz)}) — {n_raw} raw data files")
+        jobs += [(pid, d, f, sv) for d, f, sv in plan]
 
-    todo = [(pid, d, n, s) for pid, d, n, s in jobs
-            if not (os.path.exists(d) and (s == 0 or os.path.getsize(d) == s))]
-    total_bytes = sum(s for _, _, _, s in todo)
+    todo = [j for j in jobs
+            if not (os.path.exists(j[1]) and (j[2]["size"] == 0 or os.path.getsize(j[1]) == j[2]["size"]))]
+    total_bytes = sum(j[2]["size"] for j in todo)
     cached = len(jobs) - len(todo)
     print(f"\nPlan: {len(jobs)} files total, {human(total_bytes)} to download"
-          f" ({cached} already complete, skipped)\n")
+          f" ({cached} already complete, skipped), {n_workers} parallel downloads\n")
 
-    stats = Stats()
-    ok = fail = 0
-    log = open(LOG_PATH, "a")
+    lock = threading.Lock()
+    state = {"bytes": 0, "accounted": 0, "done_files": 0, "ok": 0, "fail": 0}
     t_start = time.time()
-    for i, (pid, dest, name, size) in enumerate(todo, 1):
+
+    def draw_overall():
+        rate = state["bytes"] / max(time.time() - t_start, 1e-6)
+        remaining = total_bytes - state["accounted"]
+        eta = remaining / rate if rate > 0 and remaining > 0 else 0
+        frac = state["accounted"] / total_bytes if total_bytes else 1.0
+        filled = int(frac * BAR_WIDTH)
+        bar = "#" * filled + "-" * (BAR_WIDTH - filled)
+        sys.stdout.write(
+            f"\r[{bar}] {human(state['bytes']):>10}/{human(total_bytes):>10}"
+            f" {100 * frac:5.1f}%  {human(rate):>9}/s  ETA {int(eta // 60)}m{int(eta % 60):02d}s"
+            f"  ok {state['ok']}  failed {state['fail']}  ")
+        sys.stdout.flush()
+
+    def on_bytes(n):
+        with lock:
+            state["bytes"] += n
+            draw_overall()
+
+    log = open(LOG_PATH, "a")
+
+    def work(job):
+        i, (pid, dest, f, sv) = job
         os.makedirs(os.path.dirname(dest), exist_ok=True)
-        overall_done = sum(s for _, _, _, s in todo[:i - 1]) + stats.bytes
-        print(f"[{i}/{len(todo)}] {pid}/{name} ({human(size)})")
         try:
-            url = get_presigned(pid, name)
-            got = fetch(url, dest, size, stats)
-            status = "ok" if (size == 0 or got == size) else "size-mismatch"
-            log.write(f"{pid}\t{name}\t{status}\t{got}\n")
-            ok += 1
+            url = presign(pid, f, sv)
+            got = fetch(url, dest, f["size"], on_bytes,
+                        progress=(n_workers == 1 and len(todo) > 0))
+            status = "ok" if (f["size"] == 0 or got == f["size"]) else "size-mismatch"
+            with lock:
+                log.write(f"{pid}\t{f['name']}\t{status}\t{got}\n")
+                state["ok"] += 1
+                state["accounted"] += f["size"]
+                state["done_files"] += 1
+                sys.stdout.write(f"\n  done [{state['done_files']}/{len(todo)}] "
+                                 f"{pid}/{f['category']}/{f['name']} ({human(f['size'])})")
+                draw_overall()
         except Exception as e:
-            print(f"    FAILED: {e}")
-            log.write(f"{pid}\t{name}\tERROR\t{e}\n")
-            fail += 1
-        log.flush()
-        elapsed = time.time() - t_start
-        if stats.rate() > 0:
-            eta = (total_bytes - overall_done) / stats.rate()
-            eta_s = f"{int(eta // 60)}m{int(eta % 60):02d}s"
-        else:
-            eta_s = "?"
-        print(f"    overall: {human(overall_done)}/{human(total_bytes)} "
-              f"({100 * overall_done / total_bytes if total_bytes else 100:.1f}%) "
-              f"avg {human(stats.rate())}/s  ETA {eta_s}  failed: {fail}")
+            with lock:
+                log.write(f"{pid}\t{f['name']}\tERROR\t{e}\n")
+                state["fail"] += 1
+                state["accounted"] += f["size"]
+                state["done_files"] += 1
+                sys.stdout.write(f"\n  FAIL [{state['done_files']}/{len(todo)}] "
+                                 f"{pid}/{f['category']}/{f['name']} — {e}")
+                draw_overall()
+
+    with ThreadPoolExecutor(max_workers=n_workers) as pool:
+        list(pool.map(work, list(enumerate(todo))))
     log.close()
-    print(f"\nDone. {ok} downloaded, {fail} failed, log: {LOG_PATH}")
+    print(f"\n\nDone. {state['ok']} downloaded, {state['fail']} failed. Log: {LOG_PATH}")
 
 
 if __name__ == "__main__":

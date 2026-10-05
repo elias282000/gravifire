@@ -1,0 +1,6 @@
+name,frames,span_s,median_dt_ms,in_window_frac
+P98 S2C1 zip filenames,4550,601.914,33.0,1.0
+P98 S2C2 zip filenames,4614,601.914,33.0,1.0
+P98 Camera-sheet C1,18150,604.914,33.0,1.0
+P98 Camera-sheet C2,18150,604.914,33.0,1.0
+P99 S5C1 mapped zip filenames,9600,319.939,33.0,0.9998958333333333

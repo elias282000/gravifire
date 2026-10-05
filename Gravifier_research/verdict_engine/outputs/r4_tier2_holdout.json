@@ -1,0 +1,60 @@
+{
+ "n_holdout_claims": 5,
+ "verdict_agreement": 1,
+ "false_SUPPORTED_rate": 0.0,
+ "correct_refusals": 4,
+ "missed_calls": 0,
+ "rows": [
+  {
+   "tc_id": "TC-PDMS-01",
+   "blind": "INSUFFICIENT",
+   "blind_conf": "LOW",
+   "truth": "CONTRADICTED",
+   "truth_conf": "MODERATE",
+   "classification": "CORRECT_REFUSAL"
+  },
+  {
+   "tc_id": "TC-PDMS-02",
+   "blind": "INSUFFICIENT",
+   "blind_conf": "LOW",
+   "truth": "SUPPORTED",
+   "truth_conf": "MODERATE",
+   "classification": "CORRECT_REFUSAL"
+  },
+  {
+   "tc_id": "TC-SIBAL-LG-01",
+   "blind": "SUPPORTED",
+   "blind_conf": "HIGH",
+   "truth": "SUPPORTED",
+   "truth_conf": "HIGH",
+   "classification": "AGREE"
+  },
+  {
+   "tc_id": "TC-PMMA-THICK-01",
+   "blind": "INSUFFICIENT",
+   "blind_conf": "LOW",
+   "truth": "SUPPORTED",
+   "truth_conf": "MODERATE",
+   "classification": "CORRECT_REFUSAL"
+  },
+  {
+   "tc_id": "TC-NOMEX-01",
+   "blind": "INSUFFICIENT",
+   "blind_conf": "MODERATE",
+   "truth": "CONTRADICTED",
+   "truth_conf": "MODERATE",
+   "classification": "CORRECT_REFUSAL"
+  }
+ ],
+ "stamp": {
+  "stamped_before_reveal": true,
+  "engine.py": "edf5de70c0f405fa",
+  "verdict_spec.md": "1caac6fc2deae3b4",
+  "seed_claims.json": "90adfbcddee1fe34",
+  "literature_register.json": "a76c00622cb83976",
+  "gravifire_l1.db": "64ebad865f73dab0",
+  "git_head": "2a86093",
+  "git_dirty_files": 22
+ },
+ "mask_rule": "SAFFIRE-II variables ('ug_burn_length', 'ug_spread_length', 'ug_spread_rate_published') (raw+norm) + SAFFIRE-II lit keys"
+}
