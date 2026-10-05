@@ -63,3 +63,4 @@ SAFFIRE-II) for spacecraft fire safety, with:
 | 2026-10-06 | R7 handover bundle integrity: whitelist path resolution, M1 payload verbatim check, inventory (`R7_HANDOVER/verify_bundle.py`) | 40/40 PASS |
 | 2026-10-06 | Engine determinism: `run_r3.py` regenerated `seed_verdicts.json` vs bundled copy | byte-identical; 18/18 literature concordance |
 | 2026-10-06 | R5 exit checks re-run (`verdict_engine/scripts/r5_exit_checks.py`) | ALL PASS |
+| 2026-10-06 | Phase B repo prep: secrets scan of full tree, exclusion checks on staging (no PSI-98/99, anchors, .venv, .zcode), committed-tree audit | clean; 199 files / 33 MB; publish runbook at `Setup docs/repo_publish.md` |
