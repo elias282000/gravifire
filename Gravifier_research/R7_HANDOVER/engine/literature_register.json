@@ -1,0 +1,67 @@
+{
+  "pdms_silicone": {
+    "finding": "All four SAFFIRE-II silicone coupons ignited but none sustained propagation; silica-ash layer implicated in extinction",
+    "quote": "ignited, did not sustain propagation",
+    "cite": "SAFFIRE-II review (GRAVIFIRE_SAFFIRE-II_PSI-99_Deep_Research.md) SS16.1 + SS5.2; Niehaus 2015; Rojas-Alva 2022"
+  },
+  "sibal_saffire2": {
+    "finding": "SIBAL fabric spread over the full 29 cm sample in microgravity at both tested concurrent flows (S5 ~2.1, S6 ~2.6 mm/s published), bridging small-scale BASS results",
+    "quote": "S5/S6 complete burns; scale bridge established",
+    "cite": "SAFFIRE-II review SS6.1-6.3; Li 2019; Thomsen 2019"
+  },
+  "pmma_thick": {
+    "finding": "Thick PMMA (S8 2mm-profile, S9 1 cm) did not spread; flames anchored at the base with slow regression 0.01-0.04 mm/s",
+    "quote": "anchored at base, regression not spread",
+    "cite": "SAFFIRE-II review SS7.1; Olson & Jomaas 2019"
+  },
+  "pmma_nomex": {
+    "finding": "PMMA ignition aid fully consumed but adjacent Nomex did not ignite",
+    "quote": "PMMA portion completely consumed, Nomex not ignited",
+    "cite": "SAFFIRE-II review SS5.2 + table note 2; Thomsen 2019"
+  },
+  "sibal_bass": {
+    "finding": "BASS SIBAL opposed-flow spread was not simply monotonic with airflow; low-flow quenching directly observed",
+    "quote": "non-monotonic spread; low-flow quench observed",
+    "cite": "BASS review (GRAVIFIRE_BASS_PSI-26_Deep_Research.md) SS6.3 + SS6.5; Ferkul 2012/2013"
+  },
+  "sibal_bass2": {
+    "finding": "BASS-II SIBAL showed concurrent growth and spread with low-flow quenching at the weakest flows",
+    "quote": "concurrent growth, spread, low-flow quench",
+    "cite": "BASS-II review (GRAVIFIRE_BASS-II_PSI-25_Deep_Research.md) SS4.5; Zhao 2017"
+  },
+  "thin_pmma_film": {
+    "finding": "Thin PMMA films exhibit radiative/thermal/kinetic spread regimes with radiative extinction at very low flow",
+    "quote": "low-flow radiative extinction",
+    "cite": "BASS-II review SS4.1-4.2; Bhattacharjee 2016 (x3)"
+  },
+  "pmma_rod": {
+    "finding": "PMMA rods show a quench-vs-blowoff boundary organized by Damkohler number",
+    "quote": "quenching and blowoff boundaries",
+    "cite": "BASS-II review SS4.3; Olson & Ferkul 2017"
+  },
+  "pmma_sphere": {
+    "finding": "Thermal history changes thick spherical PMMA burn outcome in microgravity",
+    "quote": "thermal-history effects on thick spherical fuel",
+    "cite": "BASS review SS6.6; Endo 2020"
+  },
+  "bass_suppression": {
+    "finding": "Nitrogen jet intended to suppress could entrain ambient air and enhance combustion instead",
+    "quote": "suppression jet entrained air, enhanced combustion",
+    "cite": "BASS review SS7.3; Takahashi 2013"
+  },
+  "saffire1_s1": {
+    "finding": "The large SAFFIRE-I SIBAL flame reached a quasi-steady state over the 420 s burn, unlike upward 1-g spread",
+    "quote": "quasi-steady large flame; differs from 1g upward spread",
+    "cite": "SAFFIRE-I review (GRAVIFIRE_SAFFIRE-I_PSI-98_Deep_Research.md) SS11.1-11.2; Urban 2019"
+  },
+  "saffire1_s2": {
+    "finding": "SAFFIRE-I Sample 2 (opposed flow) burned only ~70 s before extinction - shorter than the concurrent S1",
+    "quote": "S2 opposed-flow early extinction",
+    "cite": "SAFFIRE-I review SS10.3; PSI-98 table as-flown burn time"
+  },
+  "candle_wax": {
+    "finding": "Paraffin/Japan-wax candles showed weak persistent flames at very low flow and the suppression jet could enhance them",
+    "quote": "weak persistent candle flames; suppression complications",
+    "cite": "BASS review SS6.1 + SS7.3; Takahashi 2013"
+  }
+}

@@ -1,0 +1,120 @@
+{
+ "S5": {
+  "set_id": "SAFFIRE2-S5C1",
+  "target_mm_s": 2.1,
+  "image_width_px": 650,
+  "frames": 9600,
+  "ok_frames": 3366,
+  "burn_window_s": [
+   0.2,
+   142.7
+  ],
+  "rate_traverse_mm_s": 2.03,
+  "rate_descent_fit_mm_s": 2.18,
+  "rate_absolute_mm_s": 1.83,
+  "pct_vs_published_traverse": -3.1,
+  "pct_vs_published_descent": 4.0,
+  "pct_vs_published_absolute": -12.8,
+  "resid_std_px": 68.0,
+  "quality": {
+   "NO_FLAME": 651,
+   "SATURATED": 2072,
+   "OK": 6877
+  }
+ },
+ "S6": {
+  "set_id": "SAFFIRE2-S6C1",
+  "target_mm_s": 2.6,
+  "image_width_px": 726,
+  "frames": 9600,
+  "ok_frames": 3050,
+  "burn_window_s": [
+   5.6,
+   134.6
+  ],
+  "rate_traverse_mm_s": 2.25,
+  "rate_descent_fit_mm_s": 2.64,
+  "rate_absolute_mm_s": 2.09,
+  "pct_vs_published_traverse": -13.6,
+  "pct_vs_published_descent": 1.6,
+  "pct_vs_published_absolute": -19.6,
+  "resid_std_px": 24.0,
+  "quality": {
+   "NO_FLAME": 4282,
+   "SATURATED": 2109,
+   "OK": 3209
+  }
+ },
+ "SAFFIRE1-S1": {
+  "set_id": "SAFFIRE1-S1C1",
+  "target_mm_s": [
+   1.7,
+   1.8
+  ],
+  "frames": 14388,
+  "ok_frames": 8015,
+  "track_window_s": [
+   2.8,
+   383.8
+  ],
+  "px_rate": 4.05,
+  "scale_inference": "flame-sheet row span 837 px = fabric width 40.6 cm -> 20.6 px/cm (ROI calibration PDF is a dead NASA link)",
+  "rate_mm_s": 1.96,
+  "pct_vs_published": 12.3,
+  "quality": {
+   "OK": 8017,
+   "EXPOSURE_OUTLIER": 3247,
+   "NO_FLAME": 3124
+  }
+ },
+ "PDMS": [
+  {
+   "set_id": "SAFFIRE2-S1C2",
+   "target": "ignited but NO sustained propagation",
+   "frames_sampled": 5700,
+   "led_scene_frames_excluded": 306,
+   "flame_frames_detected": 601,
+   "longest_sustained_flame_s": 12.66,
+   "max_flame_extent_cm": 13.0,
+   "verdict": "STALL_CONFIRMED_NO_SUSTAINED_SPREAD",
+   "threshold_note": "sustained threshold 20 s: SIBAL S5 sustains 142.7 s; PDMS episodes are 11-15x shorter; NASA table burn time for PDMS reads 'Insignificant'",
+   "published": "ignition then stall (SAFFIRE-II review SS16.1); ignition itself confirmed by igniter telemetry, not by imagery (flame luminosity near JPEG noise floor)"
+  },
+  {
+   "set_id": "SAFFIRE2-S2C2",
+   "target": "ignited but NO sustained propagation",
+   "frames_sampled": 7500,
+   "led_scene_frames_excluded": 435,
+   "flame_frames_detected": 1150,
+   "longest_sustained_flame_s": 12.72,
+   "max_flame_extent_cm": 15.3,
+   "verdict": "STALL_CONFIRMED_NO_SUSTAINED_SPREAD",
+   "threshold_note": "sustained threshold 20 s: SIBAL S5 sustains 142.7 s; PDMS episodes are 11-15x shorter; NASA table burn time for PDMS reads 'Insignificant'",
+   "published": "ignition then stall (SAFFIRE-II review SS16.1); ignition itself confirmed by igniter telemetry, not by imagery (flame luminosity near JPEG noise floor)"
+  },
+  {
+   "set_id": "SAFFIRE2-S3C2",
+   "target": "ignited but NO sustained propagation",
+   "frames_sampled": 5000,
+   "led_scene_frames_excluded": 360,
+   "flame_frames_detected": 328,
+   "longest_sustained_flame_s": 0.45,
+   "max_flame_extent_cm": 2.2,
+   "verdict": "STALL_CONFIRMED_NO_SUSTAINED_SPREAD",
+   "threshold_note": "sustained threshold 20 s: SIBAL S5 sustains 142.7 s; PDMS episodes are 11-15x shorter; NASA table burn time for PDMS reads 'Insignificant'",
+   "published": "ignition then stall (SAFFIRE-II review SS16.1); ignition itself confirmed by igniter telemetry, not by imagery (flame luminosity near JPEG noise floor)"
+  },
+  {
+   "set_id": "SAFFIRE2-S4C1",
+   "target": "ignited but NO sustained propagation",
+   "frames_sampled": 7500,
+   "led_scene_frames_excluded": 0,
+   "flame_frames_detected": 162,
+   "longest_sustained_flame_s": 9.47,
+   "max_flame_extent_cm": 2.4,
+   "verdict": "STALL_CONFIRMED_NO_SUSTAINED_SPREAD",
+   "threshold_note": "sustained threshold 20 s: SIBAL S5 sustains 142.7 s; PDMS episodes are 11-15x shorter; NASA table burn time for PDMS reads 'Insignificant'",
+   "published": "ignition then stall (SAFFIRE-II review SS16.1); ignition itself confirmed by igniter telemetry, not by imagery (flame luminosity near JPEG noise floor)"
+  }
+ ]
+}

@@ -1,0 +1,239 @@
+[
+  {
+    "tc_id": "TC-PDMS-01",
+    "family": "pdms_silicone", "geometry_class": "sheet",
+    "flow_regime": {"direction": "concurrent", "bucket": "moderate_5_25"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "large",
+    "earth_expectation": {
+      "statement": "PDMS/silicone sheet ignites and propagates to complete burn (1-g Test-1-style complete burns observed)",
+      "predicate": "PROPAGATES",
+      "source": "PSI-99 table 1-g Burn Length=Complete; Niehaus 2015",
+      "source_type": "MEASURED_GROUND"},
+    "lit_key": "pdms_silicone", "grade": "BOUND", "conflicts": [],
+    "question": "Does the Earth-based propagation expectation hold in microgravity?"
+  },
+  {
+    "tc_id": "TC-PDMS-02",
+    "family": "pdms_silicone", "geometry_class": "sheet",
+    "flow_regime": {"direction": "concurrent", "bucket": "moderate_5_25"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "large",
+    "earth_expectation": {
+      "statement": "Thickest PDMS (1.03 mm) resists spread in 1-g (~0 burn length) and will not spread in microgravity either",
+      "predicate": "NO_PROPAGATION",
+      "source": "PSI-99 table row 2-3: 1-g Burn Length ~ 0",
+      "source_type": "MEASURED_GROUND"},
+    "lit_key": "pdms_silicone", "grade": "BOUND", "conflicts": [],
+    "question": "Does the Earth-based no-spread expectation for thick PDMS hold in microgravity?"
+  },
+  {
+    "tc_id": "TC-PDMS-03",
+    "family": "pdms_silicone", "geometry_class": "sheet",
+    "flow_regime": {"direction": "concurrent", "bucket": "moderate_5_25"},
+    "oxygen_regime": {"bucket": "enriched_gt22"}, "scale_class": "large",
+    "earth_expectation": {
+      "statement": "In exploration atmospheres (>22% O2) PDMS will certainly propagate",
+      "predicate": "PROPAGATES",
+      "source": "extrapolated from 1-g Test 1 logic (no ground data at this O2 either)",
+      "source_type": "LITERATURE"},
+    "lit_key": "pdms_silicone", "grade": null, "conflicts": [],
+    "question": "Can we trust an Earth-based propagation claim for PDMS at >22% O2 in microgravity?"
+  },
+  {
+    "tc_id": "TC-SIBAL-LG-01",
+    "family": "sibal_fabric", "geometry_class": "sheet",
+    "flow_regime": {"direction": "concurrent", "bucket": "moderate_5_25"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "large",
+    "earth_expectation": {
+      "statement": "SIBAL cotton-fiberglass fabric sustains spread at moderate concurrent flow (1-g complete acceleratory burns)",
+      "predicate": "PROPAGATES",
+      "source": "PSI-99 table 1-g Burn Length=Complete; NASA-STD-6001 Test 1 heritage",
+      "source_type": "MEASURED_GROUND"},
+    "lit_key": "sibal_saffire2", "grade": null, "conflicts": [],
+    "question": "Does SIBAL propagation hold in the large duct in microgravity?"
+  },
+  {
+    "tc_id": "TC-SIBAL-SCALE-01",
+    "family": "sibal_fabric", "geometry_class": "sheet",
+    "flow_regime": {"direction": "opposed", "bucket": "low_1_5"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "large",
+    "earth_expectation": {
+      "statement": "Small-duct BASS low-flow quench results for SIBAL transfer directly to the large SAFFIRE duct",
+      "predicate": "EXTINGUISHES_LOW_FLOW",
+      "source": "BASS small-duct results (Ferkul 2012/2013)",
+      "source_type": "LITERATURE"},
+    "lit_key": "sibal_bass", "grade": null, "conflicts": [],
+    "question": "Do small-duct BASS quench boundaries transfer to the large SAFFIRE duct?"
+  },
+  {
+    "tc_id": "TC-PMMA-THICK-01",
+    "family": "pmma_thick", "geometry_class": "slab",
+    "flow_regime": {"direction": "concurrent", "bucket": "moderate_5_25"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "large",
+    "earth_expectation": {
+      "statement": "Thick PMMA (2 mm profile to 1 cm) does not spread; any burning is anchored base regression",
+      "predicate": "REGRESSION_ANCHORED",
+      "source": "PSI-99 table rows 2-8/2-9 + NASA-STD-6001 thick-material logic",
+      "source_type": "MEASURED_GROUND"},
+    "lit_key": "pmma_thick", "grade": "BOUND", "conflicts": [],
+    "evidence_hooks": ["regression_anchored"],
+    "question": "Does thick PMMA stay non-spreading (anchored regression) in microgravity?"
+  },
+  {
+    "tc_id": "TC-NOMEX-01",
+    "family": "pmma_nomex", "geometry_class": "sheet",
+    "flow_regime": {"direction": "concurrent", "bucket": "moderate_5_25"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "large",
+    "earth_expectation": {
+      "statement": "Nomex adjacent to a burning PMMA section will ignite (conservative cascade assumption)",
+      "predicate": "PROPAGATES",
+      "source": "conservative flammability-assessment practice (cascade assumption)",
+      "source_type": "LITERATURE"},
+    "lit_key": "pmma_nomex", "grade": "BOUND", "conflicts": [],
+    "question": "Does adjacent-material ignition cascade hold in microgravity?"
+  },
+  {
+    "tc_id": "TC-SAF1-S1-01",
+    "family": "sibal_fabric", "geometry_class": "sheet",
+    "flow_regime": {"direction": "concurrent", "bucket": "moderate_5_25"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "large",
+    "earth_expectation": {
+      "statement": "A large SIBAL sample under moderate concurrent ventilation sustains a long burn (Earth upward-spread analogy)",
+      "predicate": "PROPAGATES",
+      "source": "SAFFIRE-I planning basis; 1-g upward spread tests",
+      "source_type": "MEASURED_GROUND"},
+    "lit_key": "saffire1_s1", "grade": null, "conflicts": ["CR-2"],
+    "question": "Does sustained burning hold for the SAFFIRE-I S1 scenario in microgravity?"
+  },
+  {
+    "tc_id": "TC-SAF1-S2-01",
+    "family": "sibal_fabric", "geometry_class": "sheet",
+    "flow_regime": {"direction": "opposed", "bucket": "moderate_5_25"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "large",
+    "earth_expectation": {
+      "statement": "Under opposed moderate flow the fabric still burns long (1-g intuition: opposed flow slows but does not kill spread)",
+      "predicate": "PROPAGATES",
+      "source": "1-g opposed-flow spread tests (slower-but-sustained intuition)",
+      "source_type": "MEASURED_GROUND"},
+    "lit_key": "saffire1_s2", "grade": null, "conflicts": [],
+    "question": "Does sustained burning hold for opposed moderate flow at large scale in microgravity?"
+  },
+  {
+    "tc_id": "TC-BASS-SIBAL-01",
+    "family": "sibal_fabric", "geometry_class": "sheet",
+    "flow_regime": {"direction": "opposed", "bucket": "low_1_5"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "small",
+    "earth_expectation": {
+      "statement": "SIBAL in the small duct sustains burning even at very low opposed flow",
+      "predicate": "PROPAGATES",
+      "source": "1-g opposed spread at low flow sustained",
+      "source_type": "MEASURED_GROUND"},
+    "lit_key": "sibal_bass", "grade": null, "conflicts": [],
+    "question": "Does low-flow sustained burning hold in the small duct in microgravity?"
+  },
+  {
+    "tc_id": "TC-BASS-SIBAL-02",
+    "family": "sibal_fabric", "geometry_class": "sheet",
+    "flow_regime": {"direction": "opposed", "bucket": "low_1_5"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "small",
+    "earth_expectation": {
+      "statement": "Spread rate increases monotonically with flow (standard 1-g flammability intuition)",
+      "predicate": "NON_MONOTONIC_FLOW",
+      "source": "1-g opposed-flow monotonic intuition",
+      "source_type": "LITERATURE"},
+    "lit_key": "sibal_bass", "grade": null, "conflicts": [],
+    "question": "Is microgravity spread rate monotonic in flow for small-duct SIBAL?"
+  },
+  {
+    "tc_id": "TC-BASS-SUPPRESS-01",
+    "family": "candle", "geometry_class": "candle",
+    "flow_regime": {"bucket": null}, "oxygen_regime": {"bucket": "normal_20_22"},
+    "scale_class": "small",
+    "earth_expectation": {
+      "statement": "A nitrogen suppressant jet extinguishes the flame",
+      "predicate": "SUPPRESSES",
+      "source": "suppression design basis (inert jet = extinguishment)",
+      "source_type": "LITERATURE"},
+    "lit_key": "bass_suppression", "grade": null, "conflicts": [],
+    "evidence_hooks": ["suppression_enhancement"],
+    "question": "Does N2-jet suppression transfer to microgravity candle flames?"
+  },
+  {
+    "tc_id": "TC-BASS-SPHERE-01",
+    "family": "pmma_sphere", "geometry_class": "sphere",
+    "flow_regime": {"bucket": "low_1_5"}, "oxygen_regime": {"bucket": "normal_20_22"},
+    "scale_class": "small",
+    "earth_expectation": {
+      "statement": "Prior thermal history of a thick PMMA sphere does not change its flammability outcome",
+      "predicate": "THERMAL_HISTORY_INSENSITIVE",
+      "source": "fresh-sample ground-test practice",
+      "source_type": "LITERATURE"},
+    "lit_key": "pmma_sphere", "grade": null, "conflicts": [],
+    "question": "Can fresh-sample Earth results be trusted for preheated spheres in microgravity?"
+  },
+  {
+    "tc_id": "TC-BASS2-FILM-01",
+    "family": "thin_pmma_film", "geometry_class": "thin_sheet",
+    "flow_regime": {"direction": "opposed", "bucket": "low_1_5"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "small",
+    "earth_expectation": {
+      "statement": "Thin PMMA film spreads readily even at low flow",
+      "predicate": "PROPAGATES",
+      "source": "1-g thin-film spread tests",
+      "source_type": "MEASURED_GROUND"},
+    "lit_key": "thin_pmma_film", "grade": null, "conflicts": [],
+    "question": "Does thin-film propagation hold at low flow in microgravity?"
+  },
+  {
+    "tc_id": "TC-BASS2-ROD-01",
+    "family": "pmma_rod", "geometry_class": "rod",
+    "flow_regime": {"direction": "opposed", "bucket": "low_1_5"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "small",
+    "earth_expectation": {
+      "statement": "PMMA rods burn steadily at low opposed flow without quenching",
+      "predicate": "PROPAGATES",
+      "source": "1-g rod burns at low flow",
+      "source_type": "MEASURED_GROUND"},
+    "lit_key": "pmma_rod", "grade": null, "conflicts": [],
+    "question": "Does steady rod burning hold at low flow in microgravity?"
+  },
+  {
+    "tc_id": "TC-PARTIAL-G-01",
+    "family": "sibal_fabric", "geometry_class": "sheet",
+    "flow_regime": {"direction": "concurrent", "bucket": "moderate_5_25"},
+    "oxygen_regime": {"bucket": "normal_20_22"}, "scale_class": "partial_gravity",
+    "earth_expectation": {
+      "statement": "1-g flammability rankings extend to lunar/Mars partial gravity",
+      "predicate": "PROPAGATES",
+      "source": "program-level aspiration",
+      "source_type": "LITERATURE"},
+    "lit_key": null, "grade": null, "conflicts": [],
+    "question": "Can Earth rankings be trusted for partial-gravity scenarios?"
+  },
+  {
+    "tc_id": "TC-EXPLORATION-O2-01",
+    "family": "pmma_thick", "geometry_class": "slab",
+    "flow_regime": {"direction": "concurrent", "bucket": "moderate_5_25"},
+    "oxygen_regime": {"bucket": "enriched_gt22"}, "scale_class": "large",
+    "earth_expectation": {
+      "statement": "Thick PMMA stays non-spreading even in 30%+ O2 exploration atmospheres",
+      "predicate": "REGRESSION_ANCHORED",
+      "source": "extrapolation from normal-O2 ground tests",
+      "source_type": "LITERATURE"},
+    "lit_key": "pmma_thick", "grade": null, "conflicts": [],
+    "evidence_hooks": [],
+    "question": "Can normal-O2 Earth results be trusted for exploration atmospheres?"
+  },
+  {
+    "tc_id": "TC-BASS-WAX-01",
+    "family": "wax_slab", "geometry_class": "slab",
+    "flow_regime": {"bucket": null}, "oxygen_regime": {"bucket": "normal_20_22"},
+    "scale_class": "small",
+    "earth_expectation": {
+      "statement": "Wax-saturated fiberglass slabs burn steadily at low flow",
+      "predicate": "PROPAGATES",
+      "source": "1-g wax-slab burns",
+      "source_type": "MEASURED_GROUND"},
+    "lit_key": "candle_wax", "grade": null, "conflicts": [],
+    "question": "Does wax-slab steady burning hold at low flow in microgravity?"
+  }
+]

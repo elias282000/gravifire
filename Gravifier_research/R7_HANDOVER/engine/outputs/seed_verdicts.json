@@ -1,0 +1,1044 @@
+{
+ "spec_version": "1.1",
+ "n_claims": 18,
+ "n_concordant": 18,
+ "verdicts": [
+  {
+   "tc_id": "TC-PDMS-01",
+   "verdict": "CONTRADICTED",
+   "confidence": "MODERATE",
+   "grade": "BOUND",
+   "evidence": [
+    {
+     "run_id": "SAFFIRE2-S1",
+     "item": "ug_burn_length",
+     "value": "~ 0",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|APPROX_MARKER",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row2",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": "SAFFIRE2-S2",
+     "item": "ug_burn_length",
+     "value": "~ 0",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|APPROX_MARKER",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row3",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": "SAFFIRE2-S3",
+     "item": "ug_burn_length",
+     "value": "~ 0",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|APPROX_MARKER",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row4",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": null,
+     "item": "All four SAFFIRE-II silicone coupons ignited but none sustained propagation; silica-ash layer implicated in extinction",
+     "value": "ignited, did not sustain propagation",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "SAFFIRE-II review (GRAVIFIRE_SAFFIRE-II_PSI-99_Deep_Research.md) SS16.1 + SS5.2; Niehaus 2015; Rojas-Alva 2022",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [],
+   "what_would_change_it": [],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 0.5,
+    "precision": 0.7,
+    "class_strength": 0.8,
+    "score": 0.5,
+    "level": "MODERATE"
+   },
+   "rule_trace": [
+    "R-MATCH family=pdms_silicone candidate_runs=4",
+    "R-DOMAIN in_domain=3 near=1",
+    "R-LIT pdms_silicone: All four SAFFIRE-II silicone coupons ignited but none sustained propagation; silica-ash layer implicated in extinction",
+    "R-OUTCOME confirms=0 contradicts=3 predicate=PROPAGATES"
+   ]
+  },
+  {
+   "tc_id": "TC-PDMS-02",
+   "verdict": "SUPPORTED",
+   "confidence": "MODERATE",
+   "grade": "BOUND",
+   "evidence": [
+    {
+     "run_id": "SAFFIRE2-S1",
+     "item": "ug_burn_length",
+     "value": "~ 0",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|APPROX_MARKER",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row2",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "SAFFIRE2-S2",
+     "item": "ug_burn_length",
+     "value": "~ 0",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|APPROX_MARKER",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row3",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "SAFFIRE2-S3",
+     "item": "ug_burn_length",
+     "value": "~ 0",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|APPROX_MARKER",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row4",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": null,
+     "item": "All four SAFFIRE-II silicone coupons ignited but none sustained propagation; silica-ash layer implicated in extinction",
+     "value": "ignited, did not sustain propagation",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "SAFFIRE-II review (GRAVIFIRE_SAFFIRE-II_PSI-99_Deep_Research.md) SS16.1 + SS5.2; Niehaus 2015; Rojas-Alva 2022",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [],
+   "what_would_change_it": [],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 1.0,
+    "precision": 0.7,
+    "class_strength": 0.8,
+    "score": 0.7,
+    "level": "MODERATE"
+   },
+   "rule_trace": [
+    "R-MATCH family=pdms_silicone candidate_runs=4",
+    "R-DOMAIN in_domain=3 near=1",
+    "R-LIT pdms_silicone: All four SAFFIRE-II silicone coupons ignited but none sustained propagation; silica-ash layer implicated in extinction",
+    "R-OUTCOME confirms=3 contradicts=0 predicate=NO_PROPAGATION"
+   ]
+  },
+  {
+   "tc_id": "TC-PDMS-03",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": "SAFFIRE2-S1",
+     "item": "nearest tested domain",
+     "value": "SAFFIRE-II pdms_silicone at True",
+     "class": "INTERPRETED",
+     "flags": "CONTEXT_ONLY",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row2",
+     "domain_distance": 1,
+     "role": "CONTEXT"
+    },
+    {
+     "run_id": null,
+     "item": "All four SAFFIRE-II silicone coupons ignited but none sustained propagation; silica-ash layer implicated in extinction",
+     "value": "ignited, did not sustain propagation",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "SAFFIRE-II review (GRAVIFIRE_SAFFIRE-II_PSI-99_Deep_Research.md) SS16.1 + SS5.2; Niehaus 2015; Rojas-Alva 2022",
+     "domain_distance": null,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [
+    "zero in-domain runs for family=pdms_silicone at the claimed flow/O2/scale domain"
+   ],
+   "what_would_change_it": [
+    "a \u03bcg test of pdms_silicone at the claimed domain (moderate_5_25, enriched_gt22, large) with published outcome"
+   ],
+   "nearest_domain": "SAFFIRE-II pdms_silicone (SAFFIRE2-S1)",
+   "refusal": true,
+   "confidence_dimensions": {
+    "directness": 0.0,
+    "consistency": null,
+    "precision": 0.0,
+    "class_strength": 0.0,
+    "score": 0.0,
+    "level": "LOW"
+   },
+   "rule_trace": [
+    "R-MATCH family=pdms_silicone candidate_runs=4",
+    "R-DOMAIN in_domain=0 near=4",
+    "R-LIT pdms_silicone: All four SAFFIRE-II silicone coupons ignited but none sustained propagation; silica-ash layer implicated in extinction",
+    "R-OUTCOME confirms=0 contradicts=0 predicate=PROPAGATES",
+    "R-REFUSE zero in-domain runs for family=pdms_silicone at the claimed flow/O2/scale domain"
+   ]
+  },
+  {
+   "tc_id": "TC-SIBAL-LG-01",
+   "verdict": "SUPPORTED",
+   "confidence": "HIGH",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": "SAFFIRE1-S1",
+     "item": "burn_time",
+     "value": "420",
+     "class": "MEASURED",
+     "flags": "",
+     "source": "PSI-98_Experimental table_SAFFIRE-1.csv#row2",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "SAFFIRE2-S5",
+     "item": "ug_burn_length",
+     "value": "29 cm",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row6",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "SAFFIRE2-S5",
+     "item": "ug_spread_rate_published",
+     "value": "2.1 mm/s",
+     "class": "INTERPRETED",
+     "flags": "INTERPRETED_FROM_MISLABELED_CELL|PUBLISHED_VALUE",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row6",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "SAFFIRE2-S6",
+     "item": "ug_burn_length",
+     "value": "29 cm",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row7",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "SAFFIRE2-S6",
+     "item": "ug_spread_rate_published",
+     "value": "2.6 mm/s",
+     "class": "INTERPRETED",
+     "flags": "INTERPRETED_FROM_MISLABELED_CELL|PUBLISHED_VALUE",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row7",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": null,
+     "item": "SIBAL fabric spread over the full 29 cm sample in microgravity at both tested concurrent flows (S5 ~2.1, S6 ~2.6 mm/s published), bridging small-scale BASS results",
+     "value": "S5/S6 complete burns; scale bridge established",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "SAFFIRE-II review SS6.1-6.3; Li 2019; Thomsen 2019",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [],
+   "what_would_change_it": [],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 1.0,
+    "precision": 1.0,
+    "class_strength": 1.0,
+    "score": 1.0,
+    "level": "HIGH"
+   },
+   "rule_trace": [
+    "R-MATCH family=sibal_fabric candidate_runs=43",
+    "R-DOMAIN in_domain=3 near=40",
+    "R-LIT sibal_fabric: SIBAL fabric spread over the full 29 cm sample in microgravity at both tested concurrent flows (S5 ~2.1, S6 ~2.6 mm/s published), bridging small-scale BASS results",
+    "R-OUTCOME confirms=3 contradicts=0 predicate=PROPAGATES"
+   ]
+  },
+  {
+   "tc_id": "TC-SIBAL-SCALE-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": "BASS2-T1",
+     "item": "nearest tested domain",
+     "value": "BASS-II sibal_fabric at False",
+     "class": "INTERPRETED",
+     "flags": "CONTEXT_ONLY",
+     "source": "PSI-25_Experimental table_BASS-II.csv#row102",
+     "domain_distance": 2,
+     "role": "CONTEXT"
+    },
+    {
+     "run_id": null,
+     "item": "BASS SIBAL opposed-flow spread was not simply monotonic with airflow; low-flow quenching directly observed",
+     "value": "non-monotonic spread; low-flow quench observed",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "BASS review (GRAVIFIRE_BASS_PSI-26_Deep_Research.md) SS6.3 + SS6.5; Ferkul 2012/2013",
+     "domain_distance": null,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [
+    "zero in-domain runs for family=sibal_fabric at the claimed flow/O2/scale domain"
+   ],
+   "what_would_change_it": [
+    "a \u03bcg test of sibal_fabric at the claimed domain (low_1_5, normal_20_22, large) with published outcome"
+   ],
+   "nearest_domain": "BASS-II sibal_fabric (BASS2-T1)",
+   "refusal": true,
+   "confidence_dimensions": {
+    "directness": 0.0,
+    "consistency": null,
+    "precision": 0.0,
+    "class_strength": 0.0,
+    "score": 0.0,
+    "level": "LOW"
+   },
+   "rule_trace": [
+    "R-MATCH family=sibal_fabric candidate_runs=43",
+    "R-DOMAIN in_domain=0 near=43",
+    "R-LIT sibal_fabric: BASS SIBAL opposed-flow spread was not simply monotonic with airflow; low-flow quenching directly observed",
+    "R-OUTCOME confirms=0 contradicts=0 predicate=EXTINGUISHES_LOW_FLOW",
+    "R-REFUSE zero in-domain runs for family=sibal_fabric at the claimed flow/O2/scale domain"
+   ]
+  },
+  {
+   "tc_id": "TC-PMMA-THICK-01",
+   "verdict": "SUPPORTED",
+   "confidence": "MODERATE",
+   "grade": "BOUND",
+   "evidence": [
+    {
+     "run_id": null,
+     "item": "Thick PMMA (S8 2mm-profile, S9 1 cm) did not spread; flames anchored at the base with slow regression 0.01-0.04 mm/s",
+     "value": "anchored at base, regression not spread",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "SAFFIRE-II review SS7.1; Olson & Jomaas 2019",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    },
+    {
+     "run_id": "SAFFIRE2-S8",
+     "item": "ug_burn_length ~10cm of 29cm + anchored regression",
+     "value": "burn_length=10.0",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED",
+     "source": "SAFFIRE2-S8 table row + review \u00a77.1",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "SAFFIRE2-S9",
+     "item": "ug_burn_length ~10cm of 29cm + anchored regression",
+     "value": "burn_length=10.0",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED",
+     "source": "SAFFIRE2-S9 table row + review \u00a77.1",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [],
+   "what_would_change_it": [],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 1.0,
+    "precision": 0.7,
+    "class_strength": 0.8,
+    "score": 0.7,
+    "level": "MODERATE"
+   },
+   "rule_trace": [
+    "R-MATCH family=pmma_thick candidate_runs=2",
+    "R-DOMAIN in_domain=2 near=0",
+    "R-LIT pmma_thick: Thick PMMA (S8 2mm-profile, S9 1 cm) did not spread; flames anchored at the base with slow regression 0.01-0.04 mm/s",
+    "R-OUTCOME confirms=2 contradicts=0 predicate=REGRESSION_ANCHORED"
+   ]
+  },
+  {
+   "tc_id": "TC-NOMEX-01",
+   "verdict": "CONTRADICTED",
+   "confidence": "MODERATE",
+   "grade": "BOUND",
+   "evidence": [
+    {
+     "run_id": "SAFFIRE2-S7",
+     "item": "ug_burn_length",
+     "value": "5 cm & 0 (note 2)",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row8",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": null,
+     "item": "PMMA ignition aid fully consumed but adjacent Nomex did not ignite",
+     "value": "PMMA portion completely consumed, Nomex not ignited",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "SAFFIRE-II review SS5.2 + table note 2; Thomsen 2019",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [],
+   "what_would_change_it": [],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 0.5,
+    "precision": 0.6,
+    "class_strength": 0.8,
+    "score": 0.5,
+    "level": "MODERATE"
+   },
+   "rule_trace": [
+    "R-MATCH family=pmma_nomex candidate_runs=1",
+    "R-DOMAIN in_domain=1 near=0",
+    "R-LIT pmma_nomex: PMMA ignition aid fully consumed but adjacent Nomex did not ignite",
+    "R-OUTCOME confirms=0 contradicts=1 predicate=PROPAGATES"
+   ]
+  },
+  {
+   "tc_id": "TC-SAF1-S1-01",
+   "verdict": "SUPPORTED",
+   "confidence": "HIGH",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": "SAFFIRE1-S1",
+     "item": "burn_time",
+     "value": "420",
+     "class": "MEASURED",
+     "flags": "",
+     "source": "PSI-98_Experimental table_SAFFIRE-1.csv#row2",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "SAFFIRE2-S5",
+     "item": "ug_burn_length",
+     "value": "29 cm",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row6",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "SAFFIRE2-S5",
+     "item": "ug_spread_rate_published",
+     "value": "2.1 mm/s",
+     "class": "INTERPRETED",
+     "flags": "INTERPRETED_FROM_MISLABELED_CELL|PUBLISHED_VALUE",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row6",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "SAFFIRE2-S6",
+     "item": "ug_burn_length",
+     "value": "29 cm",
+     "class": "DERIVED",
+     "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row7",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "SAFFIRE2-S6",
+     "item": "ug_spread_rate_published",
+     "value": "2.6 mm/s",
+     "class": "INTERPRETED",
+     "flags": "INTERPRETED_FROM_MISLABELED_CELL|PUBLISHED_VALUE",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row7",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": null,
+     "item": "The large SAFFIRE-I SIBAL flame reached a quasi-steady state over the 420 s burn, unlike upward 1-g spread",
+     "value": "quasi-steady large flame; differs from 1g upward spread",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "SAFFIRE-I review (GRAVIFIRE_SAFFIRE-I_PSI-98_Deep_Research.md) SS11.1-11.2; Urban 2019",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [
+    "CR-2 UNRESOLVED: PSI-98 0.37 cm vs PSI-99 0.37 mm thickness units (behavior verdicts unaffected)"
+   ],
+   "missing_evidence": [],
+   "what_would_change_it": [],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 1.0,
+    "precision": 1.0,
+    "class_strength": 1.0,
+    "score": 1.0,
+    "level": "HIGH"
+   },
+   "rule_trace": [
+    "R-MATCH family=sibal_fabric candidate_runs=43",
+    "R-DOMAIN in_domain=3 near=40",
+    "R-LIT sibal_fabric: The large SAFFIRE-I SIBAL flame reached a quasi-steady state over the 420 s burn, unlike upward 1-g spread",
+    "R-OUTCOME confirms=3 contradicts=0 predicate=PROPAGATES"
+   ]
+  },
+  {
+   "tc_id": "TC-SAF1-S2-01",
+   "verdict": "CONTRADICTED",
+   "confidence": "MODERATE",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": "SAFFIRE1-S2",
+     "item": "burn_time",
+     "value": "70",
+     "class": "MEASURED",
+     "flags": "",
+     "source": "PSI-98_Experimental table_SAFFIRE-1.csv#row3",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": null,
+     "item": "SAFFIRE-I Sample 2 (opposed flow) burned only ~70 s before extinction - shorter than the concurrent S1",
+     "value": "S2 opposed-flow early extinction",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "SAFFIRE-I review SS10.3; PSI-98 table as-flown burn time",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [],
+   "what_would_change_it": [],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 0.5,
+    "precision": 0.6,
+    "class_strength": 1.0,
+    "score": 0.5,
+    "level": "MODERATE"
+   },
+   "rule_trace": [
+    "R-MATCH family=sibal_fabric candidate_runs=43",
+    "R-DOMAIN in_domain=1 near=42",
+    "R-LIT sibal_fabric: SAFFIRE-I Sample 2 (opposed flow) burned only ~70 s before extinction - shorter than the concurrent S1",
+    "R-OUTCOME confirms=0 contradicts=1 predicate=PROPAGATES"
+   ]
+  },
+  {
+   "tc_id": "TC-BASS-SIBAL-01",
+   "verdict": "CONTRADICTED",
+   "confidence": "MODERATE",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": "BASS-37",
+     "item": "test_observations",
+     "value": "ignite at 5 cm/s, reduce to 3, 1.5, 1.  Extinguished at fan 41, became circular at extinction, sphere shrank to extincti",
+     "class": "INTERPRETED",
+     "flags": "FREE_TEXT_OUTCOME|TEXT_MINED|PRIMARY_OPERATOR_LOG",
+     "source": "PSI-26_Science Documents_As Run_Test Matrix.xlsx#row41",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": null,
+     "item": "BASS SIBAL opposed-flow spread was not simply monotonic with airflow; low-flow quenching directly observed",
+     "value": "non-monotonic spread; low-flow quench observed",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "BASS review (GRAVIFIRE_BASS_PSI-26_Deep_Research.md) SS6.3 + SS6.5; Ferkul 2012/2013",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [],
+   "what_would_change_it": [],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 0.5,
+    "precision": 0.7,
+    "class_strength": 0.5,
+    "score": 0.5,
+    "level": "MODERATE"
+   },
+   "rule_trace": [
+    "R-MATCH family=sibal_fabric candidate_runs=43",
+    "R-DOMAIN in_domain=2 near=41",
+    "R-LIT sibal_fabric: BASS SIBAL opposed-flow spread was not simply monotonic with airflow; low-flow quenching directly observed",
+    "R-OUTCOME confirms=0 contradicts=1 predicate=PROPAGATES"
+   ]
+  },
+  {
+   "tc_id": "TC-BASS-SIBAL-02",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": null,
+     "item": "BASS SIBAL opposed-flow spread was not simply monotonic with airflow; low-flow quenching directly observed",
+     "value": "non-monotonic spread; low-flow quench observed",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "BASS review (GRAVIFIRE_BASS_PSI-26_Deep_Research.md) SS6.3 + SS6.5; Ferkul 2012/2013",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [
+    "no in-domain outcome evidence extractable from held data; per-run video or sensor-derived outcome would be required"
+   ],
+   "what_would_change_it": [
+    "a \u03bcg test of sibal_fabric at the claimed domain (low_1_5, normal_20_22, small) with published outcome"
+   ],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 1.0,
+    "precision": 0.7,
+    "class_strength": 0.2,
+    "score": 0.2,
+    "level": "LOW"
+   },
+   "rule_trace": [
+    "R-MATCH family=sibal_fabric candidate_runs=43",
+    "R-DOMAIN in_domain=2 near=41",
+    "R-LIT sibal_fabric: BASS SIBAL opposed-flow spread was not simply monotonic with airflow; low-flow quenching directly observed",
+    "R-OUTCOME confirms=0 contradicts=0 predicate=NON_MONOTONIC_FLOW"
+   ]
+  },
+  {
+   "tc_id": "TC-BASS-SUPPRESS-01",
+   "verdict": "CONTRADICTED",
+   "confidence": "MODERATE",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": null,
+     "item": "Nitrogen jet intended to suppress could entrain ambient air and enhance combustion instead",
+     "value": "suppression jet entrained air, enhanced combustion",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "BASS review SS7.3; Takahashi 2013",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    },
+    {
+     "run_id": null,
+     "item": "gn2/dilution event rows",
+     "value": "13 runs mention dilution/GN2 (e.g. BASS-14, BASS-26, BASS-51, BASS-53)",
+     "class": "INTERPRETED",
+     "flags": "TEXT_MINED",
+     "source": "L1 store: test_observations",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": null,
+     "item": "Nitrogen jet intended to suppress could entrain ambient air and enhance combustion instead",
+     "value": "suppression jet entrained air, enhanced combustion",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "BASS review SS7.3; Takahashi 2013",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [],
+   "what_would_change_it": [],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 0.5,
+    "precision": 1.0,
+    "class_strength": 0.5,
+    "score": 0.5,
+    "level": "MODERATE"
+   },
+   "rule_trace": [
+    "R-MATCH family=candle candidate_runs=5",
+    "R-DOMAIN in_domain=5 near=0",
+    "R-LIT candle: Nitrogen jet intended to suppress could entrain ambient air and enhance combustion instead",
+    "R-OUTCOME confirms=0 contradicts=2 predicate=SUPPRESSES"
+   ]
+  },
+  {
+   "tc_id": "TC-BASS-SPHERE-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": null,
+     "item": "Thermal history changes thick spherical PMMA burn outcome in microgravity",
+     "value": "thermal-history effects on thick spherical fuel",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "BASS review SS6.6; Endo 2020",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [
+    "no in-domain outcome evidence extractable from held data; per-run video or sensor-derived outcome would be required"
+   ],
+   "what_would_change_it": [
+    "a \u03bcg test of pmma_sphere at the claimed domain (low_1_5, normal_20_22, small) with published outcome"
+   ],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 1.0,
+    "precision": 1.0,
+    "class_strength": 0.2,
+    "score": 0.2,
+    "level": "LOW"
+   },
+   "rule_trace": [
+    "R-MATCH family=pmma_sphere candidate_runs=50",
+    "R-DOMAIN in_domain=11 near=39",
+    "R-LIT pmma_sphere: Thermal history changes thick spherical PMMA burn outcome in microgravity",
+    "R-OUTCOME confirms=0 contradicts=0 predicate=THERMAL_HISTORY_INSENSITIVE"
+   ]
+  },
+  {
+   "tc_id": "TC-BASS2-FILM-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": null,
+     "item": "Thin PMMA films exhibit radiative/thermal/kinetic spread regimes with radiative extinction at very low flow",
+     "value": "low-flow radiative extinction",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "BASS-II review SS4.1-4.2; Bhattacharjee 2016 (x3)",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [
+    "no in-domain outcome evidence extractable from held data; per-run video or sensor-derived outcome would be required"
+   ],
+   "what_would_change_it": [
+    "a \u03bcg test of thin_pmma_film at the claimed domain (low_1_5, normal_20_22, small) with published outcome"
+   ],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 1.0,
+    "precision": 0.7,
+    "class_strength": 0.2,
+    "score": 0.2,
+    "level": "LOW"
+   },
+   "rule_trace": [
+    "R-MATCH family=thin_pmma_film candidate_runs=22",
+    "R-DOMAIN in_domain=5 near=17",
+    "R-LIT thin_pmma_film: Thin PMMA films exhibit radiative/thermal/kinetic spread regimes with radiative extinction at very low flow",
+    "R-OUTCOME confirms=0 contradicts=0 predicate=PROPAGATES"
+   ]
+  },
+  {
+   "tc_id": "TC-BASS2-ROD-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": null,
+     "item": "PMMA rods show a quench-vs-blowoff boundary organized by Damkohler number",
+     "value": "quenching and blowoff boundaries",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "BASS-II review SS4.3; Olson & Ferkul 2017",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [
+    "no in-domain outcome evidence extractable from held data; per-run video or sensor-derived outcome would be required"
+   ],
+   "what_would_change_it": [
+    "a \u03bcg test of pmma_rod at the claimed domain (low_1_5, normal_20_22, small) with published outcome"
+   ],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 1.0,
+    "precision": 0.7,
+    "class_strength": 0.2,
+    "score": 0.2,
+    "level": "LOW"
+   },
+   "rule_trace": [
+    "R-MATCH family=pmma_rod candidate_runs=54",
+    "R-DOMAIN in_domain=2 near=52",
+    "R-LIT pmma_rod: PMMA rods show a quench-vs-blowoff boundary organized by Damkohler number",
+    "R-OUTCOME confirms=0 contradicts=0 predicate=PROPAGATES"
+   ]
+  },
+  {
+   "tc_id": "TC-PARTIAL-G-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": "BASS2-T1",
+     "item": "nearest tested domain",
+     "value": "BASS-II sibal_fabric at False",
+     "class": "INTERPRETED",
+     "flags": "CONTEXT_ONLY",
+     "source": "PSI-25_Experimental table_BASS-II.csv#row102",
+     "domain_distance": 3,
+     "role": "CONTEXT"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [
+    "zero in-domain runs for family=sibal_fabric at the claimed flow/O2/scale domain"
+   ],
+   "what_would_change_it": [
+    "a \u03bcg test of sibal_fabric at the claimed domain (moderate_5_25, normal_20_22, partial_gravity) with published outcome"
+   ],
+   "nearest_domain": "BASS-II sibal_fabric (BASS2-T1)",
+   "refusal": true,
+   "confidence_dimensions": {
+    "directness": 0.0,
+    "consistency": null,
+    "precision": 0.0,
+    "class_strength": 0.0,
+    "score": 0.0,
+    "level": "LOW"
+   },
+   "rule_trace": [
+    "R-MATCH family=sibal_fabric candidate_runs=43",
+    "R-DOMAIN in_domain=0 near=43",
+    "R-OUTCOME confirms=0 contradicts=0 predicate=PROPAGATES",
+    "R-REFUSE zero in-domain runs for family=sibal_fabric at the claimed flow/O2/scale domain"
+   ]
+  },
+  {
+   "tc_id": "TC-EXPLORATION-O2-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": "SAFFIRE2-S8",
+     "item": "nearest tested domain",
+     "value": "SAFFIRE-II pmma_thick at True",
+     "class": "INTERPRETED",
+     "flags": "CONTEXT_ONLY",
+     "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row9",
+     "domain_distance": 1,
+     "role": "CONTEXT"
+    },
+    {
+     "run_id": null,
+     "item": "Thick PMMA (S8 2mm-profile, S9 1 cm) did not spread; flames anchored at the base with slow regression 0.01-0.04 mm/s",
+     "value": "anchored at base, regression not spread",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "SAFFIRE-II review SS7.1; Olson & Jomaas 2019",
+     "domain_distance": null,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [
+    "zero in-domain runs for family=pmma_thick at the claimed flow/O2/scale domain"
+   ],
+   "what_would_change_it": [
+    "a \u03bcg test of pmma_thick at the claimed domain (moderate_5_25, enriched_gt22, large) with published outcome"
+   ],
+   "nearest_domain": "SAFFIRE-II pmma_thick (SAFFIRE2-S8)",
+   "refusal": true,
+   "confidence_dimensions": {
+    "directness": 0.0,
+    "consistency": null,
+    "precision": 0.0,
+    "class_strength": 0.0,
+    "score": 0.0,
+    "level": "LOW"
+   },
+   "rule_trace": [
+    "R-MATCH family=pmma_thick candidate_runs=2",
+    "R-DOMAIN in_domain=0 near=2",
+    "R-LIT pmma_thick: Thick PMMA (S8 2mm-profile, S9 1 cm) did not spread; flames anchored at the base with slow regression 0.01-0.04 mm/s",
+    "R-OUTCOME confirms=0 contradicts=0 predicate=REGRESSION_ANCHORED",
+    "R-REFUSE zero in-domain runs for family=pmma_thick at the claimed flow/O2/scale domain"
+   ]
+  },
+  {
+   "tc_id": "TC-BASS-WAX-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "MODERATE",
+   "grade": null,
+   "evidence": [
+    {
+     "run_id": "BASS-68",
+     "item": "test_observations",
+     "value": "Over the shoulder view.  iso auto control on, max sensitivity 3200 iso, min shutter 1/4s, shutter hold 5 s. new igniter,",
+     "class": "INTERPRETED",
+     "flags": "FREE_TEXT_OUTCOME|TEXT_MINED|PRIMARY_OPERATOR_LOG",
+     "source": "PSI-26_Science Documents_As Run_Test Matrix.xlsx#row73",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": "BASS-69",
+     "item": "test_observations",
+     "value": "realigned crooked candle, cleaned windows, spread out coil loops.  Ignited very quickly on 2nd try, and was sooty immedi",
+     "class": "INTERPRETED",
+     "flags": "FREE_TEXT_OUTCOME|TEXT_MINED|PRIMARY_OPERATOR_LOG",
+     "source": "PSI-26_Science Documents_As Run_Test Matrix.xlsx#row74",
+     "domain_distance": 0,
+     "role": "CONFIRM"
+    },
+    {
+     "run_id": "BASS-72",
+     "item": "test_observations",
+     "value": "A mode.   Trying to heat and then step to low flow immediately.  But running out of wax.   Extinguished/burned out at 0.",
+     "class": "INTERPRETED",
+     "flags": "FREE_TEXT_OUTCOME|TEXT_MINED|PRIMARY_OPERATOR_LOG",
+     "source": "PSI-26_Science Documents_As Run_Test Matrix.xlsx#row77",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": "BASS-73",
+     "item": "test_observations",
+     "value": " Last one with over the shoulder view on this session.    Got hot then stepped to 0 flow, went out.",
+     "class": "INTERPRETED",
+     "flags": "FREE_TEXT_OUTCOME|TEXT_MINED|PRIMARY_OPERATOR_LOG",
+     "source": "PSI-26_Science Documents_As Run_Test Matrix.xlsx#row78",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": "BASS-74",
+     "item": "test_observations",
+     "value": "Turned on N2 at each flow setting starting at 0.35, not at 0.31.   At 0.31, flame persisted for a long time, went out wh",
+     "class": "INTERPRETED",
+     "flags": "FREE_TEXT_OUTCOME|TEXT_MINED|PRIMARY_OPERATOR_LOG",
+     "source": "PSI-26_Science Documents_As Run_Test Matrix.xlsx#row79",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": "BASS-78",
+     "item": "test_observations",
+     "value": "first wax slab test.   Ignited nicely.  Very sooty flame wrapped around leading edge.  Turned flow down to 3 cm/s.  Flam",
+     "class": "INTERPRETED",
+     "flags": "FREE_TEXT_OUTCOME|TEXT_MINED|PRIMARY_OPERATOR_LOG",
+     "source": "PSI-26_Science Documents_As Run_Test Matrix.xlsx#row83",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": "BASS-79",
+     "item": "test_observations",
+     "value": "tried igniting at 6 cm/s.  Flame went out when igniter was retracted, with a puff of smoke.  Tried a 2nd time, same effe",
+     "class": "INTERPRETED",
+     "flags": "FREE_TEXT_OUTCOME|TEXT_MINED|PRIMARY_OPERATOR_LOG",
+     "source": "PSI-26_Science Documents_As Run_Test Matrix.xlsx#row84",
+     "domain_distance": 0,
+     "role": "CONTRADICT"
+    },
+    {
+     "run_id": null,
+     "item": "Paraffin/Japan-wax candles showed weak persistent flames at very low flow and the suppression jet could enhance them",
+     "value": "weak persistent candle flames; suppression complications",
+     "class": "INTERPRETED",
+     "flags": "LITERATURE_REVIEW",
+     "source": "BASS review SS6.1 + SS7.3; Takahashi 2013",
+     "domain_distance": 0,
+     "role": "LITERATURE"
+    }
+   ],
+   "conflicts_considered": [],
+   "missing_evidence": [
+    "mixed in-domain outcomes with no resolved conflict; a condition-matched replicate series or calibrated per-run video re-analysis would resolve the split"
+   ],
+   "what_would_change_it": [
+    "a \u03bcg test of wax_slab at the claimed domain (None, normal_20_22, small) with published outcome"
+   ],
+   "nearest_domain": null,
+   "refusal": false,
+   "confidence_dimensions": {
+    "directness": 1.0,
+    "consistency": 0.57,
+    "precision": 1.0,
+    "class_strength": 0.5,
+    "score": 0.5,
+    "level": "MODERATE"
+   },
+   "rule_trace": [
+    "R-MATCH family=wax_slab candidate_runs=19",
+    "R-DOMAIN in_domain=13 near=6",
+    "R-LIT wax_slab: Paraffin/Japan-wax candles showed weak persistent flames at very low flow and the suppression jet could enhance them",
+    "R-OUTCOME confirms=1 contradicts=6 predicate=PROPAGATES"
+   ]
+  }
+ ]
+}

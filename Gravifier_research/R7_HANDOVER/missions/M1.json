@@ -1,0 +1,583 @@
+{
+  "mission_id": "M1",
+  "title": "The Standard",
+  "act": 1,
+  "role": "Teach the loop; the archive earns trust with anchors.",
+  "claims": [
+    "TC-SIBAL-LG-01",
+    "TC-SAF1-S1-01",
+    "TC-SAF1-S2-01",
+    "TC-SIBAL-SCALE-01",
+    "TC-BASS-SIBAL-01"
+  ],
+  "environment": {
+    "location": "cargo_bay_aegis_corridor",
+    "material": {
+      "display": "SIBAL cotton-fiberglass fabric (Aegis corridor liner panels)",
+      "family_key": "sibal_fabric"
+    },
+    "geometry": "large_sheet",
+    "duct": "large",
+    "ember_hint_key": "m1"
+  },
+  "beats": [
+    {
+      "id": "insertion",
+      "type": "insertion",
+      "duration_s": 75,
+      "dialogue": [
+        {
+          "speaker": "OKAFOR",
+          "line": "It's the standard liner. Make it quick."
+        },
+        {
+          "speaker": "EMBER",
+          "line": "Aegis corridor panels, cotton-fiberglass composite. SIBAL heritage — the archive holds two large-duct flights for this family."
+        }
+      ]
+    },
+    {
+      "id": "predict",
+      "type": "predict",
+      "timed_s": 10,
+      "prompt": "A vigorous 1-g burner. What does this fabric do in microgravity?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Same or faster than on Earth",
+          "earth_expectation_ref": "PROPAGATES"
+        },
+        {
+          "id": "b",
+          "text": "Slower, but keeps burning"
+        },
+        {
+          "id": "c",
+          "text": "It just dies"
+        }
+      ],
+      "logging": "Logged, never scored; replayed at the verdict card."
+    },
+    {
+      "id": "run_1g",
+      "type": "run_1g",
+      "render": {
+        "flame": "teardrop_yellow_fast_climb",
+        "outcome": "panel consumed"
+      },
+      "label": "Earth basis: 1-g ground tests"
+    },
+    {
+      "id": "configure",
+      "type": "configure",
+      "chamber": "cygnus_large_duct",
+      "controls": [
+        {
+          "name": "flow_valve",
+          "note": "anchor flow ~20 cm/s or low — exact per-run values in store"
+        },
+        {
+          "name": "direction_toggle",
+          "values": [
+            "concurrent",
+            "opposed"
+          ]
+        },
+        {
+          "name": "ignition",
+          "values": [
+            "hot_wire"
+          ],
+          "note": "preset per apparatus"
+        }
+      ],
+      "branches": [
+        {
+          "id": "concurrent_anchor",
+          "conditions": {
+            "direction": "concurrent",
+            "flow": "anchor"
+          },
+          "render_state": "EXACT",
+          "claim": "TC-SIBAL-LG-01",
+          "animation": {
+            "flame": "full_spread",
+            "front_marker": {
+              "rate": {
+                "whitelist_key": "s5_anchor_descent",
+                "display": "2.18 mm/s"
+              },
+              "calibration_label_on_screen": "traverse calibration",
+              "second_anchor": {
+                "whitelist_key": "s6_anchor_descent",
+                "display": "2.64 mm/s"
+              },
+              "drilldown": [
+                {
+                  "whitelist_key": "sibal_published_rate_s5",
+                  "display": "2.1 published (+4.0%)"
+                },
+                {
+                  "whitelist_key": "sibal_published_rate_s6",
+                  "display": "2.6 published (+1.6%)"
+                }
+              ]
+            },
+            "burn_timer": {
+              "whitelist_key": "sibal_s1_burn_time",
+              "display": "420 s class"
+            },
+            "gauge_clock": "one-clock timebase (sensor epoch-ms, 30.3 Hz)"
+          }
+        },
+        {
+          "id": "opposed_moderate",
+          "conditions": {
+            "direction": "opposed",
+            "flow": "moderate"
+          },
+          "render_state": "CONTRADICTED",
+          "claim": "TC-SAF1-S2-01",
+          "animation": {
+            "sequence": "flatten_tear_gutter_dark",
+            "extinction_timer": {
+              "whitelist_key": "sibal_s2_extinction",
+              "display": "70 s"
+            },
+            "contrast_timer": {
+              "whitelist_key": "sibal_s1_burn_time",
+              "display": "420 s"
+            },
+            "beat_note": "The 'slower but sustained' 1-g intuition fails at scale: it didn't slow, it died."
+          }
+        },
+        {
+          "id": "low_flow_large",
+          "conditions": {
+            "direction": "opposed",
+            "flow": "low"
+          },
+          "render_state": "REFUSAL",
+          "claim": "TC-SIBAL-SCALE-01",
+          "animation": {
+            "render": "dark_chamber",
+            "refusal_text": "SIBAL, opposed low flow, large duct — no NASA evidence found.",
+            "named_missing_test": "a μg test of sibal_fabric at (low_1_5, normal_20_22, large) with published outcome",
+            "log_gap_button": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "run_ug",
+      "type": "run_ug",
+      "renders_from": "configure.branches[].render_state (honesty contract, catalog §4.4)"
+    },
+    {
+      "id": "decide",
+      "type": "decide",
+      "prompt": "Corridor fire failsafe policy",
+      "options": [
+        {
+          "id": "a",
+          "text": "Auto-reverse to opposed + ramp",
+          "evidence": {
+            "runs": [
+              "SAFFIRE1-S2"
+            ],
+            "chip": "MODERATE",
+            "note": "one large-duct run (S2)"
+          }
+        },
+        {
+          "id": "b",
+          "text": "Full flow shutdown",
+          "evidence": {
+            "runs": [
+              "BASS-37"
+            ],
+            "chip": "BOUND",
+            "note": "quench at low flow observed in the SMALL duct (TC-BASS-SIBAL-01); large-duct transfer = named gap — asymmetry stated"
+          }
+        },
+        {
+          "id": "c",
+          "text": "N₂ flood",
+          "evidence": {
+            "chip": "DISFAVORED",
+            "note": "EMBER flags the entrainment logs (literature key bass_suppression)"
+          }
+        }
+      ],
+      "ember_line": "I rank evidence, I don't certify designs. Choose your margins.",
+      "consequence_layers": [
+        "immediate animation",
+        "evidence-alignment feedback from EMBER + card",
+        "narrative: Okafor position shifts, queue reorders"
+      ],
+      "death_states": false
+    },
+    {
+      "id": "verdict_card",
+      "type": "verdict_card",
+      "cards_from": "configure.branches",
+      "card_fields": [
+        "tc_id",
+        "verdict",
+        "confidence chip + dimension bars",
+        "evidence rows: run_id, value_raw, class, flags, file#row (clickable)",
+        "what_would_change_it",
+        "calibration labels"
+      ],
+      "prediction_recall": "You expected …; the archive said …"
+    },
+    {
+      "id": "field_manual",
+      "type": "field_manual",
+      "entry": "FM-02",
+      "text": "Direction matters: opposed flow killed the large sample in 70 seconds against 420 concurrent.",
+      "numbers": [
+        {
+          "whitelist_key": "sibal_s2_extinction",
+          "display": "70 seconds"
+        },
+        {
+          "whitelist_key": "sibal_s1_burn_time",
+          "display": "420 concurrent"
+        }
+      ]
+    },
+    {
+      "id": "return_to_queue",
+      "type": "return_to_queue",
+      "okafor_beat": {
+        "speaker": "OKAFOR",
+        "line": "Fine. The fabric behaves. Windows next."
+      }
+    }
+  ],
+  "verdict_payloads": {
+    "TC-SIBAL-LG-01": {
+      "tc_id": "TC-SIBAL-LG-01",
+      "verdict": "SUPPORTED",
+      "confidence": "HIGH",
+      "grade": null,
+      "evidence": [
+        {
+          "run_id": "SAFFIRE1-S1",
+          "item": "burn_time",
+          "value": "420",
+          "class": "MEASURED",
+          "flags": "",
+          "source": "PSI-98_Experimental table_SAFFIRE-1.csv#row2",
+          "domain_distance": 0,
+          "role": "CONFIRM"
+        },
+        {
+          "run_id": "SAFFIRE2-S5",
+          "item": "ug_burn_length",
+          "value": "29 cm",
+          "class": "DERIVED",
+          "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED",
+          "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row6",
+          "domain_distance": 0,
+          "role": "CONFIRM"
+        },
+        {
+          "run_id": "SAFFIRE2-S5",
+          "item": "ug_spread_rate_published",
+          "value": "2.1 mm/s",
+          "class": "INTERPRETED",
+          "flags": "INTERPRETED_FROM_MISLABELED_CELL|PUBLISHED_VALUE",
+          "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row6",
+          "domain_distance": 0,
+          "role": "CONFIRM"
+        },
+        {
+          "run_id": "SAFFIRE2-S6",
+          "item": "ug_burn_length",
+          "value": "29 cm",
+          "class": "DERIVED",
+          "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED",
+          "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row7",
+          "domain_distance": 0,
+          "role": "CONFIRM"
+        },
+        {
+          "run_id": "SAFFIRE2-S6",
+          "item": "ug_spread_rate_published",
+          "value": "2.6 mm/s",
+          "class": "INTERPRETED",
+          "flags": "INTERPRETED_FROM_MISLABELED_CELL|PUBLISHED_VALUE",
+          "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row7",
+          "domain_distance": 0,
+          "role": "CONFIRM"
+        },
+        {
+          "run_id": null,
+          "item": "SIBAL fabric spread over the full 29 cm sample in microgravity at both tested concurrent flows (S5 ~2.1, S6 ~2.6 mm/s published), bridging small-scale BASS results",
+          "value": "S5/S6 complete burns; scale bridge established",
+          "class": "INTERPRETED",
+          "flags": "LITERATURE_REVIEW",
+          "source": "SAFFIRE-II review SS6.1-6.3; Li 2019; Thomsen 2019",
+          "domain_distance": 0,
+          "role": "LITERATURE"
+        }
+      ],
+      "conflicts_considered": [],
+      "missing_evidence": [],
+      "what_would_change_it": [],
+      "nearest_domain": null,
+      "refusal": false,
+      "confidence_dimensions": {
+        "directness": 1.0,
+        "consistency": 1.0,
+        "precision": 1.0,
+        "class_strength": 1.0,
+        "score": 1.0,
+        "level": "HIGH"
+      },
+      "rule_trace": [
+        "R-MATCH family=sibal_fabric candidate_runs=43",
+        "R-DOMAIN in_domain=3 near=40",
+        "R-LIT sibal_fabric: SIBAL fabric spread over the full 29 cm sample in microgravity at both tested concurrent flows (S5 ~2.1, S6 ~2.6 mm/s published), bridging small-scale BASS results",
+        "R-OUTCOME confirms=3 contradicts=0 predicate=PROPAGATES"
+      ]
+    },
+    "TC-SAF1-S1-01": {
+      "tc_id": "TC-SAF1-S1-01",
+      "verdict": "SUPPORTED",
+      "confidence": "HIGH",
+      "grade": null,
+      "evidence": [
+        {
+          "run_id": "SAFFIRE1-S1",
+          "item": "burn_time",
+          "value": "420",
+          "class": "MEASURED",
+          "flags": "",
+          "source": "PSI-98_Experimental table_SAFFIRE-1.csv#row2",
+          "domain_distance": 0,
+          "role": "CONFIRM"
+        },
+        {
+          "run_id": "SAFFIRE2-S5",
+          "item": "ug_burn_length",
+          "value": "29 cm",
+          "class": "DERIVED",
+          "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED",
+          "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row6",
+          "domain_distance": 0,
+          "role": "CONFIRM"
+        },
+        {
+          "run_id": "SAFFIRE2-S5",
+          "item": "ug_spread_rate_published",
+          "value": "2.1 mm/s",
+          "class": "INTERPRETED",
+          "flags": "INTERPRETED_FROM_MISLABELED_CELL|PUBLISHED_VALUE",
+          "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row6",
+          "domain_distance": 0,
+          "role": "CONFIRM"
+        },
+        {
+          "run_id": "SAFFIRE2-S6",
+          "item": "ug_burn_length",
+          "value": "29 cm",
+          "class": "DERIVED",
+          "flags": "PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED",
+          "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row7",
+          "domain_distance": 0,
+          "role": "CONFIRM"
+        },
+        {
+          "run_id": "SAFFIRE2-S6",
+          "item": "ug_spread_rate_published",
+          "value": "2.6 mm/s",
+          "class": "INTERPRETED",
+          "flags": "INTERPRETED_FROM_MISLABELED_CELL|PUBLISHED_VALUE",
+          "source": "PSI-99_Experimental table_SAFFIRE-2.csv#row7",
+          "domain_distance": 0,
+          "role": "CONFIRM"
+        },
+        {
+          "run_id": null,
+          "item": "The large SAFFIRE-I SIBAL flame reached a quasi-steady state over the 420 s burn, unlike upward 1-g spread",
+          "value": "quasi-steady large flame; differs from 1g upward spread",
+          "class": "INTERPRETED",
+          "flags": "LITERATURE_REVIEW",
+          "source": "SAFFIRE-I review (GRAVIFIRE_SAFFIRE-I_PSI-98_Deep_Research.md) SS11.1-11.2; Urban 2019",
+          "domain_distance": 0,
+          "role": "LITERATURE"
+        }
+      ],
+      "conflicts_considered": [
+        "CR-2 UNRESOLVED: PSI-98 0.37 cm vs PSI-99 0.37 mm thickness units (behavior verdicts unaffected)"
+      ],
+      "missing_evidence": [],
+      "what_would_change_it": [],
+      "nearest_domain": null,
+      "refusal": false,
+      "confidence_dimensions": {
+        "directness": 1.0,
+        "consistency": 1.0,
+        "precision": 1.0,
+        "class_strength": 1.0,
+        "score": 1.0,
+        "level": "HIGH"
+      },
+      "rule_trace": [
+        "R-MATCH family=sibal_fabric candidate_runs=43",
+        "R-DOMAIN in_domain=3 near=40",
+        "R-LIT sibal_fabric: The large SAFFIRE-I SIBAL flame reached a quasi-steady state over the 420 s burn, unlike upward 1-g spread",
+        "R-OUTCOME confirms=3 contradicts=0 predicate=PROPAGATES"
+      ]
+    },
+    "TC-SAF1-S2-01": {
+      "tc_id": "TC-SAF1-S2-01",
+      "verdict": "CONTRADICTED",
+      "confidence": "MODERATE",
+      "grade": null,
+      "evidence": [
+        {
+          "run_id": "SAFFIRE1-S2",
+          "item": "burn_time",
+          "value": "70",
+          "class": "MEASURED",
+          "flags": "",
+          "source": "PSI-98_Experimental table_SAFFIRE-1.csv#row3",
+          "domain_distance": 0,
+          "role": "CONTRADICT"
+        },
+        {
+          "run_id": null,
+          "item": "SAFFIRE-I Sample 2 (opposed flow) burned only ~70 s before extinction - shorter than the concurrent S1",
+          "value": "S2 opposed-flow early extinction",
+          "class": "INTERPRETED",
+          "flags": "LITERATURE_REVIEW",
+          "source": "SAFFIRE-I review SS10.3; PSI-98 table as-flown burn time",
+          "domain_distance": 0,
+          "role": "LITERATURE"
+        }
+      ],
+      "conflicts_considered": [],
+      "missing_evidence": [],
+      "what_would_change_it": [],
+      "nearest_domain": null,
+      "refusal": false,
+      "confidence_dimensions": {
+        "directness": 1.0,
+        "consistency": 0.5,
+        "precision": 0.6,
+        "class_strength": 1.0,
+        "score": 0.5,
+        "level": "MODERATE"
+      },
+      "rule_trace": [
+        "R-MATCH family=sibal_fabric candidate_runs=43",
+        "R-DOMAIN in_domain=1 near=42",
+        "R-LIT sibal_fabric: SAFFIRE-I Sample 2 (opposed flow) burned only ~70 s before extinction - shorter than the concurrent S1",
+        "R-OUTCOME confirms=0 contradicts=1 predicate=PROPAGATES"
+      ]
+    },
+    "TC-SIBAL-SCALE-01": {
+      "tc_id": "TC-SIBAL-SCALE-01",
+      "verdict": "INSUFFICIENT",
+      "confidence": "LOW",
+      "grade": null,
+      "evidence": [
+        {
+          "run_id": "BASS2-T1",
+          "item": "nearest tested domain",
+          "value": "BASS-II sibal_fabric at False",
+          "class": "INTERPRETED",
+          "flags": "CONTEXT_ONLY",
+          "source": "PSI-25_Experimental table_BASS-II.csv#row102",
+          "domain_distance": 2,
+          "role": "CONTEXT"
+        },
+        {
+          "run_id": null,
+          "item": "BASS SIBAL opposed-flow spread was not simply monotonic with airflow; low-flow quenching directly observed",
+          "value": "non-monotonic spread; low-flow quench observed",
+          "class": "INTERPRETED",
+          "flags": "LITERATURE_REVIEW",
+          "source": "BASS review (GRAVIFIRE_BASS_PSI-26_Deep_Research.md) SS6.3 + SS6.5; Ferkul 2012/2013",
+          "domain_distance": null,
+          "role": "LITERATURE"
+        }
+      ],
+      "conflicts_considered": [],
+      "missing_evidence": [
+        "zero in-domain runs for family=sibal_fabric at the claimed flow/O2/scale domain"
+      ],
+      "what_would_change_it": [
+        "a μg test of sibal_fabric at the claimed domain (low_1_5, normal_20_22, large) with published outcome"
+      ],
+      "nearest_domain": "BASS-II sibal_fabric (BASS2-T1)",
+      "refusal": true,
+      "confidence_dimensions": {
+        "directness": 0.0,
+        "consistency": null,
+        "precision": 0.0,
+        "class_strength": 0.0,
+        "score": 0.0,
+        "level": "LOW"
+      },
+      "rule_trace": [
+        "R-MATCH family=sibal_fabric candidate_runs=43",
+        "R-DOMAIN in_domain=0 near=43",
+        "R-LIT sibal_fabric: BASS SIBAL opposed-flow spread was not simply monotonic with airflow; low-flow quenching directly observed",
+        "R-OUTCOME confirms=0 contradicts=0 predicate=EXTINGUISHES_LOW_FLOW",
+        "R-REFUSE zero in-domain runs for family=sibal_fabric at the claimed flow/O2/scale domain"
+      ]
+    },
+    "TC-BASS-SIBAL-01": {
+      "tc_id": "TC-BASS-SIBAL-01",
+      "verdict": "CONTRADICTED",
+      "confidence": "MODERATE",
+      "grade": null,
+      "evidence": [
+        {
+          "run_id": "BASS-37",
+          "item": "test_observations",
+          "value": "ignite at 5 cm/s, reduce to 3, 1.5, 1.  Extinguished at fan 41, became circular at extinction, sphere shrank to extincti",
+          "class": "INTERPRETED",
+          "flags": "FREE_TEXT_OUTCOME|TEXT_MINED|PRIMARY_OPERATOR_LOG",
+          "source": "PSI-26_Science Documents_As Run_Test Matrix.xlsx#row41",
+          "domain_distance": 0,
+          "role": "CONTRADICT"
+        },
+        {
+          "run_id": null,
+          "item": "BASS SIBAL opposed-flow spread was not simply monotonic with airflow; low-flow quenching directly observed",
+          "value": "non-monotonic spread; low-flow quench observed",
+          "class": "INTERPRETED",
+          "flags": "LITERATURE_REVIEW",
+          "source": "BASS review (GRAVIFIRE_BASS_PSI-26_Deep_Research.md) SS6.3 + SS6.5; Ferkul 2012/2013",
+          "domain_distance": 0,
+          "role": "LITERATURE"
+        }
+      ],
+      "conflicts_considered": [],
+      "missing_evidence": [],
+      "what_would_change_it": [],
+      "nearest_domain": null,
+      "refusal": false,
+      "confidence_dimensions": {
+        "directness": 1.0,
+        "consistency": 0.5,
+        "precision": 0.7,
+        "class_strength": 0.5,
+        "score": 0.5,
+        "level": "MODERATE"
+      },
+      "rule_trace": [
+        "R-MATCH family=sibal_fabric candidate_runs=43",
+        "R-DOMAIN in_domain=2 near=41",
+        "R-LIT sibal_fabric: BASS SIBAL opposed-flow spread was not simply monotonic with airflow; low-flow quenching directly observed",
+        "R-OUTCOME confirms=0 contradicts=1 predicate=PROPAGATES"
+      ]
+    }
+  }
+}
