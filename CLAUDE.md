@@ -19,9 +19,15 @@
 - `psidata/` — PSI download tooling, manifests, and datasets.
   - `manifests/` — full PSI file manifests (PSI-25/26/98/99).
   - `download_science_set.py` — verified science-set downloader (~810 MB).
-- `Setup docs/` — writing style, templates, skills library, cron index.
+- `Setup docs/` — writing style, decision gate, strategy agenda,
+  templates, skills library, cron index.
+  - `decision_gate.md` — winner-shape validation: run every project
+    decision through it (see Hard rule 6).
+  - `strategy_agenda.md` — open strategy decisions, deadlines, and the
+    session protocol; keep current as items clear the gate.
 - `Daily doc/` — one todo list + one work report per working day.
 - `Study Materials/` — study packs for self-paced learning topics.
+- `Scripts/` — scripts for the competition videos (e.g. the 240 s pitch).
 - `app/` — the GRAVIFIRE dashboard deliverable (own `CLAUDE.md`).
 
 ## Hard rules
@@ -43,6 +49,12 @@
 4. **No secrets in the repo.** API keys are bearer tokens; never commit them.
 5. **Write per `Setup docs/anti-ai-writing-style.md`** — short, direct,
    active voice; no "delve", no corporate hedging, no filler.
+6. **Decision gate on every choice.** Before acting on any project
+   decision — feature, scope, dataset, stack, screen, pitch line — run it
+   through `Setup docs/decision_gate.md` and give an explicit verdict:
+   FOCUS, REDUCE, or CHANGE, naming the checklist item or anti-pattern that
+   triggered it. Log the verdict in the gate's decision log. No silent
+   approvals.
 
 ## How to work on this project
 

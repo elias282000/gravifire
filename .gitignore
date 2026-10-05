@@ -8,11 +8,29 @@ settings.local.json
 __pycache__/
 *.pyc
 .venv/
+venv/
 
-# downloaded data (large, re-downloadable via psidata/)
-psidata/*/Raw*/
-psidata/*/Science*/
+# downloaded PSI data stays out except tools, manifests, and small team
+# assets (video reference images, ISA-Tab metadata, experimental tables).
+# Raw science data (~28 GB) is re-downloadable via psidata/download.py.
+psidata/PSI-*/
+!psidata/PSI-25/
+!psidata/PSI-26/
+psidata/PSI-25/*
+!psidata/PSI-25/Representative Image(s)/
+!psidata/PSI-25/metadata/
+!psidata/PSI-25/Reference Data/
+!psidata/PSI-25/Experimental table/
+psidata/PSI-26/*
+!psidata/PSI-26/metadata/
 psidata/download_log.tsv
+
+# anchor frame extraction (118,938 JPEGs, 1.5 GB) — 27 selected frames
+# ship inside Gravifier_research/R7_HANDOVER/assets/
+Gravifier_research/evidence_store/anchors/
+
+# local agent artifacts
+.zcode/
 
 # OS / editor
 .DS_Store

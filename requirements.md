@@ -49,7 +49,9 @@ SAFFIRE-II) for spacecraft fire safety, with:
 
 ## 5. Open items / decisions
 
-- [ ] Stack choice: Streamlit (fast, Python-only) vs React (polish).
+- [ ] Stack choice: resolves at the week-1 graybox gate (D8); R3F + rapier
+  single React app recommended (dev doc v1.1 §3). Streamlit superseded by
+  the FPS game decision (2026-10-05).
 - [ ] Confirm science-set download with sizing check.
 - [ ] Team roles split for the hackathon weekend.
 
@@ -58,3 +60,6 @@ SAFFIRE-II) for spacecraft fire safety, with:
 | Date | What was tested | Result |
 | ---- | --------------- | ------ |
 | 2026-10-02 | PSI manifest fetch + presigned URL download path | verified (see `psidata/download_log.tsv`) |
+| 2026-10-06 | R7 handover bundle integrity: whitelist path resolution, M1 payload verbatim check, inventory (`R7_HANDOVER/verify_bundle.py`) | 40/40 PASS |
+| 2026-10-06 | Engine determinism: `run_r3.py` regenerated `seed_verdicts.json` vs bundled copy | byte-identical; 18/18 literature concordance |
+| 2026-10-06 | R5 exit checks re-run (`verdict_engine/scripts/r5_exit_checks.py`) | ALL PASS |
