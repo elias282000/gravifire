@@ -1,0 +1,45 @@
+{
+  "investigation": "PSI-25",
+  "timestamp": "2026-09-29T23:33:19.646Z",
+  "sourceFilesProcessed": [
+    "PSI-25_Experimental table_BASS-II.csv"
+  ],
+  "sourceFilesUnsupported": [],
+  "rawRecordsFound": 129,
+  "validRecords": 129,
+  "rejectedRecords": 0,
+  "duplicateRecords": 0,
+  "fieldsDiscovered": [
+    "Air display",
+    "Calibrated final O2 % by vol",
+    "Calibrated initial O2 % by vol",
+    "Date",
+    "Fan display",
+    "Final CO (ppm)",
+    "Final CO2 % by vol",
+    "Flow restrictor",
+    "Fuel Sample Material",
+    "GMT",
+    "Initial CO (ppm)",
+    "Initial CO2 % by vol",
+    "PI",
+    "Radiometer gain (1000 250 50 10)",
+    "Sample #",
+    "Test #",
+    "Total Frames Shot"
+  ],
+  "normalizedUnits": [
+    "%",
+    "ppm"
+  ],
+  "warnings": [],
+  "materialNormalizationReviewCount": 57,
+  "measurementTextStatusCount": 4,
+  "evidenceFilesFound": 1,
+  "evidenceFilesMatched": 1,
+  "evidenceFilesUnmatched": 0,
+  "evidenceMatchWarnings": [],
+  "videoAssets": 1,
+  "imageAssets": 0,
+  "otherAssets": 0
+}

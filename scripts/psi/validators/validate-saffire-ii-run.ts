@@ -1,0 +1,4 @@
+import { NASAExperimentRun } from "../../../src/types/experiment";
+export type SAFFIREIIValidation = { success: boolean; data?: NASAExperimentRun; reason?: string };
+export function validateSAFFIREIIExperimentRun(run: NASAExperimentRun): SAFFIREIIValidation { if (run.family !== "SAFFIRE-II") return { success: false, reason: "Record is not SAFFIRE-II" }; if (!run.sourceExperimentId.trim()) return { success: false, reason: "Sample Number is absent" }; if (run.investigationId !== "saffire-ii" || run.source.investigationId !== "PSI-99") return { success: false, reason: "Investigation identity mismatch" }; if (!run.provenance.sourceSha256 || !run.provenance.sourceFile || !run.provenance.sourceRow) return { success: false, reason: "Required provenance is missing" }; return { success: true, data: run }; }
+

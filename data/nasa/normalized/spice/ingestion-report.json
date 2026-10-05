@@ -1,0 +1,65 @@
+{
+  "investigation": "PSI-107",
+  "family": "SPICE",
+  "timestamp": "2026-09-30T17:11:07.491Z",
+  "sourceFilesProcessed": [
+    "PSI-107_Experimental table_Spice.csv"
+  ],
+  "sourceRecordType": "OPERATING_CONDITION_OBSERVATION",
+  "rawRows": 469,
+  "validObservations": 469,
+  "rejectedRecords": 0,
+  "runRecordsCreated": 0,
+  "exactDuplicateOccurrences": 34,
+  "exactDuplicatePatternCount": 31,
+  "rawFuelCounts": {
+    "Ethylene": 47,
+    "Propane": 50,
+    "75% Propylene": 16,
+    "75 % Propylene": 119,
+    "50 % Propylene": 111,
+    "Propylene": 122,
+    "Methane": 4
+  },
+  "canonicalFuelCounts": {
+    "ETHYLENE": 47,
+    "PROPANE": 50,
+    "PROPYLENE_NITROGEN_MIXTURE": 246,
+    "PROPYLENE": 122,
+    "METHANE": 4
+  },
+  "nozzleCounts": {
+    "1.6002": 178,
+    "0.762": 119,
+    "0.4064": 172
+  },
+  "fuelRateSccmCoverage": 457,
+  "fuelRateMgSCoverage": 457,
+  "hydrocarbonFuelRateCoverage": 469,
+  "airRateCoverage": 444,
+  "missingAirRateCount": 25,
+  "negativeAirRateCount": 8,
+  "ignitionTimeStatuses": {
+    "PARSED_COLON_TIME": 393,
+    "PARSED_DOT_TIME": 61,
+    "HHMM_LIKE_RAW": 2,
+    "TEXT_STATUS": 13
+  },
+  "flameOffTimeStatuses": {
+    "PARSED_COLON_TIME": 384,
+    "NOT_REPORTED": 11,
+    "PARSED_DOT_TIME": 63,
+    "TEXT_STATUS": 11
+  },
+  "missingIgnitionCount": 0,
+  "missingFlameOffCount": 11,
+  "sourceScopeCountDifference": {
+    "localExperimentalTableRows": 469,
+    "investigationPageFlamesReported": 526,
+    "status": "SOURCE_SCOPE_COUNT_DIFFERENCE",
+    "note": "These quantities may represent different record levels or publication scopes; the 469 rows are not treated as a direct flame count."
+  },
+  "smokePointLabelsAvailable": false,
+  "flameLengthResultsAvailable": false,
+  "warnings": []
+}

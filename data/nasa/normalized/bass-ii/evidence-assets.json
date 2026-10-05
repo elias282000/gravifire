@@ -1,0 +1,28 @@
+[
+  {
+    "id": "evidence-e82f64268c51efee",
+    "investigationId": "PSI-25",
+    "sourceExperimentId": "B1",
+    "sourceSampleId": "147",
+    "assetType": "RAW_VIDEO",
+    "fileName": "BASS_GMT50_SAMPLE_147_TEST_B1.mp4",
+    "localPath": "src/data/nasa/raw/bass-ii/evidence/BASS_GMT50_SAMPLE_147_TEST_B1.mp4",
+    "mediaType": "video/mp4",
+    "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+    "sha256": "e82f64268c51efeea73a3f11e690a2f6e504845e980fb60356a6ef1584d273cd",
+    "sizeBytes": 5803980,
+    "dataStatus": "REAL_NASA_DATA",
+    "matchMethod": "TEST_AND_SAMPLE",
+    "matchConfidence": "EXACT_IDENTIFIERS",
+    "provenance": {
+      "sourceFile": "BASS_GMT50_SAMPLE_147_TEST_B1.mp4",
+      "relativePath": "src/data/nasa/raw/bass-ii/evidence/BASS_GMT50_SAMPLE_147_TEST_B1.mp4",
+      "investigationId": "PSI-25",
+      "investigationUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+      "ingestionTimestamp": "2026-09-29T23:33:19.646Z",
+      "rawGmt": "50",
+      "parsedTestId": "B1",
+      "parsedSampleId": "147"
+    }
+  }
+]

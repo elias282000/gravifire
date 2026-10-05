@@ -1,0 +1,624 @@
+[
+  {
+    "id": "1",
+    "investigationId": "same",
+    "sourceExperimentId": "1",
+    "title": "SAME Experimental Table sample 1",
+    "family": "SAME",
+    "material": "Teflon",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 5,
+      "weightLossRateMgMin": 2,
+      "agingDurationMinutes": 1
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-102",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102"
+    },
+    "provenance": {
+      "investigationId": "PSI-102",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
+      "sourceFile": "PSI-102_Experimental table_SAME.csv",
+      "sourceSha256": "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af",
+      "sourceRow": 2,
+      "rawExperimentId": "1",
+      "parserVersion": "same-experimental-table-parser@1.0.0",
+      "normalizerVersion": "same-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T17:07:29.710Z",
+      "originalFields": [
+        "Sample #",
+        "Sample Material",
+        "Air Flow (cm/s)",
+        "Weight loss rate (mg/min)",
+        "Aging Duration (minutes)"
+      ],
+      "ingestionNote": "Exact SAME Experimental Table mapping. Physical Air Flow is preserved as an explicitly labelled NASA measurement.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample #": "1",
+      "Sample Material": "Teflon",
+      "Air Flow (cm/s)": "5",
+      "Weight loss rate (mg/min)": "2",
+      "Aging Duration (minutes)": "1"
+    },
+    "sameData": {
+      "sourceSampleId": "1",
+      "rawSampleMaterial": "Teflon",
+      "normalizedMaterial": "TEFLON",
+      "materialNormalizationStatus": "NORMALIZED",
+      "airflowCmS": {
+        "rawValue": "5",
+        "parsedValue": 5,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)"
+      },
+      "weightLossRateMgMin": {
+        "rawValue": "2",
+        "parsedValue": 2,
+        "unit": "mg/min",
+        "status": "EXACT",
+        "sourceField": "Weight loss rate (mg/min)"
+      },
+      "agingDurationMinutes": {
+        "rawValue": "1",
+        "parsedValue": 1,
+        "unit": "minutes",
+        "status": "EXACT",
+        "sourceField": "Aging Duration (minutes)"
+      }
+    }
+  },
+  {
+    "id": "2",
+    "investigationId": "same",
+    "sourceExperimentId": "2",
+    "title": "SAME Experimental Table sample 2",
+    "family": "SAME",
+    "material": "Teflon",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 5,
+      "weightLossRateMgMin": 1,
+      "agingDurationMinutes": 1
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-102",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102"
+    },
+    "provenance": {
+      "investigationId": "PSI-102",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
+      "sourceFile": "PSI-102_Experimental table_SAME.csv",
+      "sourceSha256": "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af",
+      "sourceRow": 3,
+      "rawExperimentId": "2",
+      "parserVersion": "same-experimental-table-parser@1.0.0",
+      "normalizerVersion": "same-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T17:07:29.710Z",
+      "originalFields": [
+        "Sample #",
+        "Sample Material",
+        "Air Flow (cm/s)",
+        "Weight loss rate (mg/min)",
+        "Aging Duration (minutes)"
+      ],
+      "ingestionNote": "Exact SAME Experimental Table mapping. Physical Air Flow is preserved as an explicitly labelled NASA measurement.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample #": "2",
+      "Sample Material": "Teflon",
+      "Air Flow (cm/s)": "5",
+      "Weight loss rate (mg/min)": "1",
+      "Aging Duration (minutes)": "1"
+    },
+    "sameData": {
+      "sourceSampleId": "2",
+      "rawSampleMaterial": "Teflon",
+      "normalizedMaterial": "TEFLON",
+      "materialNormalizationStatus": "NORMALIZED",
+      "airflowCmS": {
+        "rawValue": "5",
+        "parsedValue": 5,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)"
+      },
+      "weightLossRateMgMin": {
+        "rawValue": "1",
+        "parsedValue": 1,
+        "unit": "mg/min",
+        "status": "EXACT",
+        "sourceField": "Weight loss rate (mg/min)"
+      },
+      "agingDurationMinutes": {
+        "rawValue": "1",
+        "parsedValue": 1,
+        "unit": "minutes",
+        "status": "EXACT",
+        "sourceField": "Aging Duration (minutes)"
+      }
+    }
+  },
+  {
+    "id": "3",
+    "investigationId": "same",
+    "sourceExperimentId": "3",
+    "title": "SAME Experimental Table sample 3",
+    "family": "SAME",
+    "material": "Teflon",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 5,
+      "weightLossRateMgMin": 2,
+      "agingDurationMinutes": 20
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-102",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102"
+    },
+    "provenance": {
+      "investigationId": "PSI-102",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
+      "sourceFile": "PSI-102_Experimental table_SAME.csv",
+      "sourceSha256": "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af",
+      "sourceRow": 4,
+      "rawExperimentId": "3",
+      "parserVersion": "same-experimental-table-parser@1.0.0",
+      "normalizerVersion": "same-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T17:07:29.710Z",
+      "originalFields": [
+        "Sample #",
+        "Sample Material",
+        "Air Flow (cm/s)",
+        "Weight loss rate (mg/min)",
+        "Aging Duration (minutes)"
+      ],
+      "ingestionNote": "Exact SAME Experimental Table mapping. Physical Air Flow is preserved as an explicitly labelled NASA measurement.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample #": "3",
+      "Sample Material": "Teflon",
+      "Air Flow (cm/s)": "5",
+      "Weight loss rate (mg/min)": "2",
+      "Aging Duration (minutes)": "20"
+    },
+    "sameData": {
+      "sourceSampleId": "3",
+      "rawSampleMaterial": "Teflon",
+      "normalizedMaterial": "TEFLON",
+      "materialNormalizationStatus": "NORMALIZED",
+      "airflowCmS": {
+        "rawValue": "5",
+        "parsedValue": 5,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)"
+      },
+      "weightLossRateMgMin": {
+        "rawValue": "2",
+        "parsedValue": 2,
+        "unit": "mg/min",
+        "status": "EXACT",
+        "sourceField": "Weight loss rate (mg/min)"
+      },
+      "agingDurationMinutes": {
+        "rawValue": "20",
+        "parsedValue": 20,
+        "unit": "minutes",
+        "status": "EXACT",
+        "sourceField": "Aging Duration (minutes)"
+      }
+    }
+  },
+  {
+    "id": "4",
+    "investigationId": "same",
+    "sourceExperimentId": "4",
+    "title": "SAME Experimental Table sample 4",
+    "family": "SAME",
+    "material": "Teflon",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 10,
+      "weightLossRateMgMin": 2,
+      "agingDurationMinutes": 1
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-102",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102"
+    },
+    "provenance": {
+      "investigationId": "PSI-102",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
+      "sourceFile": "PSI-102_Experimental table_SAME.csv",
+      "sourceSha256": "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af",
+      "sourceRow": 5,
+      "rawExperimentId": "4",
+      "parserVersion": "same-experimental-table-parser@1.0.0",
+      "normalizerVersion": "same-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T17:07:29.710Z",
+      "originalFields": [
+        "Sample #",
+        "Sample Material",
+        "Air Flow (cm/s)",
+        "Weight loss rate (mg/min)",
+        "Aging Duration (minutes)"
+      ],
+      "ingestionNote": "Exact SAME Experimental Table mapping. Physical Air Flow is preserved as an explicitly labelled NASA measurement.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample #": "4",
+      "Sample Material": "Teflon",
+      "Air Flow (cm/s)": "10",
+      "Weight loss rate (mg/min)": "2",
+      "Aging Duration (minutes)": "1"
+    },
+    "sameData": {
+      "sourceSampleId": "4",
+      "rawSampleMaterial": "Teflon",
+      "normalizedMaterial": "TEFLON",
+      "materialNormalizationStatus": "NORMALIZED",
+      "airflowCmS": {
+        "rawValue": "10",
+        "parsedValue": 10,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)"
+      },
+      "weightLossRateMgMin": {
+        "rawValue": "2",
+        "parsedValue": 2,
+        "unit": "mg/min",
+        "status": "EXACT",
+        "sourceField": "Weight loss rate (mg/min)"
+      },
+      "agingDurationMinutes": {
+        "rawValue": "1",
+        "parsedValue": 1,
+        "unit": "minutes",
+        "status": "EXACT",
+        "sourceField": "Aging Duration (minutes)"
+      }
+    }
+  },
+  {
+    "id": "5",
+    "investigationId": "same",
+    "sourceExperimentId": "5",
+    "title": "SAME Experimental Table sample 5",
+    "family": "SAME",
+    "material": "Kapton: same conditions as 1-4",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {},
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-102",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102"
+    },
+    "provenance": {
+      "investigationId": "PSI-102",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
+      "sourceFile": "PSI-102_Experimental table_SAME.csv",
+      "sourceSha256": "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af",
+      "sourceRow": 6,
+      "rawExperimentId": "5",
+      "parserVersion": "same-experimental-table-parser@1.0.0",
+      "normalizerVersion": "same-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T17:07:29.710Z",
+      "originalFields": [
+        "Sample #",
+        "Sample Material",
+        "Air Flow (cm/s)",
+        "Weight loss rate (mg/min)",
+        "Aging Duration (minutes)"
+      ],
+      "ingestionNote": "Exact SAME Experimental Table mapping. Physical Air Flow is preserved as an explicitly labelled NASA measurement.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample #": "5",
+      "Sample Material": "Kapton: same conditions as 1-4",
+      "Air Flow (cm/s)": "",
+      "Weight loss rate (mg/min)": "",
+      "Aging Duration (minutes)": ""
+    },
+    "sameData": {
+      "sourceSampleId": "5",
+      "rawSampleMaterial": "Kapton: same conditions as 1-4",
+      "normalizedMaterial": "KAPTON",
+      "materialNormalizationStatus": "NORMALIZED",
+      "airflowCmS": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "cm/s",
+        "status": "NOT_REPORTED",
+        "sourceField": "Air Flow (cm/s)"
+      },
+      "weightLossRateMgMin": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "mg/min",
+        "status": "NOT_REPORTED",
+        "sourceField": "Weight loss rate (mg/min)"
+      },
+      "agingDurationMinutes": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "minutes",
+        "status": "NOT_REPORTED",
+        "sourceField": "Aging Duration (minutes)"
+      }
+    }
+  },
+  {
+    "id": "6",
+    "investigationId": "same",
+    "sourceExperimentId": "6",
+    "title": "SAME Experimental Table sample 6",
+    "family": "SAME",
+    "material": "Silicone Rubber: same conditions as 1-4",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {},
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-102",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102"
+    },
+    "provenance": {
+      "investigationId": "PSI-102",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
+      "sourceFile": "PSI-102_Experimental table_SAME.csv",
+      "sourceSha256": "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af",
+      "sourceRow": 7,
+      "rawExperimentId": "6",
+      "parserVersion": "same-experimental-table-parser@1.0.0",
+      "normalizerVersion": "same-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T17:07:29.710Z",
+      "originalFields": [
+        "Sample #",
+        "Sample Material",
+        "Air Flow (cm/s)",
+        "Weight loss rate (mg/min)",
+        "Aging Duration (minutes)"
+      ],
+      "ingestionNote": "Exact SAME Experimental Table mapping. Physical Air Flow is preserved as an explicitly labelled NASA measurement.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [
+      "Material value requires review: Silicone Rubber: same conditions as 1-4"
+    ],
+    "rawRecord": {
+      "Sample #": "6",
+      "Sample Material": "Silicone Rubber: same conditions as 1-4",
+      "Air Flow (cm/s)": "",
+      "Weight loss rate (mg/min)": "",
+      "Aging Duration (minutes)": ""
+    },
+    "sameData": {
+      "sourceSampleId": "6",
+      "rawSampleMaterial": "Silicone Rubber: same conditions as 1-4",
+      "normalizedMaterial": null,
+      "materialNormalizationStatus": "REVIEW_REQUIRED",
+      "airflowCmS": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "cm/s",
+        "status": "NOT_REPORTED",
+        "sourceField": "Air Flow (cm/s)"
+      },
+      "weightLossRateMgMin": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "mg/min",
+        "status": "NOT_REPORTED",
+        "sourceField": "Weight loss rate (mg/min)"
+      },
+      "agingDurationMinutes": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "minutes",
+        "status": "NOT_REPORTED",
+        "sourceField": "Aging Duration (minutes)"
+      }
+    }
+  },
+  {
+    "id": "7",
+    "investigationId": "same",
+    "sourceExperimentId": "7",
+    "title": "SAME Experimental Table sample 7",
+    "family": "SAME",
+    "material": "Lampwick: same conditions as 1-4",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {},
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-102",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102"
+    },
+    "provenance": {
+      "investigationId": "PSI-102",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
+      "sourceFile": "PSI-102_Experimental table_SAME.csv",
+      "sourceSha256": "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af",
+      "sourceRow": 8,
+      "rawExperimentId": "7",
+      "parserVersion": "same-experimental-table-parser@1.0.0",
+      "normalizerVersion": "same-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T17:07:29.710Z",
+      "originalFields": [
+        "Sample #",
+        "Sample Material",
+        "Air Flow (cm/s)",
+        "Weight loss rate (mg/min)",
+        "Aging Duration (minutes)"
+      ],
+      "ingestionNote": "Exact SAME Experimental Table mapping. Physical Air Flow is preserved as an explicitly labelled NASA measurement.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [
+      "Material value requires review: Lampwick: same conditions as 1-4"
+    ],
+    "rawRecord": {
+      "Sample #": "7",
+      "Sample Material": "Lampwick: same conditions as 1-4",
+      "Air Flow (cm/s)": "",
+      "Weight loss rate (mg/min)": "",
+      "Aging Duration (minutes)": ""
+    },
+    "sameData": {
+      "sourceSampleId": "7",
+      "rawSampleMaterial": "Lampwick: same conditions as 1-4",
+      "normalizedMaterial": null,
+      "materialNormalizationStatus": "REVIEW_REQUIRED",
+      "airflowCmS": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "cm/s",
+        "status": "NOT_REPORTED",
+        "sourceField": "Air Flow (cm/s)"
+      },
+      "weightLossRateMgMin": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "mg/min",
+        "status": "NOT_REPORTED",
+        "sourceField": "Weight loss rate (mg/min)"
+      },
+      "agingDurationMinutes": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "minutes",
+        "status": "NOT_REPORTED",
+        "sourceField": "Aging Duration (minutes)"
+      }
+    }
+  },
+  {
+    "id": "8",
+    "investigationId": "same",
+    "sourceExperimentId": "8",
+    "title": "SAME Experimental Table sample 8",
+    "family": "SAME",
+    "material": "Dibutyl Phthalate: same conditions as 1-4",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {},
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-102",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102"
+    },
+    "provenance": {
+      "investigationId": "PSI-102",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
+      "sourceFile": "PSI-102_Experimental table_SAME.csv",
+      "sourceSha256": "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af",
+      "sourceRow": 9,
+      "rawExperimentId": "8",
+      "parserVersion": "same-experimental-table-parser@1.0.0",
+      "normalizerVersion": "same-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T17:07:29.710Z",
+      "originalFields": [
+        "Sample #",
+        "Sample Material",
+        "Air Flow (cm/s)",
+        "Weight loss rate (mg/min)",
+        "Aging Duration (minutes)"
+      ],
+      "ingestionNote": "Exact SAME Experimental Table mapping. Physical Air Flow is preserved as an explicitly labelled NASA measurement.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [
+      "Material value requires review: Dibutyl Phthalate: same conditions as 1-4"
+    ],
+    "rawRecord": {
+      "Sample #": "8",
+      "Sample Material": "Dibutyl Phthalate: same conditions as 1-4",
+      "Air Flow (cm/s)": "",
+      "Weight loss rate (mg/min)": "",
+      "Aging Duration (minutes)": ""
+    },
+    "sameData": {
+      "sourceSampleId": "8",
+      "rawSampleMaterial": "Dibutyl Phthalate: same conditions as 1-4",
+      "normalizedMaterial": null,
+      "materialNormalizationStatus": "REVIEW_REQUIRED",
+      "airflowCmS": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "cm/s",
+        "status": "NOT_REPORTED",
+        "sourceField": "Air Flow (cm/s)"
+      },
+      "weightLossRateMgMin": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "mg/min",
+        "status": "NOT_REPORTED",
+        "sourceField": "Weight loss rate (mg/min)"
+      },
+      "agingDurationMinutes": {
+        "rawValue": "",
+        "parsedValue": null,
+        "unit": "minutes",
+        "status": "NOT_REPORTED",
+        "sourceField": "Aging Duration (minutes)"
+      }
+    }
+  }
+]

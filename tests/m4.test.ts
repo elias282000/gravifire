@@ -1,0 +1,17 @@
+import { describe, expect, it } from "vitest";
+import { campaignMissions } from "@/data/missions";
+import { m4Mission } from "@/data/missions/m4-silicone";
+import { m4DocumentReferences, m4RowReference, resolveM4Family } from "@/lib/m4-evidence";
+import { completeMission, createInitialCampaign, unlockManual } from "@/lib/mission-state";
+
+describe("M4 silicone evidence contract", () => {
+  const family = resolveM4Family();
+  it("is locked before M1 and available after M1 completion", () => { const initial = createInitialCampaign(campaignMissions); expect(initial.missions.m4.status).toBe("LOCKED"); const after = completeMission(completeMission(initial, "m0", "m1"), "m1", "m4"); expect(after.missions.m4.status).toBe("AVAILABLE"); });
+  it("resolves all four Silicone records from PSI-99", () => { expect(family.map((item) => item.data.rawMaterialDescription)).toEqual(["Silicone", "Silicone", "Silicone", "Silicone"]); expect(family.map((item) => item.data.sourceSampleId)).toEqual(["2-1", "2-2", "2-3", "2-4"]); });
+  it("preserves hero and family source semantics", () => { expect(family[0].data.sampleThickness.rawValue).toBe("0.27 mm"); expect(family[0].data.airflowCmS.rawValue).toBe("20 cm/s"); expect(family.every((item) => item.data.burnTime.rawValue === "Insignificant")).toBe(true); expect(family.every((item) => item.data.microgravityBurnLength.rawValue === "~ 0")).toBe(true); expect(family[0].data.normalGravityReference.burnLength.rawValue).toBe("Complete"); expect(family[1].data.normalGravityReference.burnLength.rawValue).toBe("7.6 cm"); expect(family[2].data.normalGravityReference.burnLength.rawValue).toBe("~ 0"); expect(family[3].data.sampleThickness.rawValue).toBe("037 mm"); expect(family[3].data.sampleThickness.status).toBe("REVIEW_REQUIRED"); });
+  it("keeps document context separate from row evidence", () => { expect(m4DocumentReferences[1].evidenceRole).toBe("CONTEXT"); expect(m4DocumentReferences[1].sourceField).toBe("Document context"); expect(m4RowReference(family[0]).evidenceRole).toBe("DIRECT"); });
+  it("defines exact finding with four direct rows and document context", () => { const verdict = m4Mission.verdictDefinitions[0]; expect(verdict.verdict).toBe("EXACT"); expect(verdict.evidence.filter((item) => item.evidenceRole === "DIRECT")).toHaveLength(4); expect(verdict.evidence.filter((item) => item.evidenceRole === "CONTEXT")).toHaveLength(2); expect(verdict.conclusion).toContain("did not propagate"); expect(verdict.conclusion).not.toContain("PDMS"); });
+  it("unlocks FM-05 idempotently", () => { const initial = createInitialCampaign(campaignMissions); const entry = { id: "FM-05", title: "GROUND BEHAVIOR MAY NOT TRANSFER", text: m4Mission.fieldManualEntry?.text ?? "", missionId: "m4", evidenceRefs: ["psi99-2-1", "ntrs-20180004258"], unlocked: true }; const once = unlockManual(initial, entry); const twice = unlockManual(once, entry); expect(twice.manual.filter((item) => item.id === "FM-05")).toHaveLength(1); });
+  it("does not contain forbidden universal claims or unsupported duration", () => { const text = JSON.stringify(m4Mission); expect(text).not.toMatch(/PDMS|13 seconds|142\.7|safe|unsafe|all four burned completely/i); });
+  it("unlocks M6 on completion", () => { const initial = createInitialCampaign(campaignMissions); const state = completeMission(completeMission(initial, "m0", "m1"), "m1", "m4"); const completed = completeMission(state, "m4", "m6"); expect(completed.missions.m6.status).toBe("AVAILABLE"); });
+});

@@ -1,0 +1,59 @@
+{
+  "investigation": "PSI-99",
+  "family": "SAFFIRE-II",
+  "timestamp": "2026-09-30T14:12:37.762Z",
+  "rawRows": 15,
+  "combustionExperiments": 9,
+  "pretestRecords": 2,
+  "sourceNoteRecords": 4,
+  "emptyRows": 0,
+  "unknownRows": 0,
+  "rejectedRecords": 0,
+  "duplicateRecords": 0,
+  "materialMissingCount": 2,
+  "materialNormalizationCount": 7,
+  "thicknessReviewRequiredCount": 3,
+  "oxygenStatusCounts": {
+    "APPROXIMATE": 7,
+    "RANGE": 2,
+    "EXACT": 0,
+    "NOT_REPORTED": 0,
+    "TEXT_STATUS": 0
+  },
+  "oxygenMeasurementMethodCounts": {
+    "DERIVED_SOURCE_MEASUREMENT": 9
+  },
+  "numericBurnTimeCount": 5,
+  "textStatusBurnTimeCount": 4,
+  "cameraCoverage": {
+    "camera1": 8,
+    "camera2": 9
+  },
+  "numericCoverage": {
+    "sampleThickness": 4,
+    "sampleLength": 8,
+    "sampleWidth": 9,
+    "airflowCmS": 9,
+    "ignitionPowerW": 9,
+    "ignitionTimeS": 9,
+    "burnTime": 5,
+    "lowGravityBurnLength": 2,
+    "lowGravitySpread": 2,
+    "oneGBurnLength": 1,
+    "oneGSpreadRate": 2
+  },
+  "schemaWarnings": [
+    "SOURCE_VALUE_FORMAT_AMBIGUITY: Sample 2-4 thickness was preserved without numeric normalization.",
+    "SOURCE_VALUE_FORMAT_AMBIGUITY: Sample 2-5 thickness was preserved without numeric normalization.",
+    "SOURCE_SCHEMA_UNIT_MISMATCH: Sample 2-5 has '?-g Spread Length' values with rate units.",
+    "SOURCE_VALUE_FORMAT_AMBIGUITY: Sample 2-6 thickness was preserved without numeric normalization.",
+    "SOURCE_SCHEMA_UNIT_MISMATCH: Sample 2-6 has '?-g Spread Length' values with rate units."
+  ],
+  "warnings": [
+    "SOURCE_VALUE_FORMAT_AMBIGUITY: Sample 2-4 thickness was preserved without numeric normalization.",
+    "SOURCE_VALUE_FORMAT_AMBIGUITY: Sample 2-5 thickness was preserved without numeric normalization.",
+    "SOURCE_SCHEMA_UNIT_MISMATCH: Sample 2-5 has '?-g Spread Length' values with rate units.",
+    "SOURCE_VALUE_FORMAT_AMBIGUITY: Sample 2-6 thickness was preserved without numeric normalization.",
+    "SOURCE_SCHEMA_UNIT_MISMATCH: Sample 2-6 has '?-g Spread Length' values with rate units."
+  ]
+}

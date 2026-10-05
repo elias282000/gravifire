@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "flex2-isooctane-pure",
+    "investigationId": "PSI-68",
+    "sourceRecordType": "EXPERIMENT_CONFIGURATION_ENVELOPE",
+    "dataStatus": "REAL_NASA_DATA",
+    "rawFuelDescription": "IsoOctane (pure)",
+    "fuelConfiguration": {
+      "type": "PURE",
+      "normalizedMaterial": "ISO_OCTANE",
+      "components": [
+        {
+          "material": "ISO_OCTANE",
+          "fraction": 1
+        }
+      ],
+      "fractionBasis": null
+    },
+    "initialDropletDiameterRange": {
+      "minValue": 1.5,
+      "maxValue": 5,
+      "unit": "mm",
+      "status": "RANGE",
+      "rawValue": "1.5 - 5",
+      "sourceField": "Initial Droplet Diameter (mm)"
+    },
+    "ambientGasMixtureOptions": [
+      {
+        "oxidizer": "O2",
+        "diluent": "N2"
+      },
+      {
+        "oxidizer": "O2",
+        "diluent": "He"
+      }
+    ],
+    "ambientGasMixtureRaw": "O2/N2 or O2/He",
+    "oxygenMoleFractionOptions": {
+      "values": [
+        0.17,
+        0.21,
+        0.25,
+        0.3
+      ],
+      "unit": "mole fraction",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.17; 0.21;0.25; 0.3",
+      "sourceField": "Oxygen Mole Fraction"
+    },
+    "ambientPressureOptions": {
+      "values": [
+        0.5,
+        1,
+        1.5,
+        2,
+        3
+      ],
+      "unit": "atm",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.5; 1.0; 1.5; 2.0; or 3.0",
+      "sourceField": "Ambient Pressure (atm)"
+    },
+    "ambientTemperature": {
+      "rawValue": "25",
+      "parsedValue": 25,
+      "unit": "°C",
+      "status": "EXACT_SOURCE_VALUE",
+      "sourceField": "Ambient Temperature (C)"
+    },
+    "flowVelocityRange": {
+      "minValue": 0.1,
+      "maxValue": 5,
+      "unit": "cm/s",
+      "status": "RANGE",
+      "rawValue": "0.1 - 5",
+      "sourceField": "Flow Velocity (cm/s)"
+    },
+    "provenance": {
+      "sourceFile": "PSI-68_Experimental table_Flex2.csv",
+      "sourceSha256": "cc57ad1bd9977aa13e7ac6c3aa618303012686e232b36c052c6a9f1a74e5f528",
+      "sourceRow": 2,
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-68",
+      "sourceHeaders": [
+        "Sample (Fuel Type)",
+        "Initial Droplet Diameter (mm)",
+        "Ambient Gas Mixture ",
+        "Oxygen Mole Fraction",
+        "Ambient Pressure (atm)",
+        " Ambient Temperature (C)",
+        "Flow Velocity (cm/s)"
+      ],
+      "ingestionTimestamp": "2026-09-30T16:50:30.414Z",
+      "parserVersion": "flex-2-experimental-table-parser@1.0.0",
+      "normalizerVersion": "flex-2-experimental-table-normalizer@1.0.0",
+      "fieldTransformations": {
+        "id": "GRAVIFIRE internal slug; not a NASA test identifier",
+        "oxygenMoleFractionOptions": "semicolon-delimited source options parsed into numbers; not made continuous",
+        "ambientPressureOptions": "semicolon/or-delimited source options parsed into numbers; not made continuous",
+        "ambientGasMixtureOptions": "explicit O2/N2 or O2/He alternatives parsed into two options"
+      }
+    },
+    "dataAvailability": {
+      "available": [
+        "fuel/configuration description",
+        "initial droplet diameter range",
+        "ambient gas mixture options",
+        "oxygen option set",
+        "pressure option set",
+        "ambient temperature",
+        "flow velocity range"
+      ],
+      "notReportedInCurrentSource": [
+        "individual test identifier",
+        "run result",
+        "burn time",
+        "extinction measurement",
+        "soot measurement",
+        "burning-rate measurement",
+        "particle/flame output"
+      ]
+    },
+    "sourceWarnings": [
+      "CONFIGURATION_NOT_RUN_RESULT",
+      "NO_CARTESIAN_EXPANSION"
+    ]
+  },
+  {
+    "id": "flex2-n-octane-pure",
+    "investigationId": "PSI-68",
+    "sourceRecordType": "EXPERIMENT_CONFIGURATION_ENVELOPE",
+    "dataStatus": "REAL_NASA_DATA",
+    "rawFuelDescription": "n-Octane (pure)",
+    "fuelConfiguration": {
+      "type": "PURE",
+      "normalizedMaterial": "N_OCTANE",
+      "components": [],
+      "fractionBasis": null
+    },
+    "initialDropletDiameterRange": {
+      "minValue": 1.5,
+      "maxValue": 5,
+      "unit": "mm",
+      "status": "RANGE",
+      "rawValue": "1.5 - 5",
+      "sourceField": "Initial Droplet Diameter (mm)"
+    },
+    "ambientGasMixtureOptions": [
+      {
+        "oxidizer": "O2",
+        "diluent": "N2"
+      },
+      {
+        "oxidizer": "O2",
+        "diluent": "He"
+      }
+    ],
+    "ambientGasMixtureRaw": "O2/N2 or O2/He",
+    "oxygenMoleFractionOptions": {
+      "values": [
+        0.17,
+        0.21,
+        0.25,
+        0.3
+      ],
+      "unit": "mole fraction",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.17; 0.21;0.25; 0.3",
+      "sourceField": "Oxygen Mole Fraction"
+    },
+    "ambientPressureOptions": {
+      "values": [
+        0.5,
+        1,
+        1.5,
+        2,
+        3
+      ],
+      "unit": "atm",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.5; 1.0; 1.5; 2.0; or 3.0",
+      "sourceField": "Ambient Pressure (atm)"
+    },
+    "ambientTemperature": {
+      "rawValue": "25",
+      "parsedValue": 25,
+      "unit": "°C",
+      "status": "EXACT_SOURCE_VALUE",
+      "sourceField": "Ambient Temperature (C)"
+    },
+    "flowVelocityRange": {
+      "minValue": 0.1,
+      "maxValue": 5,
+      "unit": "cm/s",
+      "status": "RANGE",
+      "rawValue": "0.1 - 5",
+      "sourceField": "Flow Velocity (cm/s)"
+    },
+    "provenance": {
+      "sourceFile": "PSI-68_Experimental table_Flex2.csv",
+      "sourceSha256": "cc57ad1bd9977aa13e7ac6c3aa618303012686e232b36c052c6a9f1a74e5f528",
+      "sourceRow": 3,
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-68",
+      "sourceHeaders": [
+        "Sample (Fuel Type)",
+        "Initial Droplet Diameter (mm)",
+        "Ambient Gas Mixture ",
+        "Oxygen Mole Fraction",
+        "Ambient Pressure (atm)",
+        " Ambient Temperature (C)",
+        "Flow Velocity (cm/s)"
+      ],
+      "ingestionTimestamp": "2026-09-30T16:50:30.414Z",
+      "parserVersion": "flex-2-experimental-table-parser@1.0.0",
+      "normalizerVersion": "flex-2-experimental-table-normalizer@1.0.0",
+      "fieldTransformations": {
+        "id": "GRAVIFIRE internal slug; not a NASA test identifier",
+        "oxygenMoleFractionOptions": "semicolon-delimited source options parsed into numbers; not made continuous",
+        "ambientPressureOptions": "semicolon/or-delimited source options parsed into numbers; not made continuous",
+        "ambientGasMixtureOptions": "explicit O2/N2 or O2/He alternatives parsed into two options"
+      }
+    },
+    "dataAvailability": {
+      "available": [
+        "fuel/configuration description",
+        "initial droplet diameter range",
+        "ambient gas mixture options",
+        "oxygen option set",
+        "pressure option set",
+        "ambient temperature",
+        "flow velocity range"
+      ],
+      "notReportedInCurrentSource": [
+        "individual test identifier",
+        "run result",
+        "burn time",
+        "extinction measurement",
+        "soot measurement",
+        "burning-rate measurement",
+        "particle/flame output"
+      ]
+    },
+    "sourceWarnings": [
+      "CONFIGURATION_NOT_RUN_RESULT",
+      "NO_CARTESIAN_EXPANSION"
+    ]
+  },
+  {
+    "id": "flex2-heptane-pure",
+    "investigationId": "PSI-68",
+    "sourceRecordType": "EXPERIMENT_CONFIGURATION_ENVELOPE",
+    "dataStatus": "REAL_NASA_DATA",
+    "rawFuelDescription": "Heptane (pure)",
+    "fuelConfiguration": {
+      "type": "PURE",
+      "normalizedMaterial": "HEPTANE",
+      "components": [
+        {
+          "material": "HEPTANE",
+          "fraction": 1
+        }
+      ],
+      "fractionBasis": null
+    },
+    "initialDropletDiameterRange": {
+      "minValue": 1.5,
+      "maxValue": 5,
+      "unit": "mm",
+      "status": "RANGE",
+      "rawValue": "1.5 - 5",
+      "sourceField": "Initial Droplet Diameter (mm)"
+    },
+    "ambientGasMixtureOptions": [
+      {
+        "oxidizer": "O2",
+        "diluent": "N2"
+      },
+      {
+        "oxidizer": "O2",
+        "diluent": "He"
+      }
+    ],
+    "ambientGasMixtureRaw": "O2/N2 or O2/He",
+    "oxygenMoleFractionOptions": {
+      "values": [
+        0.17,
+        0.21,
+        0.25,
+        0.3
+      ],
+      "unit": "mole fraction",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.17; 0.21;0.25; 0.3",
+      "sourceField": "Oxygen Mole Fraction"
+    },
+    "ambientPressureOptions": {
+      "values": [
+        0.5,
+        1,
+        1.5,
+        2,
+        3
+      ],
+      "unit": "atm",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.5; 1.0; 1.5; 2.0; or 3.0",
+      "sourceField": "Ambient Pressure (atm)"
+    },
+    "ambientTemperature": {
+      "rawValue": "25",
+      "parsedValue": 25,
+      "unit": "°C",
+      "status": "EXACT_SOURCE_VALUE",
+      "sourceField": "Ambient Temperature (C)"
+    },
+    "flowVelocityRange": {
+      "minValue": 0.1,
+      "maxValue": 5,
+      "unit": "cm/s",
+      "status": "RANGE",
+      "rawValue": "0.1 - 5",
+      "sourceField": "Flow Velocity (cm/s)"
+    },
+    "provenance": {
+      "sourceFile": "PSI-68_Experimental table_Flex2.csv",
+      "sourceSha256": "cc57ad1bd9977aa13e7ac6c3aa618303012686e232b36c052c6a9f1a74e5f528",
+      "sourceRow": 4,
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-68",
+      "sourceHeaders": [
+        "Sample (Fuel Type)",
+        "Initial Droplet Diameter (mm)",
+        "Ambient Gas Mixture ",
+        "Oxygen Mole Fraction",
+        "Ambient Pressure (atm)",
+        " Ambient Temperature (C)",
+        "Flow Velocity (cm/s)"
+      ],
+      "ingestionTimestamp": "2026-09-30T16:50:30.414Z",
+      "parserVersion": "flex-2-experimental-table-parser@1.0.0",
+      "normalizerVersion": "flex-2-experimental-table-normalizer@1.0.0",
+      "fieldTransformations": {
+        "id": "GRAVIFIRE internal slug; not a NASA test identifier",
+        "oxygenMoleFractionOptions": "semicolon-delimited source options parsed into numbers; not made continuous",
+        "ambientPressureOptions": "semicolon/or-delimited source options parsed into numbers; not made continuous",
+        "ambientGasMixtureOptions": "explicit O2/N2 or O2/He alternatives parsed into two options"
+      }
+    },
+    "dataAvailability": {
+      "available": [
+        "fuel/configuration description",
+        "initial droplet diameter range",
+        "ambient gas mixture options",
+        "oxygen option set",
+        "pressure option set",
+        "ambient temperature",
+        "flow velocity range"
+      ],
+      "notReportedInCurrentSource": [
+        "individual test identifier",
+        "run result",
+        "burn time",
+        "extinction measurement",
+        "soot measurement",
+        "burning-rate measurement",
+        "particle/flame output"
+      ]
+    },
+    "sourceWarnings": [
+      "CONFIGURATION_NOT_RUN_RESULT",
+      "NO_CARTESIAN_EXPANSION"
+    ]
+  },
+  {
+    "id": "flex2-decane-pure",
+    "investigationId": "PSI-68",
+    "sourceRecordType": "EXPERIMENT_CONFIGURATION_ENVELOPE",
+    "dataStatus": "REAL_NASA_DATA",
+    "rawFuelDescription": "Decane (pure)",
+    "fuelConfiguration": {
+      "type": "PURE",
+      "normalizedMaterial": "DECANE",
+      "components": [],
+      "fractionBasis": null
+    },
+    "initialDropletDiameterRange": {
+      "minValue": 1.5,
+      "maxValue": 5,
+      "unit": "mm",
+      "status": "RANGE",
+      "rawValue": "1.5 - 5",
+      "sourceField": "Initial Droplet Diameter (mm)"
+    },
+    "ambientGasMixtureOptions": [
+      {
+        "oxidizer": "O2",
+        "diluent": "N2"
+      },
+      {
+        "oxidizer": "O2",
+        "diluent": "He"
+      }
+    ],
+    "ambientGasMixtureRaw": "O2/N2 or O2/He",
+    "oxygenMoleFractionOptions": {
+      "values": [
+        0.17,
+        0.21,
+        0.25,
+        0.3
+      ],
+      "unit": "mole fraction",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.17; 0.21;0.25; 0.3",
+      "sourceField": "Oxygen Mole Fraction"
+    },
+    "ambientPressureOptions": {
+      "values": [
+        0.5,
+        1,
+        1.5,
+        2,
+        3
+      ],
+      "unit": "atm",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.5; 1.0; 1.5; 2.0; or 3.0",
+      "sourceField": "Ambient Pressure (atm)"
+    },
+    "ambientTemperature": {
+      "rawValue": "25",
+      "parsedValue": 25,
+      "unit": "°C",
+      "status": "EXACT_SOURCE_VALUE",
+      "sourceField": "Ambient Temperature (C)"
+    },
+    "flowVelocityRange": {
+      "minValue": 0.1,
+      "maxValue": 5,
+      "unit": "cm/s",
+      "status": "RANGE",
+      "rawValue": "0.1 - 5",
+      "sourceField": "Flow Velocity (cm/s)"
+    },
+    "provenance": {
+      "sourceFile": "PSI-68_Experimental table_Flex2.csv",
+      "sourceSha256": "cc57ad1bd9977aa13e7ac6c3aa618303012686e232b36c052c6a9f1a74e5f528",
+      "sourceRow": 5,
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-68",
+      "sourceHeaders": [
+        "Sample (Fuel Type)",
+        "Initial Droplet Diameter (mm)",
+        "Ambient Gas Mixture ",
+        "Oxygen Mole Fraction",
+        "Ambient Pressure (atm)",
+        " Ambient Temperature (C)",
+        "Flow Velocity (cm/s)"
+      ],
+      "ingestionTimestamp": "2026-09-30T16:50:30.414Z",
+      "parserVersion": "flex-2-experimental-table-parser@1.0.0",
+      "normalizerVersion": "flex-2-experimental-table-normalizer@1.0.0",
+      "fieldTransformations": {
+        "id": "GRAVIFIRE internal slug; not a NASA test identifier",
+        "oxygenMoleFractionOptions": "semicolon-delimited source options parsed into numbers; not made continuous",
+        "ambientPressureOptions": "semicolon/or-delimited source options parsed into numbers; not made continuous",
+        "ambientGasMixtureOptions": "explicit O2/N2 or O2/He alternatives parsed into two options"
+      }
+    },
+    "dataAvailability": {
+      "available": [
+        "fuel/configuration description",
+        "initial droplet diameter range",
+        "ambient gas mixture options",
+        "oxygen option set",
+        "pressure option set",
+        "ambient temperature",
+        "flow velocity range"
+      ],
+      "notReportedInCurrentSource": [
+        "individual test identifier",
+        "run result",
+        "burn time",
+        "extinction measurement",
+        "soot measurement",
+        "burning-rate measurement",
+        "particle/flame output"
+      ]
+    },
+    "sourceWarnings": [
+      "CONFIGURATION_NOT_RUN_RESULT",
+      "NO_CARTESIAN_EXPANSION"
+    ]
+  },
+  {
+    "id": "flex2-ethanol-pure",
+    "investigationId": "PSI-68",
+    "sourceRecordType": "EXPERIMENT_CONFIGURATION_ENVELOPE",
+    "dataStatus": "REAL_NASA_DATA",
+    "rawFuelDescription": "Ethanol (pure)",
+    "fuelConfiguration": {
+      "type": "PURE",
+      "normalizedMaterial": "ETHANOL",
+      "components": [],
+      "fractionBasis": null
+    },
+    "initialDropletDiameterRange": {
+      "minValue": 1.5,
+      "maxValue": 5,
+      "unit": "mm",
+      "status": "RANGE",
+      "rawValue": "1.5 - 5",
+      "sourceField": "Initial Droplet Diameter (mm)"
+    },
+    "ambientGasMixtureOptions": [
+      {
+        "oxidizer": "O2",
+        "diluent": "N2"
+      },
+      {
+        "oxidizer": "O2",
+        "diluent": "He"
+      }
+    ],
+    "ambientGasMixtureRaw": "O2/N2 or O2/He",
+    "oxygenMoleFractionOptions": {
+      "values": [
+        0.17,
+        0.21,
+        0.25,
+        0.3
+      ],
+      "unit": "mole fraction",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.17; 0.21;0.25; 0.3",
+      "sourceField": "Oxygen Mole Fraction"
+    },
+    "ambientPressureOptions": {
+      "values": [
+        0.5,
+        1,
+        1.5,
+        2,
+        3
+      ],
+      "unit": "atm",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.5; 1.0; 1.5; 2.0; or 3.0",
+      "sourceField": "Ambient Pressure (atm)"
+    },
+    "ambientTemperature": {
+      "rawValue": "25",
+      "parsedValue": 25,
+      "unit": "°C",
+      "status": "EXACT_SOURCE_VALUE",
+      "sourceField": "Ambient Temperature (C)"
+    },
+    "flowVelocityRange": {
+      "minValue": 0.1,
+      "maxValue": 5,
+      "unit": "cm/s",
+      "status": "RANGE",
+      "rawValue": "0.1 - 5",
+      "sourceField": "Flow Velocity (cm/s)"
+    },
+    "provenance": {
+      "sourceFile": "PSI-68_Experimental table_Flex2.csv",
+      "sourceSha256": "cc57ad1bd9977aa13e7ac6c3aa618303012686e232b36c052c6a9f1a74e5f528",
+      "sourceRow": 6,
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-68",
+      "sourceHeaders": [
+        "Sample (Fuel Type)",
+        "Initial Droplet Diameter (mm)",
+        "Ambient Gas Mixture ",
+        "Oxygen Mole Fraction",
+        "Ambient Pressure (atm)",
+        " Ambient Temperature (C)",
+        "Flow Velocity (cm/s)"
+      ],
+      "ingestionTimestamp": "2026-09-30T16:50:30.414Z",
+      "parserVersion": "flex-2-experimental-table-parser@1.0.0",
+      "normalizerVersion": "flex-2-experimental-table-normalizer@1.0.0",
+      "fieldTransformations": {
+        "id": "GRAVIFIRE internal slug; not a NASA test identifier",
+        "oxygenMoleFractionOptions": "semicolon-delimited source options parsed into numbers; not made continuous",
+        "ambientPressureOptions": "semicolon/or-delimited source options parsed into numbers; not made continuous",
+        "ambientGasMixtureOptions": "explicit O2/N2 or O2/He alternatives parsed into two options"
+      }
+    },
+    "dataAvailability": {
+      "available": [
+        "fuel/configuration description",
+        "initial droplet diameter range",
+        "ambient gas mixture options",
+        "oxygen option set",
+        "pressure option set",
+        "ambient temperature",
+        "flow velocity range"
+      ],
+      "notReportedInCurrentSource": [
+        "individual test identifier",
+        "run result",
+        "burn time",
+        "extinction measurement",
+        "soot measurement",
+        "burning-rate measurement",
+        "particle/flame output"
+      ]
+    },
+    "sourceWarnings": [
+      "CONFIGURATION_NOT_RUN_RESULT",
+      "NO_CARTESIAN_EXPANSION"
+    ]
+  },
+  {
+    "id": "flex2-propanol-95-glycerol-5",
+    "investigationId": "PSI-68",
+    "sourceRecordType": "EXPERIMENT_CONFIGURATION_ENVELOPE",
+    "dataStatus": "REAL_NASA_DATA",
+    "rawFuelDescription": "Propanol (95%) Glycerol (5%) (mixture)",
+    "fuelConfiguration": {
+      "type": "MIXTURE",
+      "normalizedMaterial": null,
+      "components": [
+        {
+          "material": "PROPANOL",
+          "fraction": 0.95
+        },
+        {
+          "material": "GLYCEROL",
+          "fraction": 0.05
+        }
+      ],
+      "fractionBasis": "SOURCE_PERCENTAGE_UNSPECIFIED_BASIS"
+    },
+    "initialDropletDiameterRange": {
+      "minValue": 1.5,
+      "maxValue": 5,
+      "unit": "mm",
+      "status": "RANGE",
+      "rawValue": "1.5 - 5",
+      "sourceField": "Initial Droplet Diameter (mm)"
+    },
+    "ambientGasMixtureOptions": [
+      {
+        "oxidizer": "O2",
+        "diluent": "N2"
+      },
+      {
+        "oxidizer": "O2",
+        "diluent": "He"
+      }
+    ],
+    "ambientGasMixtureRaw": "O2/N2 or O2/He",
+    "oxygenMoleFractionOptions": {
+      "values": [
+        0.17,
+        0.21,
+        0.25,
+        0.3
+      ],
+      "unit": "mole fraction",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.17; 0.21;0.25; 0.3",
+      "sourceField": "Oxygen Mole Fraction"
+    },
+    "ambientPressureOptions": {
+      "values": [
+        0.5,
+        1,
+        1.5,
+        2,
+        3
+      ],
+      "unit": "atm",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.5; 1.0; 1.5; 2.0; or 3.0",
+      "sourceField": "Ambient Pressure (atm)"
+    },
+    "ambientTemperature": {
+      "rawValue": "25",
+      "parsedValue": 25,
+      "unit": "°C",
+      "status": "EXACT_SOURCE_VALUE",
+      "sourceField": "Ambient Temperature (C)"
+    },
+    "flowVelocityRange": {
+      "minValue": 0.1,
+      "maxValue": 5,
+      "unit": "cm/s",
+      "status": "RANGE",
+      "rawValue": "0.1 - 5",
+      "sourceField": "Flow Velocity (cm/s)"
+    },
+    "provenance": {
+      "sourceFile": "PSI-68_Experimental table_Flex2.csv",
+      "sourceSha256": "cc57ad1bd9977aa13e7ac6c3aa618303012686e232b36c052c6a9f1a74e5f528",
+      "sourceRow": 7,
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-68",
+      "sourceHeaders": [
+        "Sample (Fuel Type)",
+        "Initial Droplet Diameter (mm)",
+        "Ambient Gas Mixture ",
+        "Oxygen Mole Fraction",
+        "Ambient Pressure (atm)",
+        " Ambient Temperature (C)",
+        "Flow Velocity (cm/s)"
+      ],
+      "ingestionTimestamp": "2026-09-30T16:50:30.414Z",
+      "parserVersion": "flex-2-experimental-table-parser@1.0.0",
+      "normalizerVersion": "flex-2-experimental-table-normalizer@1.0.0",
+      "fieldTransformations": {
+        "id": "GRAVIFIRE internal slug; not a NASA test identifier",
+        "oxygenMoleFractionOptions": "semicolon-delimited source options parsed into numbers; not made continuous",
+        "ambientPressureOptions": "semicolon/or-delimited source options parsed into numbers; not made continuous",
+        "ambientGasMixtureOptions": "explicit O2/N2 or O2/He alternatives parsed into two options"
+      }
+    },
+    "dataAvailability": {
+      "available": [
+        "fuel/configuration description",
+        "initial droplet diameter range",
+        "ambient gas mixture options",
+        "oxygen option set",
+        "pressure option set",
+        "ambient temperature",
+        "flow velocity range"
+      ],
+      "notReportedInCurrentSource": [
+        "individual test identifier",
+        "run result",
+        "burn time",
+        "extinction measurement",
+        "soot measurement",
+        "burning-rate measurement",
+        "particle/flame output"
+      ]
+    },
+    "sourceWarnings": [
+      "CONFIGURATION_NOT_RUN_RESULT",
+      "NO_CARTESIAN_EXPANSION",
+      "MIXTURE_PERCENTAGE_BASIS_UNSPECIFIED"
+    ]
+  },
+  {
+    "id": "flex2-heptane-50-isooctane-50",
+    "investigationId": "PSI-68",
+    "sourceRecordType": "EXPERIMENT_CONFIGURATION_ENVELOPE",
+    "dataStatus": "REAL_NASA_DATA",
+    "rawFuelDescription": "Heptane (50%) IsoOctane (50%) (mixture)",
+    "fuelConfiguration": {
+      "type": "MIXTURE",
+      "normalizedMaterial": null,
+      "components": [
+        {
+          "material": "HEPTANE",
+          "fraction": 0.5
+        },
+        {
+          "material": "ISO_OCTANE",
+          "fraction": 0.5
+        }
+      ],
+      "fractionBasis": "SOURCE_PERCENTAGE_UNSPECIFIED_BASIS"
+    },
+    "initialDropletDiameterRange": {
+      "minValue": 1.5,
+      "maxValue": 5,
+      "unit": "mm",
+      "status": "RANGE",
+      "rawValue": "1.5 - 5",
+      "sourceField": "Initial Droplet Diameter (mm)"
+    },
+    "ambientGasMixtureOptions": [
+      {
+        "oxidizer": "O2",
+        "diluent": "N2"
+      },
+      {
+        "oxidizer": "O2",
+        "diluent": "He"
+      }
+    ],
+    "ambientGasMixtureRaw": "O2/N2 or O2/He",
+    "oxygenMoleFractionOptions": {
+      "values": [
+        0.17,
+        0.21,
+        0.25,
+        0.3
+      ],
+      "unit": "mole fraction",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.17; 0.21;0.25; 0.3",
+      "sourceField": "Oxygen Mole Fraction"
+    },
+    "ambientPressureOptions": {
+      "values": [
+        0.5,
+        1,
+        1.5,
+        2,
+        3
+      ],
+      "unit": "atm",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.5; 1.0; 1.5; 2.0; or 3.0",
+      "sourceField": "Ambient Pressure (atm)"
+    },
+    "ambientTemperature": {
+      "rawValue": "25",
+      "parsedValue": 25,
+      "unit": "°C",
+      "status": "EXACT_SOURCE_VALUE",
+      "sourceField": "Ambient Temperature (C)"
+    },
+    "flowVelocityRange": {
+      "minValue": 0.1,
+      "maxValue": 5,
+      "unit": "cm/s",
+      "status": "RANGE",
+      "rawValue": "0.1 - 5",
+      "sourceField": "Flow Velocity (cm/s)"
+    },
+    "provenance": {
+      "sourceFile": "PSI-68_Experimental table_Flex2.csv",
+      "sourceSha256": "cc57ad1bd9977aa13e7ac6c3aa618303012686e232b36c052c6a9f1a74e5f528",
+      "sourceRow": 8,
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-68",
+      "sourceHeaders": [
+        "Sample (Fuel Type)",
+        "Initial Droplet Diameter (mm)",
+        "Ambient Gas Mixture ",
+        "Oxygen Mole Fraction",
+        "Ambient Pressure (atm)",
+        " Ambient Temperature (C)",
+        "Flow Velocity (cm/s)"
+      ],
+      "ingestionTimestamp": "2026-09-30T16:50:30.414Z",
+      "parserVersion": "flex-2-experimental-table-parser@1.0.0",
+      "normalizerVersion": "flex-2-experimental-table-normalizer@1.0.0",
+      "fieldTransformations": {
+        "id": "GRAVIFIRE internal slug; not a NASA test identifier",
+        "oxygenMoleFractionOptions": "semicolon-delimited source options parsed into numbers; not made continuous",
+        "ambientPressureOptions": "semicolon/or-delimited source options parsed into numbers; not made continuous",
+        "ambientGasMixtureOptions": "explicit O2/N2 or O2/He alternatives parsed into two options"
+      }
+    },
+    "dataAvailability": {
+      "available": [
+        "fuel/configuration description",
+        "initial droplet diameter range",
+        "ambient gas mixture options",
+        "oxygen option set",
+        "pressure option set",
+        "ambient temperature",
+        "flow velocity range"
+      ],
+      "notReportedInCurrentSource": [
+        "individual test identifier",
+        "run result",
+        "burn time",
+        "extinction measurement",
+        "soot measurement",
+        "burning-rate measurement",
+        "particle/flame output"
+      ]
+    },
+    "sourceWarnings": [
+      "CONFIGURATION_NOT_RUN_RESULT",
+      "NO_CARTESIAN_EXPANSION",
+      "MIXTURE_PERCENTAGE_BASIS_UNSPECIFIED"
+    ]
+  },
+  {
+    "id": "flex2-propanol-80-glycerol-20",
+    "investigationId": "PSI-68",
+    "sourceRecordType": "EXPERIMENT_CONFIGURATION_ENVELOPE",
+    "dataStatus": "REAL_NASA_DATA",
+    "rawFuelDescription": "Propanol (80%) Glycerol (20%) (mixture)",
+    "fuelConfiguration": {
+      "type": "MIXTURE",
+      "normalizedMaterial": null,
+      "components": [
+        {
+          "material": "PROPANOL",
+          "fraction": 0.8
+        },
+        {
+          "material": "GLYCEROL",
+          "fraction": 0.2
+        }
+      ],
+      "fractionBasis": "SOURCE_PERCENTAGE_UNSPECIFIED_BASIS"
+    },
+    "initialDropletDiameterRange": {
+      "minValue": 1.5,
+      "maxValue": 5,
+      "unit": "mm",
+      "status": "RANGE",
+      "rawValue": "1.5 - 5",
+      "sourceField": "Initial Droplet Diameter (mm)"
+    },
+    "ambientGasMixtureOptions": [
+      {
+        "oxidizer": "O2",
+        "diluent": "N2"
+      },
+      {
+        "oxidizer": "O2",
+        "diluent": "He"
+      }
+    ],
+    "ambientGasMixtureRaw": "O2/N2 or O2/He",
+    "oxygenMoleFractionOptions": {
+      "values": [
+        0.17,
+        0.21,
+        0.25,
+        0.3
+      ],
+      "unit": "mole fraction",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.17; 0.21;0.25; 0.3",
+      "sourceField": "Oxygen Mole Fraction"
+    },
+    "ambientPressureOptions": {
+      "values": [
+        0.5,
+        1,
+        1.5,
+        2,
+        3
+      ],
+      "unit": "atm",
+      "status": "DISCRETE_OPTION_SET",
+      "rawValue": "0.5; 1.0; 1.5; 2.0; or 3.0",
+      "sourceField": "Ambient Pressure (atm)"
+    },
+    "ambientTemperature": {
+      "rawValue": "25",
+      "parsedValue": 25,
+      "unit": "°C",
+      "status": "EXACT_SOURCE_VALUE",
+      "sourceField": "Ambient Temperature (C)"
+    },
+    "flowVelocityRange": {
+      "minValue": 0.1,
+      "maxValue": 5,
+      "unit": "cm/s",
+      "status": "RANGE",
+      "rawValue": "0.1 - 5",
+      "sourceField": "Flow Velocity (cm/s)"
+    },
+    "provenance": {
+      "sourceFile": "PSI-68_Experimental table_Flex2.csv",
+      "sourceSha256": "cc57ad1bd9977aa13e7ac6c3aa618303012686e232b36c052c6a9f1a74e5f528",
+      "sourceRow": 9,
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-68",
+      "sourceHeaders": [
+        "Sample (Fuel Type)",
+        "Initial Droplet Diameter (mm)",
+        "Ambient Gas Mixture ",
+        "Oxygen Mole Fraction",
+        "Ambient Pressure (atm)",
+        " Ambient Temperature (C)",
+        "Flow Velocity (cm/s)"
+      ],
+      "ingestionTimestamp": "2026-09-30T16:50:30.414Z",
+      "parserVersion": "flex-2-experimental-table-parser@1.0.0",
+      "normalizerVersion": "flex-2-experimental-table-normalizer@1.0.0",
+      "fieldTransformations": {
+        "id": "GRAVIFIRE internal slug; not a NASA test identifier",
+        "oxygenMoleFractionOptions": "semicolon-delimited source options parsed into numbers; not made continuous",
+        "ambientPressureOptions": "semicolon/or-delimited source options parsed into numbers; not made continuous",
+        "ambientGasMixtureOptions": "explicit O2/N2 or O2/He alternatives parsed into two options"
+      }
+    },
+    "dataAvailability": {
+      "available": [
+        "fuel/configuration description",
+        "initial droplet diameter range",
+        "ambient gas mixture options",
+        "oxygen option set",
+        "pressure option set",
+        "ambient temperature",
+        "flow velocity range"
+      ],
+      "notReportedInCurrentSource": [
+        "individual test identifier",
+        "run result",
+        "burn time",
+        "extinction measurement",
+        "soot measurement",
+        "burning-rate measurement",
+        "particle/flame output"
+      ]
+    },
+    "sourceWarnings": [
+      "CONFIGURATION_NOT_RUN_RESULT",
+      "NO_CARTESIAN_EXPANSION",
+      "MIXTURE_PERCENTAGE_BASIS_UNSPECIFIED"
+    ]
+  }
+]

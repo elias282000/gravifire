@@ -1,0 +1,75 @@
+{
+  "investigation": "PSI-68",
+  "family": "FLEX-2",
+  "timestamp": "2026-09-30T16:50:30.414Z",
+  "sourceFilesProcessed": [
+    "PSI-68_Experimental table_Flex2.csv"
+  ],
+  "rawRows": 8,
+  "validConfigurationEnvelopes": 8,
+  "rejectedRecords": 0,
+  "sourceRecordType": "EXPERIMENT_CONFIGURATION_ENVELOPE",
+  "pureFuelCount": 5,
+  "mixtureFuelCount": 3,
+  "fuelDescriptions": [
+    "IsoOctane (pure)",
+    "n-Octane (pure)",
+    "Heptane (pure)",
+    "Decane (pure)",
+    "Ethanol (pure)",
+    "Propanol (95%) Glycerol (5%) (mixture)",
+    "Heptane (50%) IsoOctane (50%) (mixture)",
+    "Propanol (80%) Glycerol (20%) (mixture)"
+  ],
+  "componentCounts": {
+    "ISO_OCTANE": 2,
+    "HEPTANE": 2,
+    "PROPANOL": 2,
+    "GLYCEROL": 2
+  },
+  "dropletDiameter": {
+    "status": "RANGE",
+    "values": [
+      "1.5 - 5",
+      "1.5 - 5",
+      "1.5 - 5",
+      "1.5 - 5",
+      "1.5 - 5",
+      "1.5 - 5",
+      "1.5 - 5",
+      "1.5 - 5"
+    ]
+  },
+  "gasMixtureOptionCount": 2,
+  "oxygenOptions": [
+    0.17,
+    0.21,
+    0.25,
+    0.3
+  ],
+  "pressureOptions": [
+    0.5,
+    1,
+    1.5,
+    2,
+    3
+  ],
+  "temperatureCoverage": 8,
+  "flowVelocity": {
+    "status": "RANGE",
+    "values": [
+      "0.1 - 5",
+      "0.1 - 5",
+      "0.1 - 5",
+      "0.1 - 5",
+      "0.1 - 5",
+      "0.1 - 5",
+      "0.1 - 5",
+      "0.1 - 5"
+    ]
+  },
+  "runLevelResultsAvailable": false,
+  "warnings": [
+    "The source defines configuration space; no Cartesian product or run count was generated."
+  ]
+}

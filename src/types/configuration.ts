@@ -1,0 +1,24 @@
+export type ScientificSourceRecordType = "EXPERIMENT_RUN" | "EXPERIMENT_CONFIGURATION_ENVELOPE" | "OPERATING_CONDITION_OBSERVATION" | "PRETEST_RECORD" | "SOURCE_NOTE" | "DOCUMENT_EVIDENCE";
+export type FLEX2MeasurementStatus = "RANGE" | "DISCRETE_OPTION_SET" | "EXACT_SOURCE_VALUE";
+export type FLEX2Range = { minValue: number; maxValue: number; unit: "mm" | "cm/s"; status: "RANGE"; rawValue: string; sourceField: string };
+export type FLEX2OptionSet = { values: number[]; unit: "mole fraction" | "atm"; status: "DISCRETE_OPTION_SET"; rawValue: string; sourceField: string };
+export type FLEX2FuelComponent = { material: "PROPANOL" | "GLYCEROL" | "HEPTANE" | "ISO_OCTANE"; fraction: number };
+export type FLEX2FuelConfiguration = { type: "PURE" | "MIXTURE"; normalizedMaterial: string | null; components: FLEX2FuelComponent[]; fractionBasis: "SOURCE_PERCENTAGE_UNSPECIFIED_BASIS" | null };
+export type FLEX2ConfigurationEnvelope = {
+    id: string;
+    investigationId: "PSI-68";
+    sourceRecordType: "EXPERIMENT_CONFIGURATION_ENVELOPE";
+    dataStatus: "REAL_NASA_DATA";
+    rawFuelDescription: string;
+    fuelConfiguration: FLEX2FuelConfiguration;
+    initialDropletDiameterRange: FLEX2Range;
+    ambientGasMixtureOptions: Array<{ oxidizer: "O2"; diluent: "N2" | "He" }>;
+    ambientGasMixtureRaw: string;
+    oxygenMoleFractionOptions: FLEX2OptionSet;
+    ambientPressureOptions: FLEX2OptionSet;
+    ambientTemperature: { rawValue: string; parsedValue: number; unit: "°C"; status: "EXACT_SOURCE_VALUE"; sourceField: string };
+    flowVelocityRange: FLEX2Range;
+    provenance: { sourceFile: string; sourceSha256: string; sourceRow: number; sourceUrl: string; sourceHeaders: string[]; ingestionTimestamp: string; parserVersion: string; normalizerVersion: string; fieldTransformations: Record<string, string> };
+    dataAvailability: { available: string[]; notReportedInCurrentSource: string[] };
+    sourceWarnings: string[];
+};

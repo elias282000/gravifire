@@ -1,0 +1,19 @@
+{
+  "investigationId": "PSI-102",
+  "family": "SAME",
+  "title": "Smoke and Aerosol Measurement Experiment",
+  "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
+  "doi": "10.60555/gd4k-8h62",
+  "license": "CC0-1.0",
+  "sourceType": "NASA_PSI_INVESTIGATION",
+  "files": [
+    {
+      "fileName": "PSI-102_Experimental table_SAME.csv",
+      "localPath": "src/data/nasa/raw/same/PSI-102_Experimental table_SAME.csv",
+      "sha256": "268d1e121d2f211b124407dd32b9475617bd269ede2c2d1749441da3e949a2af",
+      "sizeBytes": 331,
+      "mediaType": "text/csv",
+      "downloadStatus": "LOCAL_ONLY"
+    }
+  ]
+}

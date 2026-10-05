@@ -1,0 +1,25 @@
+"use client";
+
+import { useKeyboardControls } from "@react-three/drei";
+import { useFrame, useThree } from "@react-three/fiber";
+import * as THREE from "three";
+import { useEffect, useRef, useState } from "react";
+import { CAMERA_MODE_STORAGE_KEY, parseCameraMode, toggleCameraMode, type CameraMode } from "@/lib/camera-state";
+
+function EngineerAvatar({ moving, sprinting, crouched }: { moving: boolean; sprinting: boolean; crouched: boolean }) {
+  const swing = moving ? (sprinting ? 0.3 : 0.18) : 0;
+  const height = crouched ? 1.25 : 1.7;
+  return <group position={[0, crouched ? -0.35 : 0, 0]}>
+    <group position={[0, height, 0]}><mesh castShadow><sphereGeometry args={[0.25, 12, 8]} /><meshStandardMaterial color="#d9e0e1" roughness={0.68} /></mesh><mesh position={[0, 0, -0.2]}><sphereGeometry args={[0.19, 12, 8]} /><meshStandardMaterial color="#14252d" metalness={0.45} roughness={0.28} /></mesh><mesh position={[0, -0.48, 0]}><boxGeometry args={[0.62, 0.8, 0.35]} /><meshStandardMaterial color="#d0d7d8" roughness={0.78} /></mesh><mesh position={[0, -0.45, -0.19]}><boxGeometry args={[0.3, 0.12, 0.025]} /><meshStandardMaterial color="#55d7e8" emissive="#55d7e8" emissiveIntensity={1.5} /></mesh></group>
+    <mesh position={[-0.23, 0.55, 0]} rotation={[swing, 0, 0]}><capsuleGeometry args={[0.08, 0.55, 5, 8]} /><meshStandardMaterial color="#26343a" roughness={0.76} /></mesh><mesh position={[0.23, 0.55, 0]} rotation={[-swing, 0, 0]}><capsuleGeometry args={[0.08, 0.55, 5, 8]} /><meshStandardMaterial color="#26343a" roughness={0.76} /></mesh>
+    <mesh position={[-0.18, 0.05, 0]} rotation={[swing, 0, 0]}><capsuleGeometry args={[0.11, 0.65, 5, 8]} /><meshStandardMaterial color="#d9e0e1" roughness={0.78} /></mesh><mesh position={[0.18, 0.05, 0]} rotation={[-swing, 0, 0]}><capsuleGeometry args={[0.11, 0.65, 5, 8]} /><meshStandardMaterial color="#d9e0e1" roughness={0.78} /></mesh><mesh position={[-0.18, -0.38, -0.08]}><boxGeometry args={[0.18, 0.12, 0.35]} /><meshStandardMaterial color="#111a20" roughness={0.8} /></mesh><mesh position={[0.18, -0.38, -0.08]}><boxGeometry args={[0.18, 0.12, 0.35]} /><meshStandardMaterial color="#111a20" roughness={0.8} /></mesh>
+    <mesh position={[0, 0.55, 0.2]}><boxGeometry args={[0.55, 0.32, 0.18]} /><meshStandardMaterial color="#17272d" metalness={0.55} roughness={0.45} /></mesh>
+  </group>;
+}
+
+export default function ThirdPersonRig() {
+  const getState = useThree((state) => state.get as () => { camera: THREE.PerspectiveCamera; scene: THREE.Scene }); const [, getKeys] = useKeyboardControls(); const avatar = useRef<THREE.Group>(null); const ray = useRef(new THREE.Raycaster()); const [mode, setMode] = useState<CameraMode>("THIRD_PERSON");
+  useEffect(() => { const modeTimer = window.setTimeout(() => setMode(parseCameraMode(localStorage.getItem(CAMERA_MODE_STORAGE_KEY))), 0); const onKey = (event: KeyboardEvent) => { if (event.key.toLowerCase() !== "v") return; const next = toggleCameraMode(parseCameraMode(localStorage.getItem(CAMERA_MODE_STORAGE_KEY))); localStorage.setItem(CAMERA_MODE_STORAGE_KEY, next); setMode(next); window.dispatchEvent(new CustomEvent("camera-mode-changed", { detail: next })); }; const onMode = (event: Event) => setMode((event as CustomEvent<CameraMode>).detail); window.addEventListener("keydown", onKey); window.addEventListener("camera-mode-changed", onMode); return () => { window.clearTimeout(modeTimer); window.removeEventListener("keydown", onKey); window.removeEventListener("camera-mode-changed", onMode); }; }, []);
+  useFrame((_, delta) => { const camera = getState().camera; const player = camera.position.clone(); const keys = getKeys() as Record<string, boolean>; const moving = Boolean(keys.forward || keys.backward || keys.left || keys.right); const crouched = Boolean(keys.crouch); const sprinting = moving && Boolean(keys.sprint) && !crouched; if (avatar.current) { avatar.current.position.lerp(player, Math.min(1, delta * 18)); avatar.current.visible = mode === "THIRD_PERSON"; } if (mode === "FIRST_PERSON") return; const direction = new THREE.Vector3(); camera.getWorldDirection(direction); direction.y = 0; direction.normalize(); const desired = player.clone().addScaledVector(direction, -3.2); desired.y += crouched ? 1.0 : 1.55; const castDirection = desired.clone().sub(player); const distance = castDirection.length(); castDirection.normalize(); ray.current.set(player, castDirection); const hits = ray.current.intersectObjects(getState().scene.children, true).filter((hit) => hit.object !== avatar.current && hit.distance > 0.25); const safeDistance = hits[0] ? Math.max(0.7, Math.min(distance, hits[0].distance - 0.25)) : distance; const target = player.clone().addScaledVector(castDirection, safeDistance); camera.position.lerp(target, Math.min(1, delta * 12)); camera.fov = THREE.MathUtils.damp(camera.fov, sprinting ? 78 : 74, 7, delta); camera.updateProjectionMatrix(); });
+  return <group ref={avatar}><EngineerAvatar moving={false} sprinting={false} crouched={false} /></group>;
+}

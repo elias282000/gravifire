@@ -1,0 +1,279 @@
+[
+  {
+    "id": "S1",
+    "investigationId": "saffire-i",
+    "sourceExperimentId": "S1",
+    "title": "SAFFIRE-I Experimental Table S1",
+    "family": "SAFFIRE-I",
+    "material": "SIBAL Fabric",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "sampleThicknessCm": 0.37,
+      "sampleLengthCm": 40.6,
+      "sampleWidthCm": 94,
+      "airflowCmS": 20,
+      "ignitionPowerW": 182,
+      "ignitionTimeS": 8,
+      "burnTimeS": 420
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-98",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98"
+    },
+    "provenance": {
+      "investigationId": "PSI-98",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+      "sourceFile": "PSI-98_Experimental table_SAFFIRE-1.csv",
+      "sourceSha256": "c01f29c62455f0a3b512290ab85e5687ecded326733189f002f580368402308d",
+      "sourceRow": 2,
+      "rawExperimentId": "S1",
+      "parserVersion": "saffire-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T18:28:18.237Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Sample Thickness (cm)",
+        "Sample Length (cm)",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Exact SAFFIRE-I Experimental Table mapping; pre-test visualization rows are retained separately.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample Number": "S1",
+      "Material": "SIBAL Fabric",
+      "Sample Thickness (cm)": "0.37",
+      "Sample Length (cm)": "40.6",
+      "Sample Width (cm)": "94",
+      "Air Flow (cm/s)": "20",
+      "Percent O2": "21.5 - 21.7",
+      "Ignition Power (W)": "182",
+      "Ignition Time (s)": "8",
+      "Burn Time (s)": "420",
+      "Flow Direction": "Concurrent",
+      "Camera 1": "S1C1",
+      "Camera 2": "S1C2"
+    },
+    "saffireData": {
+      "sourceSampleId": "S1",
+      "rawMaterialDescription": "SIBAL Fabric",
+      "normalizedMaterial": "SIBAL",
+      "materialNormalizationStatus": "NORMALIZED",
+      "sampleThicknessCm": {
+        "rawValue": "0.37",
+        "parsedValue": 0.37,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Thickness (cm)"
+      },
+      "sampleLengthCm": {
+        "rawValue": "40.6",
+        "parsedValue": 40.6,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Length (cm)"
+      },
+      "sampleWidthCm": {
+        "rawValue": "94",
+        "parsedValue": 94,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Width (cm)"
+      },
+      "airflowCmS": {
+        "rawValue": "20",
+        "parsedValue": 20,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)"
+      },
+      "oxygenMeasurement": {
+        "rawValue": "21.5 - 21.7",
+        "unit": "%",
+        "status": "RANGE",
+        "minValue": 21.5,
+        "maxValue": 21.7,
+        "sourceField": "Percent O2"
+      },
+      "ignitionPowerW": {
+        "rawValue": "182",
+        "parsedValue": 182,
+        "unit": "W",
+        "status": "EXACT",
+        "sourceField": "Ignition Power (W)"
+      },
+      "ignitionTimeS": {
+        "rawValue": "8",
+        "parsedValue": 8,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Ignition Time (s)"
+      },
+      "burnTimeS": {
+        "rawValue": "420",
+        "parsedValue": 420,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Burn Time (s)"
+      },
+      "flowDirection": "Concurrent",
+      "flowDirectionRaw": "Concurrent",
+      "camera1Identifier": "S1C1",
+      "camera2Identifier": "S1C2"
+    }
+  },
+  {
+    "id": "S2",
+    "investigationId": "saffire-i",
+    "sourceExperimentId": "S2",
+    "title": "SAFFIRE-I Experimental Table S2",
+    "family": "SAFFIRE-I",
+    "material": "SIBAL Fabric",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "sampleThicknessCm": 0.37,
+      "sampleLengthCm": 40.6,
+      "sampleWidthCm": 94,
+      "airflowCmS": 20,
+      "ignitionPowerW": 182,
+      "ignitionTimeS": 8,
+      "burnTimeS": 70
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-98",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98"
+    },
+    "provenance": {
+      "investigationId": "PSI-98",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+      "sourceFile": "PSI-98_Experimental table_SAFFIRE-1.csv",
+      "sourceSha256": "c01f29c62455f0a3b512290ab85e5687ecded326733189f002f580368402308d",
+      "sourceRow": 3,
+      "rawExperimentId": "S2",
+      "parserVersion": "saffire-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T18:28:18.237Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Sample Thickness (cm)",
+        "Sample Length (cm)",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Exact SAFFIRE-I Experimental Table mapping; pre-test visualization rows are retained separately.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample Number": "S2",
+      "Material": "SIBAL Fabric",
+      "Sample Thickness (cm)": "0.37",
+      "Sample Length (cm)": "40.6",
+      "Sample Width (cm)": "94",
+      "Air Flow (cm/s)": "20",
+      "Percent O2": "~ 21.5",
+      "Ignition Power (W)": "182",
+      "Ignition Time (s)": "8",
+      "Burn Time (s)": "70",
+      "Flow Direction": "Opposed",
+      "Camera 1": "S2C1",
+      "Camera 2": "S2C2"
+    },
+    "saffireData": {
+      "sourceSampleId": "S2",
+      "rawMaterialDescription": "SIBAL Fabric",
+      "normalizedMaterial": "SIBAL",
+      "materialNormalizationStatus": "NORMALIZED",
+      "sampleThicknessCm": {
+        "rawValue": "0.37",
+        "parsedValue": 0.37,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Thickness (cm)"
+      },
+      "sampleLengthCm": {
+        "rawValue": "40.6",
+        "parsedValue": 40.6,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Length (cm)"
+      },
+      "sampleWidthCm": {
+        "rawValue": "94",
+        "parsedValue": 94,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Width (cm)"
+      },
+      "airflowCmS": {
+        "rawValue": "20",
+        "parsedValue": 20,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)"
+      },
+      "oxygenMeasurement": {
+        "rawValue": "~ 21.5",
+        "unit": "%",
+        "status": "APPROXIMATE",
+        "approximateValue": 21.5,
+        "sourceField": "Percent O2"
+      },
+      "ignitionPowerW": {
+        "rawValue": "182",
+        "parsedValue": 182,
+        "unit": "W",
+        "status": "EXACT",
+        "sourceField": "Ignition Power (W)"
+      },
+      "ignitionTimeS": {
+        "rawValue": "8",
+        "parsedValue": 8,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Ignition Time (s)"
+      },
+      "burnTimeS": {
+        "rawValue": "70",
+        "parsedValue": 70,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Burn Time (s)"
+      },
+      "flowDirection": "Opposed",
+      "flowDirectionRaw": "Opposed",
+      "camera1Identifier": "S2C1",
+      "camera2Identifier": "S2C2"
+    }
+  }
+]

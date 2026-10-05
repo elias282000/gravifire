@@ -1,0 +1,29 @@
+{
+  "investigation": "PSI-102",
+  "family": "SAME",
+  "timestamp": "2026-09-30T17:07:29.710Z",
+  "sourceFilesProcessed": [
+    "PSI-102_Experimental table_SAME.csv"
+  ],
+  "sourceFilesUnsupported": [],
+  "rawRecordsFound": 8,
+  "validRecords": 8,
+  "rejectedRecords": 0,
+  "duplicateRecords": 0,
+  "materialNormalizationReviewCount": 3,
+  "numericCoverage": {
+    "airflowCmS": 4,
+    "weightLossRateMgMin": 4,
+    "agingDurationMinutes": 4
+  },
+  "fieldsDiscovered": [
+    "Aging Duration (minutes)",
+    "Air Flow (cm/s)",
+    "Sample #",
+    "Sample Material",
+    "Weight loss rate (mg/min)"
+  ],
+  "warnings": [
+    "Source/version discrepancy recorded: LOCAL_SOURCE_RECORDS=8; CURRENT_WEB_TABLE_DISPLAY=9. The local CSV remains authoritative for this build until manually reconciled."
+  ]
+}

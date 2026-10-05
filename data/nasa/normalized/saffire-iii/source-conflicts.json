@@ -1,0 +1,68 @@
+[
+  {
+    "field": "thickness",
+    "type": "SOURCE_UNIT_CONFLICT",
+    "primarySource": "PSI-100 Experimental Table",
+    "primaryValue": ".33 cm",
+    "externalSource": "EXTERNAL NASA CONTEXT",
+    "externalValue": "approximately 0.33 mm",
+    "status": "UNRESOLVED_SOURCE_CONFLICT",
+    "note": "The local PSI-100 table and separate NASA Saffire technical literature use conflicting thickness units; GRAVIFIRE preserves both without reconciliation.",
+    "sourceExperimentId": "S1"
+  },
+  {
+    "field": "airflow",
+    "type": "SOURCE_CONTEXT_CONFLICT",
+    "primarySource": "PSI-100 Experimental Table",
+    "primaryValue": "30 cm/s",
+    "externalSource": "EXTERNAL NASA CONTEXT",
+    "externalValue": "25 cm/s in later selected-results context",
+    "status": "UNRESOLVED_SOURCE_CONFLICT",
+    "note": "Planning/configured and later analyzed source contexts may differ; GRAVIFIRE does not average or overwrite the PSI table value.",
+    "sourceExperimentId": "S1"
+  },
+  {
+    "field": "sampleLength",
+    "type": "SOURCE_CONTEXT_CONFLICT",
+    "primarySource": "PSI-100 Experimental Table",
+    "primaryValue": "94 cm sample length",
+    "externalSource": "EXTERNAL NASA CONTEXT",
+    "externalValue": "approximately 10 cm selected/burned quantity",
+    "status": "UNRESOLVED_SOURCE_CONFLICT",
+    "note": "The external quantity may describe burned or effective length rather than installed sample geometry; it is not used to modify Sample Length.",
+    "sourceExperimentId": "S1"
+  },
+  {
+    "field": "thickness",
+    "type": "SOURCE_UNIT_CONFLICT",
+    "primarySource": "PSI-100 Experimental Table",
+    "primaryValue": ".33 cm",
+    "externalSource": "EXTERNAL NASA CONTEXT",
+    "externalValue": "approximately 0.33 mm",
+    "status": "UNRESOLVED_SOURCE_CONFLICT",
+    "note": "The local PSI-100 table and separate NASA Saffire technical literature use conflicting thickness units; GRAVIFIRE preserves both without reconciliation.",
+    "sourceExperimentId": "S2"
+  },
+  {
+    "field": "airflow",
+    "type": "SOURCE_CONTEXT_CONFLICT",
+    "primarySource": "PSI-100 Experimental Table",
+    "primaryValue": "30 cm/s",
+    "externalSource": "EXTERNAL NASA CONTEXT",
+    "externalValue": "25 cm/s in later selected-results context",
+    "status": "UNRESOLVED_SOURCE_CONFLICT",
+    "note": "Planning/configured and later analyzed source contexts may differ; GRAVIFIRE does not average or overwrite the PSI table value.",
+    "sourceExperimentId": "S2"
+  },
+  {
+    "field": "sampleLength",
+    "type": "SOURCE_CONTEXT_CONFLICT",
+    "primarySource": "PSI-100 Experimental Table",
+    "primaryValue": "94 cm sample length",
+    "externalSource": "EXTERNAL NASA CONTEXT",
+    "externalValue": "approximately 10 cm selected/burned quantity",
+    "status": "UNRESOLVED_SOURCE_CONFLICT",
+    "note": "The external quantity may describe burned or effective length rather than installed sample geometry; it is not used to modify Sample Length.",
+    "sourceExperimentId": "S2"
+  }
+]

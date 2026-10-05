@@ -1,0 +1,32 @@
+{
+  "investigation": "PSI-98",
+  "family": "SAFFIRE-I",
+  "timestamp": "2026-09-30T18:28:18.237Z",
+  "sourceFilesProcessed": [
+    "PSI-98_Experimental table_SAFFIRE-1.csv"
+  ],
+  "rawRows": 4,
+  "combustionRecords": 2,
+  "pretestFlowVisualizationRecords": 2,
+  "emptyRows": 0,
+  "unknownRecords": 0,
+  "rejectedRecords": 0,
+  "duplicateRecords": 0,
+  "numericCoverage": {
+    "sampleThicknessCm": 2,
+    "sampleLengthCm": 2,
+    "sampleWidthCm": 2,
+    "airflowCmS": 2,
+    "ignitionPowerW": 2,
+    "ignitionTimeS": 2,
+    "burnTimeS": 2
+  },
+  "oxygenStatusCounts": {
+    "EXACT": 0,
+    "RANGE": 1,
+    "APPROXIMATE": 1,
+    "NOT_REPORTED": 0,
+    "TEXT_STATUS": 0
+  },
+  "warnings": []
+}

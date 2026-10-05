@@ -1,0 +1,13 @@
+{
+  "investigation": "PSI-25",
+  "timestamp": "2026-09-29T23:33:19.985Z",
+  "documentsFound": 1,
+  "documentsProcessed": 1,
+  "pagesExtracted": 144,
+  "chunksGenerated": 271,
+  "directClaimsGenerated": 0,
+  "verifiedRunLinks": 0,
+  "candidateRunLinks": 0,
+  "conflicts": 0,
+  "warnings": []
+}

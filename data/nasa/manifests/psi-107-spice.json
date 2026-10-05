@@ -1,0 +1,11 @@
+{
+  "investigationId": "PSI-107",
+  "family": "SPICE",
+  "title": "Smoke Point In Co-flow Experiment",
+  "version": "4",
+  "doi": "10.60555/9kbh-e962",
+  "license": "CC0-1.0",
+  "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+  "sourceType": "NASA_PSI_INVESTIGATION",
+  "files": []
+}

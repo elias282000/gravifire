@@ -1,0 +1,114 @@
+{
+  "investigation": "PSI-69",
+  "family": "FLEX",
+  "timestamp": "2026-09-30T15:53:59.829Z",
+  "sourceFilesProcessed": [
+    "PSI-69_Experimental table_FLEX.csv"
+  ],
+  "rawRows": 274,
+  "validRecords": 274,
+  "rejectedRecords": 0,
+  "duplicateFLEXTestCount": 0,
+  "uniqueFLEXTestCount": 274,
+  "duplicateFLEXIdentifierGroups": [
+    {
+      "identifier": "193F001",
+      "count": 2,
+      "testIds": [
+        "70",
+        "73"
+      ]
+    }
+  ],
+  "fuelCounts": {
+    "Methanol": 157,
+    "Heptane": 117
+  },
+  "testEndCounts": {
+    "Disruption": 61,
+    "Extinction": 186,
+    "Completion": 27
+  },
+  "pressure": {
+    "numeric": 274,
+    "range": {
+      "min": 0,
+      "max": 2319.9
+    }
+  },
+  "composition": {
+    "oxygen": {
+      "numeric": 274,
+      "range": {
+        "min": 0.12,
+        "max": 0.34
+      }
+    },
+    "nitrogen": {
+      "numeric": 274,
+      "range": {
+        "min": 0.09,
+        "max": 0.88
+      }
+    },
+    "carbonDioxide": {
+      "numeric": 274,
+      "range": {
+        "min": 0,
+        "max": 0.7
+      }
+    },
+    "helium": {
+      "numeric": 274,
+      "range": {
+        "min": 0,
+        "max": 0.45
+      }
+    }
+  },
+  "compositionSumWarnings": 0,
+  "initialDiameter": {
+    "numeric": 262,
+    "dash": 6,
+    "blank": 6,
+    "range": {
+      "min": 1.1,
+      "max": 4.67
+    }
+  },
+  "extinctionDiameter": {
+    "numeric": 197,
+    "dash": 28,
+    "blank": 49,
+    "zero": 8,
+    "range": {
+      "min": 0,
+      "max": 4.6
+    }
+  },
+  "burningRate": {
+    "numeric": 258,
+    "range": {
+      "min": 0.05,
+      "max": 1.06
+    }
+  },
+  "burnTime": {
+    "exact": 266,
+    "approximate": 2,
+    "missing": 6
+  },
+  "dateCoverage": 274,
+  "gmtCoverage": 273,
+  "schemaWarnings": [
+    "SOURCE_HEADER_UNIT_LOSS",
+    "SOURCE_GAS_LABEL_SEMANTIC_MAPPING"
+  ],
+  "sourceScopeDiscrepancy": {
+    "localExperimentalTableCount": 274,
+    "externalNASAReportTestCount": 284,
+    "externalNASAReport": "NASA/TP-2015-216046",
+    "status": "UNRESOLVED_SOURCE_SCOPE_DIFFERENCE"
+  },
+  "warnings": []
+}

@@ -1,0 +1,334 @@
+[
+  {
+    "id": "S1",
+    "investigationId": "saffire-iii",
+    "sourceExperimentId": "S1",
+    "title": "SAFFIRE-III Experimental Table S1",
+    "family": "SAFFIRE-III",
+    "material": "SIBAL Fabric",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 30,
+      "thicknessMm": 3.3
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-100",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100"
+    },
+    "provenance": {
+      "investigationId": "PSI-100",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100",
+      "sourceFile": "PSI-100_Experimental table_SAFFIRE-3.csv",
+      "sourceSha256": "4d3c717ec20dd0247db670b2784a9fd7d746788bc54a936f80693e48eb8cd117",
+      "sourceRow": 2,
+      "rawExperimentId": "S1",
+      "parserVersion": "saffire-iii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-iii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:40:06.277Z",
+      "originalFields": [
+        "Sample Number ",
+        "Material",
+        "Sample Thickness",
+        "Sample Length",
+        "Sample Width",
+        "Air Flow ",
+        "Direction",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Primary PSI-100 Experimental Table values are preserved; external NASA context is recorded as unresolved conflict metadata and never used to overwrite the primary source.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [
+      "SAFFIRE_III_THICKNESS_SOURCE_CONFLICT",
+      "SAFFIRE_III_AIRFLOW_SOURCE_CONTEXT_CONFLICT"
+    ],
+    "rawRecord": {
+      "Sample Number ": "S1",
+      "Material": "SIBAL Fabric",
+      "Sample Thickness": ".33 cm",
+      "Sample Length": "94 cm",
+      "Sample Width": "40.6 cm",
+      "Air Flow ": "30 cm/s",
+      "Direction": "Concurrent",
+      "Camera 1": "S1C1",
+      "Camera 2": "S1C2"
+    },
+    "saffireIIIData": {
+      "sourceSampleId": "S1",
+      "rawMaterialDescription": "SIBAL Fabric",
+      "normalizedMaterial": "SIBAL",
+      "materialNormalizationStatus": "NORMALIZED",
+      "sampleThickness": {
+        "rawValue": ".33 cm",
+        "parsedValue": 0.33,
+        "sourceUnit": "cm",
+        "normalizedMm": 3.3,
+        "status": "EXACT_IN_SOURCE",
+        "sourceField": "Sample Thickness",
+        "normalizationRule": "Deterministic cm × 10 conversion; does not resolve external source conflicts.",
+        "sourceConflictStatus": "EXTERNAL_SOURCE_UNIT_CONFLICT"
+      },
+      "sampleLength": {
+        "rawValue": "94 cm",
+        "parsedValue": 94,
+        "sourceUnit": "cm",
+        "normalizedMm": 940,
+        "status": "EXACT_IN_SOURCE",
+        "sourceField": "Sample Length",
+        "normalizationRule": "Deterministic cm × 10 conversion; does not resolve external source conflicts."
+      },
+      "sampleWidth": {
+        "rawValue": "40.6 cm",
+        "parsedValue": 40.6,
+        "sourceUnit": "cm",
+        "normalizedMm": 406,
+        "status": "EXACT_IN_SOURCE",
+        "sourceField": "Sample Width",
+        "normalizationRule": "Deterministic cm × 10 conversion; does not resolve external source conflicts."
+      },
+      "airflow": {
+        "rawValue": "30 cm/s",
+        "parsedValue": 30,
+        "sourceUnit": "cm/s",
+        "status": "EXACT_IN_SOURCE",
+        "sourceField": "Air Flow",
+        "sourceConflictStatus": "EXTERNAL_SOURCE_UNIT_CONFLICT"
+      },
+      "flowDirection": "Concurrent",
+      "flowDirectionRaw": "Concurrent",
+      "camera1Identifier": "S1C1",
+      "camera2Identifier": "S1C2",
+      "sourceConflicts": [
+        {
+          "field": "thickness",
+          "type": "SOURCE_UNIT_CONFLICT",
+          "primarySource": "PSI-100 Experimental Table",
+          "primaryValue": ".33 cm",
+          "externalSource": "EXTERNAL NASA CONTEXT",
+          "externalValue": "approximately 0.33 mm",
+          "status": "UNRESOLVED_SOURCE_CONFLICT",
+          "note": "The local PSI-100 table and separate NASA Saffire technical literature use conflicting thickness units; GRAVIFIRE preserves both without reconciliation."
+        },
+        {
+          "field": "airflow",
+          "type": "SOURCE_CONTEXT_CONFLICT",
+          "primarySource": "PSI-100 Experimental Table",
+          "primaryValue": "30 cm/s",
+          "externalSource": "EXTERNAL NASA CONTEXT",
+          "externalValue": "25 cm/s in later selected-results context",
+          "status": "UNRESOLVED_SOURCE_CONFLICT",
+          "note": "Planning/configured and later analyzed source contexts may differ; GRAVIFIRE does not average or overwrite the PSI table value."
+        },
+        {
+          "field": "sampleLength",
+          "type": "SOURCE_CONTEXT_CONFLICT",
+          "primarySource": "PSI-100 Experimental Table",
+          "primaryValue": "94 cm sample length",
+          "externalSource": "EXTERNAL NASA CONTEXT",
+          "externalValue": "approximately 10 cm selected/burned quantity",
+          "status": "UNRESOLVED_SOURCE_CONFLICT",
+          "note": "The external quantity may describe burned or effective length rather than installed sample geometry; it is not used to modify Sample Length."
+        }
+      ],
+      "dataAvailability": {
+        "available": [
+          "sample identity",
+          "material",
+          "thickness source value",
+          "sample length",
+          "sample width",
+          "physical airflow",
+          "flow direction",
+          "camera identifiers"
+        ],
+        "notReportedInCurrentSource": [
+          "oxygen",
+          "ignition power",
+          "ignition time",
+          "burn duration",
+          "burn outcome",
+          "flame spread",
+          "burn length",
+          "temperature",
+          "pressure",
+          "CO2",
+          "detailed O2",
+          "sensor time series"
+        ]
+      }
+    }
+  },
+  {
+    "id": "S2",
+    "investigationId": "saffire-iii",
+    "sourceExperimentId": "S2",
+    "title": "SAFFIRE-III Experimental Table S2",
+    "family": "SAFFIRE-III",
+    "material": "SIBAL Fabric",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 30,
+      "thicknessMm": 3.3
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-100",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100"
+    },
+    "provenance": {
+      "investigationId": "PSI-100",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100",
+      "sourceFile": "PSI-100_Experimental table_SAFFIRE-3.csv",
+      "sourceSha256": "4d3c717ec20dd0247db670b2784a9fd7d746788bc54a936f80693e48eb8cd117",
+      "sourceRow": 3,
+      "rawExperimentId": "S2",
+      "parserVersion": "saffire-iii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-iii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:40:06.277Z",
+      "originalFields": [
+        "Sample Number ",
+        "Material",
+        "Sample Thickness",
+        "Sample Length",
+        "Sample Width",
+        "Air Flow ",
+        "Direction",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Primary PSI-100 Experimental Table values are preserved; external NASA context is recorded as unresolved conflict metadata and never used to overwrite the primary source.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [
+      "SAFFIRE_III_THICKNESS_SOURCE_CONFLICT",
+      "SAFFIRE_III_AIRFLOW_SOURCE_CONTEXT_CONFLICT"
+    ],
+    "rawRecord": {
+      "Sample Number ": "S2",
+      "Material": "SIBAL Fabric",
+      "Sample Thickness": ".33 cm",
+      "Sample Length": "94 cm",
+      "Sample Width": "40.6 cm",
+      "Air Flow ": "30 cm/s",
+      "Direction": "Opposed",
+      "Camera 1": "S2C1",
+      "Camera 2": "S2C2"
+    },
+    "saffireIIIData": {
+      "sourceSampleId": "S2",
+      "rawMaterialDescription": "SIBAL Fabric",
+      "normalizedMaterial": "SIBAL",
+      "materialNormalizationStatus": "NORMALIZED",
+      "sampleThickness": {
+        "rawValue": ".33 cm",
+        "parsedValue": 0.33,
+        "sourceUnit": "cm",
+        "normalizedMm": 3.3,
+        "status": "EXACT_IN_SOURCE",
+        "sourceField": "Sample Thickness",
+        "normalizationRule": "Deterministic cm × 10 conversion; does not resolve external source conflicts.",
+        "sourceConflictStatus": "EXTERNAL_SOURCE_UNIT_CONFLICT"
+      },
+      "sampleLength": {
+        "rawValue": "94 cm",
+        "parsedValue": 94,
+        "sourceUnit": "cm",
+        "normalizedMm": 940,
+        "status": "EXACT_IN_SOURCE",
+        "sourceField": "Sample Length",
+        "normalizationRule": "Deterministic cm × 10 conversion; does not resolve external source conflicts."
+      },
+      "sampleWidth": {
+        "rawValue": "40.6 cm",
+        "parsedValue": 40.6,
+        "sourceUnit": "cm",
+        "normalizedMm": 406,
+        "status": "EXACT_IN_SOURCE",
+        "sourceField": "Sample Width",
+        "normalizationRule": "Deterministic cm × 10 conversion; does not resolve external source conflicts."
+      },
+      "airflow": {
+        "rawValue": "30 cm/s",
+        "parsedValue": 30,
+        "sourceUnit": "cm/s",
+        "status": "EXACT_IN_SOURCE",
+        "sourceField": "Air Flow",
+        "sourceConflictStatus": "EXTERNAL_SOURCE_UNIT_CONFLICT"
+      },
+      "flowDirection": "Opposed",
+      "flowDirectionRaw": "Opposed",
+      "camera1Identifier": "S2C1",
+      "camera2Identifier": "S2C2",
+      "sourceConflicts": [
+        {
+          "field": "thickness",
+          "type": "SOURCE_UNIT_CONFLICT",
+          "primarySource": "PSI-100 Experimental Table",
+          "primaryValue": ".33 cm",
+          "externalSource": "EXTERNAL NASA CONTEXT",
+          "externalValue": "approximately 0.33 mm",
+          "status": "UNRESOLVED_SOURCE_CONFLICT",
+          "note": "The local PSI-100 table and separate NASA Saffire technical literature use conflicting thickness units; GRAVIFIRE preserves both without reconciliation."
+        },
+        {
+          "field": "airflow",
+          "type": "SOURCE_CONTEXT_CONFLICT",
+          "primarySource": "PSI-100 Experimental Table",
+          "primaryValue": "30 cm/s",
+          "externalSource": "EXTERNAL NASA CONTEXT",
+          "externalValue": "25 cm/s in later selected-results context",
+          "status": "UNRESOLVED_SOURCE_CONFLICT",
+          "note": "Planning/configured and later analyzed source contexts may differ; GRAVIFIRE does not average or overwrite the PSI table value."
+        },
+        {
+          "field": "sampleLength",
+          "type": "SOURCE_CONTEXT_CONFLICT",
+          "primarySource": "PSI-100 Experimental Table",
+          "primaryValue": "94 cm sample length",
+          "externalSource": "EXTERNAL NASA CONTEXT",
+          "externalValue": "approximately 10 cm selected/burned quantity",
+          "status": "UNRESOLVED_SOURCE_CONFLICT",
+          "note": "The external quantity may describe burned or effective length rather than installed sample geometry; it is not used to modify Sample Length."
+        }
+      ],
+      "dataAvailability": {
+        "available": [
+          "sample identity",
+          "material",
+          "thickness source value",
+          "sample length",
+          "sample width",
+          "physical airflow",
+          "flow direction",
+          "camera identifiers"
+        ],
+        "notReportedInCurrentSource": [
+          "oxygen",
+          "ignition power",
+          "ignition time",
+          "burn duration",
+          "burn outcome",
+          "flame spread",
+          "burn length",
+          "temperature",
+          "pressure",
+          "CO2",
+          "detailed O2",
+          "sensor time series"
+        ]
+      }
+    }
+  }
+]

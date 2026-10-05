@@ -6,22 +6,46 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "ingest:bass-ii": "tsx scripts/psi/ingest-bass-ii.ts",
+    "ingest:same": "tsx scripts/psi/ingest-same.ts",
+    "ingest:same-r": "tsx scripts/psi/ingest-same-r.ts",
+    "ingest:saffire-i": "tsx scripts/psi/ingest-saffire-i.ts",
+    "ingest:saffire-ii": "tsx scripts/psi/ingest-saffire-ii.ts",
+    "ingest:saffire-iii": "tsx scripts/psi/ingest-saffire-iii.ts",
+    "ingest:flex": "tsx scripts/psi/ingest-flex.ts",
+    "ingest:flex-2": "tsx scripts/psi/ingest-flex-2.ts",
+    "ingest:spice": "tsx scripts/psi/ingest-spice.ts",
+    "ingest:bass-ii-documents": "tsx scripts/psi/ingest-bass-ii-documents.ts",
+    "test": "vitest run"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.1",
+    "@react-three/rapier": "^2.2.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.48.0",
     "next": "16.3.6",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "recharts": "^3.10.1",
+    "tailwind-merge": "^3.7.0",
+    "three": "^0.186.1",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.186.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.6",
+    "pdfjs-dist": "^6.3.289",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vitest": "^5.0.2"
   },
   "packageManager": "pnpm@12.3.4"
 }

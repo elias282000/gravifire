@@ -1,0 +1,3 @@
+import { NASAExperimentRun } from "../../../src/types/experiment";
+export type SAMERValidation = { success: boolean; data?: NASAExperimentRun; reason?: string };
+export function validateSAMERRun(run: NASAExperimentRun): SAMERValidation { if (run.family !== "SAME-R") return { success: false, reason: "Record is not SAME-R" }; if (!run.sourceExperimentId.trim()) return { success: false, reason: "SAME Test # is absent" }; if (run.investigationId !== "same-r" || run.source.investigationId !== "PSI-101") return { success: false, reason: "Investigation identity mismatch" }; if (!run.provenance.sourceSha256 || !run.provenance.sourceFile || !run.provenance.sourceRow) return { success: false, reason: "Required provenance is missing" }; return { success: true, data: run }; }

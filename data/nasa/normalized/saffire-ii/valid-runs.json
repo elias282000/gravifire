@@ -1,0 +1,2318 @@
+[
+  {
+    "id": "2-1",
+    "investigationId": "saffire-ii",
+    "sourceExperimentId": "2-1",
+    "title": "SAFFIRE-II Experimental Table 2-1",
+    "family": "SAFFIRE-II",
+    "material": "Silicone",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 20
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-99",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+    },
+    "provenance": {
+      "investigationId": "PSI-99",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "sourceRow": 2,
+      "rawExperimentId": "2-1",
+      "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Samle Thickness",
+        "Sample Length",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2 (Note 1)",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "?-g Burn Length",
+        "?-g Spread Length",
+        "1-g Burn Length",
+        "1-g Spread Rate",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Exact SAFFIRE-II Experimental Table mapping; low-g and 1-g fields remain separate.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample Number": "2-1",
+      "Material": "Silicone",
+      "Samle Thickness": "0.27 mm",
+      "Sample Length": "29 cm",
+      "Sample Width (cm)": "5 cm",
+      "Air Flow (cm/s)": "20 cm/s",
+      "Percent O2 (Note 1)": "~ 21.5",
+      "Ignition Power (W)": "80 W",
+      "Ignition Time (s)": "9.2 s",
+      "Burn Time (s)": "Insignificant",
+      "Flow Direction": "Concurrent",
+      "?-g Burn Length": "~ 0",
+      "?-g Spread Length": "n/a",
+      "1-g Burn Length": "Complete",
+      "1-g Spread Rate": "Acceleratory",
+      "Camera 1": "S1C1",
+      "Camera 2": "S1C2"
+    },
+    "saffireIIData": {
+      "sourceSampleId": "2-1",
+      "rawMaterialDescription": "Silicone",
+      "normalizedMaterial": "SILICONE",
+      "materialStatus": "NORMALIZED",
+      "materialConfiguration": {
+        "type": "SINGLE_MATERIAL"
+      },
+      "sampleThickness": {
+        "rawValue": "0.27 mm",
+        "parsedValue": 0.27,
+        "unit": "mm",
+        "status": "EXACT",
+        "sourceField": "Samle Thickness",
+        "sourceHeader": "Samle Thickness"
+      },
+      "sampleLength": {
+        "rawValue": "29 cm",
+        "parsedValue": 29,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Length",
+        "sourceHeader": "Sample Length"
+      },
+      "sampleWidth": {
+        "rawValue": "5 cm",
+        "parsedValue": 5,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Width (cm)",
+        "sourceHeader": "Sample Width (cm)"
+      },
+      "airflowCmS": {
+        "rawValue": "20 cm/s",
+        "parsedValue": 20,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)",
+        "sourceHeader": "Air Flow (cm/s)"
+      },
+      "oxygenMeasurement": {
+        "rawValue": "~ 21.5",
+        "unit": "%",
+        "measurementMethod": "DERIVED_SOURCE_MEASUREMENT",
+        "sourceField": "Percent O2 (Note 1)",
+        "status": "APPROXIMATE",
+        "approximateValue": 21.5
+      },
+      "ignitionPowerW": {
+        "rawValue": "80 W",
+        "parsedValue": 80,
+        "unit": "W",
+        "status": "EXACT",
+        "sourceField": "Ignition Power (W)",
+        "sourceHeader": "Ignition Power (W)"
+      },
+      "ignitionTimeS": {
+        "rawValue": "9.2 s",
+        "parsedValue": 9.2,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Ignition Time (s)",
+        "sourceHeader": "Ignition Time (s)"
+      },
+      "burnTime": {
+        "rawValue": "Insignificant",
+        "parsedValue": null,
+        "unit": "s",
+        "status": "TEXT_STATUS",
+        "sourceField": "Burn Time (s)",
+        "sourceHeader": "Burn Time (s)"
+      },
+      "flowDirection": "Concurrent",
+      "flowDirectionRaw": "Concurrent",
+      "microgravityBurnLength": {
+        "rawValue": "~ 0",
+        "parsedValue": null,
+        "unit": "cm",
+        "status": "APPROXIMATE",
+        "approximateValue": 0,
+        "sourceField": "?-g Burn Length",
+        "sourceHeader": "?-g Burn Length"
+      },
+      "microgravitySpreadMeasurement": {
+        "rawValue": "n/a",
+        "parsedValue": null,
+        "unit": "mm/s",
+        "status": "NOT_APPLICABLE",
+        "sourceField": "?-g Spread Length",
+        "sourceHeader": "?-g Spread Length"
+      },
+      "normalGravityReference": {
+        "burnLength": {
+          "rawValue": "Complete",
+          "parsedValue": null,
+          "unit": "cm",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Burn Length",
+          "sourceHeader": "1-g Burn Length"
+        },
+        "spreadRate": {
+          "rawValue": "Acceleratory",
+          "parsedValue": null,
+          "unit": "mm/s",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Spread Rate",
+          "sourceHeader": "1-g Spread Rate"
+        }
+      },
+      "camera1Identifier": "S1C1",
+      "camera2Identifier": "S1C2",
+      "sourceNotes": [
+        {
+          "noteId": "Note 1",
+          "rawText": "Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS.",
+          "referencedByRunIds": [
+            "2-1"
+          ],
+          "referencedFields": [
+            "Percent O2 (Note 1)"
+          ],
+          "sourceRow": 13,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 13,
+            "rawExperimentId": "Note 1",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        }
+      ],
+      "componentObservations": []
+    }
+  },
+  {
+    "id": "2-2",
+    "investigationId": "saffire-ii",
+    "sourceExperimentId": "2-2",
+    "title": "SAFFIRE-II Experimental Table 2-2",
+    "family": "SAFFIRE-II",
+    "material": "Silicone",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 20
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-99",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+    },
+    "provenance": {
+      "investigationId": "PSI-99",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "sourceRow": 3,
+      "rawExperimentId": "2-2",
+      "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Samle Thickness",
+        "Sample Length",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2 (Note 1)",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "?-g Burn Length",
+        "?-g Spread Length",
+        "1-g Burn Length",
+        "1-g Spread Rate",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Exact SAFFIRE-II Experimental Table mapping; low-g and 1-g fields remain separate.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample Number": "2-2",
+      "Material": "Silicone",
+      "Samle Thickness": "0.61 mm",
+      "Sample Length": "29 cm",
+      "Sample Width (cm)": "5 cm",
+      "Air Flow (cm/s)": "20 cm/s",
+      "Percent O2 (Note 1)": "~ 22.1",
+      "Ignition Power (W)": "80 W",
+      "Ignition Time (s)": "9.2 s",
+      "Burn Time (s)": "Insignificant",
+      "Flow Direction": "Concurrent",
+      "?-g Burn Length": "~ 0",
+      "?-g Spread Length": "n/a",
+      "1-g Burn Length": "7.6 cm",
+      "1-g Spread Rate": "1.2 mm/s",
+      "Camera 1": "n/a",
+      "Camera 2": "S2C2"
+    },
+    "saffireIIData": {
+      "sourceSampleId": "2-2",
+      "rawMaterialDescription": "Silicone",
+      "normalizedMaterial": "SILICONE",
+      "materialStatus": "NORMALIZED",
+      "materialConfiguration": {
+        "type": "SINGLE_MATERIAL"
+      },
+      "sampleThickness": {
+        "rawValue": "0.61 mm",
+        "parsedValue": 0.61,
+        "unit": "mm",
+        "status": "EXACT",
+        "sourceField": "Samle Thickness",
+        "sourceHeader": "Samle Thickness"
+      },
+      "sampleLength": {
+        "rawValue": "29 cm",
+        "parsedValue": 29,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Length",
+        "sourceHeader": "Sample Length"
+      },
+      "sampleWidth": {
+        "rawValue": "5 cm",
+        "parsedValue": 5,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Width (cm)",
+        "sourceHeader": "Sample Width (cm)"
+      },
+      "airflowCmS": {
+        "rawValue": "20 cm/s",
+        "parsedValue": 20,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)",
+        "sourceHeader": "Air Flow (cm/s)"
+      },
+      "oxygenMeasurement": {
+        "rawValue": "~ 22.1",
+        "unit": "%",
+        "measurementMethod": "DERIVED_SOURCE_MEASUREMENT",
+        "sourceField": "Percent O2 (Note 1)",
+        "status": "APPROXIMATE",
+        "approximateValue": 22.1
+      },
+      "ignitionPowerW": {
+        "rawValue": "80 W",
+        "parsedValue": 80,
+        "unit": "W",
+        "status": "EXACT",
+        "sourceField": "Ignition Power (W)",
+        "sourceHeader": "Ignition Power (W)"
+      },
+      "ignitionTimeS": {
+        "rawValue": "9.2 s",
+        "parsedValue": 9.2,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Ignition Time (s)",
+        "sourceHeader": "Ignition Time (s)"
+      },
+      "burnTime": {
+        "rawValue": "Insignificant",
+        "parsedValue": null,
+        "unit": "s",
+        "status": "TEXT_STATUS",
+        "sourceField": "Burn Time (s)",
+        "sourceHeader": "Burn Time (s)"
+      },
+      "flowDirection": "Concurrent",
+      "flowDirectionRaw": "Concurrent",
+      "microgravityBurnLength": {
+        "rawValue": "~ 0",
+        "parsedValue": null,
+        "unit": "cm",
+        "status": "APPROXIMATE",
+        "approximateValue": 0,
+        "sourceField": "?-g Burn Length",
+        "sourceHeader": "?-g Burn Length"
+      },
+      "microgravitySpreadMeasurement": {
+        "rawValue": "n/a",
+        "parsedValue": null,
+        "unit": "mm/s",
+        "status": "NOT_APPLICABLE",
+        "sourceField": "?-g Spread Length",
+        "sourceHeader": "?-g Spread Length"
+      },
+      "normalGravityReference": {
+        "burnLength": {
+          "rawValue": "7.6 cm",
+          "parsedValue": 7.6,
+          "unit": "cm",
+          "status": "EXACT",
+          "sourceField": "1-g Burn Length",
+          "sourceHeader": "1-g Burn Length"
+        },
+        "spreadRate": {
+          "rawValue": "1.2 mm/s",
+          "parsedValue": 1.2,
+          "unit": "mm/s",
+          "status": "EXACT",
+          "sourceField": "1-g Spread Rate",
+          "sourceHeader": "1-g Spread Rate"
+        }
+      },
+      "camera1Identifier": "n/a",
+      "camera2Identifier": "S2C2",
+      "sourceNotes": [
+        {
+          "noteId": "Note 1",
+          "rawText": "Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS.",
+          "referencedByRunIds": [
+            "2-2"
+          ],
+          "referencedFields": [
+            "Percent O2 (Note 1)"
+          ],
+          "sourceRow": 13,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 13,
+            "rawExperimentId": "Note 1",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        }
+      ],
+      "componentObservations": []
+    }
+  },
+  {
+    "id": "2-3",
+    "investigationId": "saffire-ii",
+    "sourceExperimentId": "2-3",
+    "title": "SAFFIRE-II Experimental Table 2-3",
+    "family": "SAFFIRE-II",
+    "material": "Silicone",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 20
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-99",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+    },
+    "provenance": {
+      "investigationId": "PSI-99",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "sourceRow": 4,
+      "rawExperimentId": "2-3",
+      "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Samle Thickness",
+        "Sample Length",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2 (Note 1)",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "?-g Burn Length",
+        "?-g Spread Length",
+        "1-g Burn Length",
+        "1-g Spread Rate",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Exact SAFFIRE-II Experimental Table mapping; low-g and 1-g fields remain separate.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample Number": "2-3",
+      "Material": "Silicone",
+      "Samle Thickness": "1.03 mm",
+      "Sample Length": "29 cm",
+      "Sample Width (cm)": "5 cm",
+      "Air Flow (cm/s)": "20 cm/s",
+      "Percent O2 (Note 1)": "~ 22.1",
+      "Ignition Power (W)": "80 W",
+      "Ignition Time (s)": "9.2 s",
+      "Burn Time (s)": "Insignificant",
+      "Flow Direction": "Concurrent",
+      "?-g Burn Length": "~ 0",
+      "?-g Spread Length": "n/a",
+      "1-g Burn Length": "~ 0",
+      "1-g Spread Rate": "n/a",
+      "Camera 1": "",
+      "Camera 2": "S3C2"
+    },
+    "saffireIIData": {
+      "sourceSampleId": "2-3",
+      "rawMaterialDescription": "Silicone",
+      "normalizedMaterial": "SILICONE",
+      "materialStatus": "NORMALIZED",
+      "materialConfiguration": {
+        "type": "SINGLE_MATERIAL"
+      },
+      "sampleThickness": {
+        "rawValue": "1.03 mm",
+        "parsedValue": 1.03,
+        "unit": "mm",
+        "status": "EXACT",
+        "sourceField": "Samle Thickness",
+        "sourceHeader": "Samle Thickness"
+      },
+      "sampleLength": {
+        "rawValue": "29 cm",
+        "parsedValue": 29,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Length",
+        "sourceHeader": "Sample Length"
+      },
+      "sampleWidth": {
+        "rawValue": "5 cm",
+        "parsedValue": 5,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Width (cm)",
+        "sourceHeader": "Sample Width (cm)"
+      },
+      "airflowCmS": {
+        "rawValue": "20 cm/s",
+        "parsedValue": 20,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)",
+        "sourceHeader": "Air Flow (cm/s)"
+      },
+      "oxygenMeasurement": {
+        "rawValue": "~ 22.1",
+        "unit": "%",
+        "measurementMethod": "DERIVED_SOURCE_MEASUREMENT",
+        "sourceField": "Percent O2 (Note 1)",
+        "status": "APPROXIMATE",
+        "approximateValue": 22.1
+      },
+      "ignitionPowerW": {
+        "rawValue": "80 W",
+        "parsedValue": 80,
+        "unit": "W",
+        "status": "EXACT",
+        "sourceField": "Ignition Power (W)",
+        "sourceHeader": "Ignition Power (W)"
+      },
+      "ignitionTimeS": {
+        "rawValue": "9.2 s",
+        "parsedValue": 9.2,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Ignition Time (s)",
+        "sourceHeader": "Ignition Time (s)"
+      },
+      "burnTime": {
+        "rawValue": "Insignificant",
+        "parsedValue": null,
+        "unit": "s",
+        "status": "TEXT_STATUS",
+        "sourceField": "Burn Time (s)",
+        "sourceHeader": "Burn Time (s)"
+      },
+      "flowDirection": "Concurrent",
+      "flowDirectionRaw": "Concurrent",
+      "microgravityBurnLength": {
+        "rawValue": "~ 0",
+        "parsedValue": null,
+        "unit": "cm",
+        "status": "APPROXIMATE",
+        "approximateValue": 0,
+        "sourceField": "?-g Burn Length",
+        "sourceHeader": "?-g Burn Length"
+      },
+      "microgravitySpreadMeasurement": {
+        "rawValue": "n/a",
+        "parsedValue": null,
+        "unit": "mm/s",
+        "status": "NOT_APPLICABLE",
+        "sourceField": "?-g Spread Length",
+        "sourceHeader": "?-g Spread Length"
+      },
+      "normalGravityReference": {
+        "burnLength": {
+          "rawValue": "~ 0",
+          "parsedValue": null,
+          "unit": "cm",
+          "status": "APPROXIMATE",
+          "approximateValue": 0,
+          "sourceField": "1-g Burn Length",
+          "sourceHeader": "1-g Burn Length"
+        },
+        "spreadRate": {
+          "rawValue": "n/a",
+          "parsedValue": null,
+          "unit": "mm/s",
+          "status": "NOT_APPLICABLE",
+          "sourceField": "1-g Spread Rate",
+          "sourceHeader": "1-g Spread Rate"
+        }
+      },
+      "camera1Identifier": "",
+      "camera2Identifier": "S3C2",
+      "sourceNotes": [
+        {
+          "noteId": "Note 1",
+          "rawText": "Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS.",
+          "referencedByRunIds": [
+            "2-3"
+          ],
+          "referencedFields": [
+            "Percent O2 (Note 1)"
+          ],
+          "sourceRow": 13,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 13,
+            "rawExperimentId": "Note 1",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        }
+      ],
+      "componentObservations": []
+    }
+  },
+  {
+    "id": "2-4",
+    "investigationId": "saffire-ii",
+    "sourceExperimentId": "2-4",
+    "title": "SAFFIRE-II Experimental Table 2-4",
+    "family": "SAFFIRE-II",
+    "material": "Silicone",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 20
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-99",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+    },
+    "provenance": {
+      "investigationId": "PSI-99",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "sourceRow": 5,
+      "rawExperimentId": "2-4",
+      "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Samle Thickness",
+        "Sample Length",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2 (Note 1)",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "?-g Burn Length",
+        "?-g Spread Length",
+        "1-g Burn Length",
+        "1-g Spread Rate",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Exact SAFFIRE-II Experimental Table mapping; low-g and 1-g fields remain separate.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [
+      "Thickness value requires review; source formatting was preserved."
+    ],
+    "rawRecord": {
+      "Sample Number": "2-4",
+      "Material": "Silicone",
+      "Samle Thickness": "037 mm",
+      "Sample Length": "29 cm",
+      "Sample Width (cm)": "5 cm",
+      "Air Flow (cm/s)": "20 cm/s",
+      "Percent O2 (Note 1)": "~ 22.1",
+      "Ignition Power (W)": "80 W",
+      "Ignition Time (s)": "9.2 s",
+      "Burn Time (s)": "Insignificant",
+      "Flow Direction": "Opposed",
+      "?-g Burn Length": "~ 0",
+      "?-g Spread Length": "n/a",
+      "1-g Burn Length": "Complete",
+      "1-g Spread Rate": "0.6 mm/s",
+      "Camera 1": "S4C1",
+      "Camera 2": "S4C1"
+    },
+    "saffireIIData": {
+      "sourceSampleId": "2-4",
+      "rawMaterialDescription": "Silicone",
+      "normalizedMaterial": "SILICONE",
+      "materialStatus": "NORMALIZED",
+      "materialConfiguration": {
+        "type": "SINGLE_MATERIAL"
+      },
+      "sampleThickness": {
+        "rawValue": "037 mm",
+        "parsedValue": null,
+        "unit": "mm",
+        "status": "REVIEW_REQUIRED",
+        "sourceField": "Samle Thickness",
+        "sourceHeader": "Samle Thickness"
+      },
+      "sampleLength": {
+        "rawValue": "29 cm",
+        "parsedValue": 29,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Length",
+        "sourceHeader": "Sample Length"
+      },
+      "sampleWidth": {
+        "rawValue": "5 cm",
+        "parsedValue": 5,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Width (cm)",
+        "sourceHeader": "Sample Width (cm)"
+      },
+      "airflowCmS": {
+        "rawValue": "20 cm/s",
+        "parsedValue": 20,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)",
+        "sourceHeader": "Air Flow (cm/s)"
+      },
+      "oxygenMeasurement": {
+        "rawValue": "~ 22.1",
+        "unit": "%",
+        "measurementMethod": "DERIVED_SOURCE_MEASUREMENT",
+        "sourceField": "Percent O2 (Note 1)",
+        "status": "APPROXIMATE",
+        "approximateValue": 22.1
+      },
+      "ignitionPowerW": {
+        "rawValue": "80 W",
+        "parsedValue": 80,
+        "unit": "W",
+        "status": "EXACT",
+        "sourceField": "Ignition Power (W)",
+        "sourceHeader": "Ignition Power (W)"
+      },
+      "ignitionTimeS": {
+        "rawValue": "9.2 s",
+        "parsedValue": 9.2,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Ignition Time (s)",
+        "sourceHeader": "Ignition Time (s)"
+      },
+      "burnTime": {
+        "rawValue": "Insignificant",
+        "parsedValue": null,
+        "unit": "s",
+        "status": "TEXT_STATUS",
+        "sourceField": "Burn Time (s)",
+        "sourceHeader": "Burn Time (s)"
+      },
+      "flowDirection": "Opposed",
+      "flowDirectionRaw": "Opposed",
+      "microgravityBurnLength": {
+        "rawValue": "~ 0",
+        "parsedValue": null,
+        "unit": "cm",
+        "status": "APPROXIMATE",
+        "approximateValue": 0,
+        "sourceField": "?-g Burn Length",
+        "sourceHeader": "?-g Burn Length"
+      },
+      "microgravitySpreadMeasurement": {
+        "rawValue": "n/a",
+        "parsedValue": null,
+        "unit": "mm/s",
+        "status": "NOT_APPLICABLE",
+        "sourceField": "?-g Spread Length",
+        "sourceHeader": "?-g Spread Length"
+      },
+      "normalGravityReference": {
+        "burnLength": {
+          "rawValue": "Complete",
+          "parsedValue": null,
+          "unit": "cm",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Burn Length",
+          "sourceHeader": "1-g Burn Length"
+        },
+        "spreadRate": {
+          "rawValue": "0.6 mm/s",
+          "parsedValue": 0.6,
+          "unit": "mm/s",
+          "status": "EXACT",
+          "sourceField": "1-g Spread Rate",
+          "sourceHeader": "1-g Spread Rate"
+        }
+      },
+      "camera1Identifier": "S4C1",
+      "camera2Identifier": "S4C1",
+      "sourceNotes": [
+        {
+          "noteId": "Note 1",
+          "rawText": "Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS.",
+          "referencedByRunIds": [
+            "2-4"
+          ],
+          "referencedFields": [
+            "Percent O2 (Note 1)"
+          ],
+          "sourceRow": 13,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 13,
+            "rawExperimentId": "Note 1",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        }
+      ],
+      "componentObservations": []
+    }
+  },
+  {
+    "id": "2-5",
+    "investigationId": "saffire-ii",
+    "sourceExperimentId": "2-5",
+    "title": "SAFFIRE-II Experimental Table 2-5",
+    "family": "SAFFIRE-II",
+    "material": "Cotton-Fiberglass (SIBAL)",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 20
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-99",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+    },
+    "provenance": {
+      "investigationId": "PSI-99",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "sourceRow": 6,
+      "rawExperimentId": "2-5",
+      "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Samle Thickness",
+        "Sample Length",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2 (Note 1)",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "?-g Burn Length",
+        "?-g Spread Length",
+        "1-g Burn Length",
+        "1-g Spread Rate",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Exact SAFFIRE-II Experimental Table mapping; low-g and 1-g fields remain separate.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [
+      "Thickness value requires review; source formatting was preserved."
+    ],
+    "rawRecord": {
+      "Sample Number": "2-5",
+      "Material": "Cotton-Fiberglass (SIBAL)",
+      "Samle Thickness": "037 mm",
+      "Sample Length": "29 cm",
+      "Sample Width (cm)": "5 cm",
+      "Air Flow (cm/s)": "20 cm/s",
+      "Percent O2 (Note 1)": "~ 22.1",
+      "Ignition Power (W)": "80 W",
+      "Ignition Time (s)": "9.2 s",
+      "Burn Time (s)": "145 s",
+      "Flow Direction": "Concurrent",
+      "?-g Burn Length": "29 cm",
+      "?-g Spread Length": "2.1 mm/s",
+      "1-g Burn Length": "Complete",
+      "1-g Spread Rate": "Acceleratory",
+      "Camera 1": "S5C1",
+      "Camera 2": "S5C2"
+    },
+    "saffireIIData": {
+      "sourceSampleId": "2-5",
+      "rawMaterialDescription": "Cotton-Fiberglass (SIBAL)",
+      "normalizedMaterial": "SIBAL",
+      "materialStatus": "NORMALIZED",
+      "materialConfiguration": {
+        "type": "SINGLE_MATERIAL"
+      },
+      "sampleThickness": {
+        "rawValue": "037 mm",
+        "parsedValue": null,
+        "unit": "mm",
+        "status": "REVIEW_REQUIRED",
+        "sourceField": "Samle Thickness",
+        "sourceHeader": "Samle Thickness"
+      },
+      "sampleLength": {
+        "rawValue": "29 cm",
+        "parsedValue": 29,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Length",
+        "sourceHeader": "Sample Length"
+      },
+      "sampleWidth": {
+        "rawValue": "5 cm",
+        "parsedValue": 5,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Width (cm)",
+        "sourceHeader": "Sample Width (cm)"
+      },
+      "airflowCmS": {
+        "rawValue": "20 cm/s",
+        "parsedValue": 20,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)",
+        "sourceHeader": "Air Flow (cm/s)"
+      },
+      "oxygenMeasurement": {
+        "rawValue": "~ 22.1",
+        "unit": "%",
+        "measurementMethod": "DERIVED_SOURCE_MEASUREMENT",
+        "sourceField": "Percent O2 (Note 1)",
+        "status": "APPROXIMATE",
+        "approximateValue": 22.1
+      },
+      "ignitionPowerW": {
+        "rawValue": "80 W",
+        "parsedValue": 80,
+        "unit": "W",
+        "status": "EXACT",
+        "sourceField": "Ignition Power (W)",
+        "sourceHeader": "Ignition Power (W)"
+      },
+      "ignitionTimeS": {
+        "rawValue": "9.2 s",
+        "parsedValue": 9.2,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Ignition Time (s)",
+        "sourceHeader": "Ignition Time (s)"
+      },
+      "burnTime": {
+        "rawValue": "145 s",
+        "parsedValue": 145,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Burn Time (s)",
+        "sourceHeader": "Burn Time (s)"
+      },
+      "flowDirection": "Concurrent",
+      "flowDirectionRaw": "Concurrent",
+      "microgravityBurnLength": {
+        "rawValue": "29 cm",
+        "parsedValue": 29,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "?-g Burn Length",
+        "sourceHeader": "?-g Burn Length"
+      },
+      "microgravitySpreadMeasurement": {
+        "rawValue": "2.1 mm/s",
+        "parsedValue": 2.1,
+        "unit": "mm/s",
+        "status": "EXACT",
+        "sourceField": "?-g Spread Length",
+        "sourceHeader": "?-g Spread Length"
+      },
+      "normalGravityReference": {
+        "burnLength": {
+          "rawValue": "Complete",
+          "parsedValue": null,
+          "unit": "cm",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Burn Length",
+          "sourceHeader": "1-g Burn Length"
+        },
+        "spreadRate": {
+          "rawValue": "Acceleratory",
+          "parsedValue": null,
+          "unit": "mm/s",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Spread Rate",
+          "sourceHeader": "1-g Spread Rate"
+        }
+      },
+      "camera1Identifier": "S5C1",
+      "camera2Identifier": "S5C2",
+      "sourceNotes": [
+        {
+          "noteId": "Note 1",
+          "rawText": "Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS.",
+          "referencedByRunIds": [
+            "2-5"
+          ],
+          "referencedFields": [
+            "Percent O2 (Note 1)"
+          ],
+          "sourceRow": 13,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 13,
+            "rawExperimentId": "Note 1",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        }
+      ],
+      "componentObservations": []
+    }
+  },
+  {
+    "id": "2-6",
+    "investigationId": "saffire-ii",
+    "sourceExperimentId": "2-6",
+    "title": "SAFFIRE-II Experimental Table 2-6",
+    "family": "SAFFIRE-II",
+    "material": "Unknown",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 20
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-99",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+    },
+    "provenance": {
+      "investigationId": "PSI-99",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "sourceRow": 7,
+      "rawExperimentId": "2-6",
+      "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Samle Thickness",
+        "Sample Length",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2 (Note 1)",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "?-g Burn Length",
+        "?-g Spread Length",
+        "1-g Burn Length",
+        "1-g Spread Rate",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Exact SAFFIRE-II Experimental Table mapping; low-g and 1-g fields remain separate.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [
+      "Thickness value requires review; source formatting was preserved."
+    ],
+    "rawRecord": {
+      "Sample Number": "2-6",
+      "Material": "",
+      "Samle Thickness": "037 mm",
+      "Sample Length": "29 cm",
+      "Sample Width (cm)": "5 cm",
+      "Air Flow (cm/s)": "20 cm/s",
+      "Percent O2 (Note 1)": "~ 22.1",
+      "Ignition Power (W)": "80 W",
+      "Ignition Time (s)": "9.2 s",
+      "Burn Time (s)": "115 s",
+      "Flow Direction": "Concurrent",
+      "?-g Burn Length": "29 cm",
+      "?-g Spread Length": "2.6 mm/s",
+      "1-g Burn Length": "Complete",
+      "1-g Spread Rate": "Acceleratory",
+      "Camera 1": "S6C1",
+      "Camera 2": "S56C2"
+    },
+    "saffireIIData": {
+      "sourceSampleId": "2-6",
+      "rawMaterialDescription": null,
+      "normalizedMaterial": null,
+      "materialStatus": "NOT_REPORTED",
+      "materialConfiguration": {
+        "type": "NOT_REPORTED"
+      },
+      "sampleThickness": {
+        "rawValue": "037 mm",
+        "parsedValue": null,
+        "unit": "mm",
+        "status": "REVIEW_REQUIRED",
+        "sourceField": "Samle Thickness",
+        "sourceHeader": "Samle Thickness"
+      },
+      "sampleLength": {
+        "rawValue": "29 cm",
+        "parsedValue": 29,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Length",
+        "sourceHeader": "Sample Length"
+      },
+      "sampleWidth": {
+        "rawValue": "5 cm",
+        "parsedValue": 5,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Width (cm)",
+        "sourceHeader": "Sample Width (cm)"
+      },
+      "airflowCmS": {
+        "rawValue": "20 cm/s",
+        "parsedValue": 20,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)",
+        "sourceHeader": "Air Flow (cm/s)"
+      },
+      "oxygenMeasurement": {
+        "rawValue": "~ 22.1",
+        "unit": "%",
+        "measurementMethod": "DERIVED_SOURCE_MEASUREMENT",
+        "sourceField": "Percent O2 (Note 1)",
+        "status": "APPROXIMATE",
+        "approximateValue": 22.1
+      },
+      "ignitionPowerW": {
+        "rawValue": "80 W",
+        "parsedValue": 80,
+        "unit": "W",
+        "status": "EXACT",
+        "sourceField": "Ignition Power (W)",
+        "sourceHeader": "Ignition Power (W)"
+      },
+      "ignitionTimeS": {
+        "rawValue": "9.2 s",
+        "parsedValue": 9.2,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Ignition Time (s)",
+        "sourceHeader": "Ignition Time (s)"
+      },
+      "burnTime": {
+        "rawValue": "115 s",
+        "parsedValue": 115,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Burn Time (s)",
+        "sourceHeader": "Burn Time (s)"
+      },
+      "flowDirection": "Concurrent",
+      "flowDirectionRaw": "Concurrent",
+      "microgravityBurnLength": {
+        "rawValue": "29 cm",
+        "parsedValue": 29,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "?-g Burn Length",
+        "sourceHeader": "?-g Burn Length"
+      },
+      "microgravitySpreadMeasurement": {
+        "rawValue": "2.6 mm/s",
+        "parsedValue": 2.6,
+        "unit": "mm/s",
+        "status": "EXACT",
+        "sourceField": "?-g Spread Length",
+        "sourceHeader": "?-g Spread Length"
+      },
+      "normalGravityReference": {
+        "burnLength": {
+          "rawValue": "Complete",
+          "parsedValue": null,
+          "unit": "cm",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Burn Length",
+          "sourceHeader": "1-g Burn Length"
+        },
+        "spreadRate": {
+          "rawValue": "Acceleratory",
+          "parsedValue": null,
+          "unit": "mm/s",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Spread Rate",
+          "sourceHeader": "1-g Spread Rate"
+        }
+      },
+      "camera1Identifier": "S6C1",
+      "camera2Identifier": "S56C2",
+      "sourceNotes": [
+        {
+          "noteId": "Note 1",
+          "rawText": "Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS.",
+          "referencedByRunIds": [
+            "2-6"
+          ],
+          "referencedFields": [
+            "Percent O2 (Note 1)"
+          ],
+          "sourceRow": 13,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 13,
+            "rawExperimentId": "Note 1",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        }
+      ],
+      "componentObservations": []
+    }
+  },
+  {
+    "id": "2-7",
+    "investigationId": "saffire-ii",
+    "sourceExperimentId": "2-7",
+    "title": "SAFFIRE-II Experimental Table 2-7",
+    "family": "SAFFIRE-II",
+    "material": "PMMA & Nomex",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 20
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-99",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+    },
+    "provenance": {
+      "investigationId": "PSI-99",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "sourceRow": 8,
+      "rawExperimentId": "2-7",
+      "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Samle Thickness",
+        "Sample Length",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2 (Note 1)",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "?-g Burn Length",
+        "?-g Spread Length",
+        "1-g Burn Length",
+        "1-g Spread Rate",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Exact SAFFIRE-II Experimental Table mapping; low-g and 1-g fields remain separate.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample Number": "2-7",
+      "Material": "PMMA & Nomex",
+      "Samle Thickness": "0.85 and 0.37 mm",
+      "Sample Length": "5 and 24 cm",
+      "Sample Width (cm)": "5 cm",
+      "Air Flow (cm/s)": "20 cm/s",
+      "Percent O2 (Note 1)": "~ 22.1",
+      "Ignition Power (W)": "80 W",
+      "Ignition Time (s)": "9.2 s",
+      "Burn Time (s)": "140 s",
+      "Flow Direction": "Concurrent",
+      "?-g Burn Length": "5 cm & 0 (note 2)",
+      "?-g Spread Length": "n/a (Nomex)",
+      "1-g Burn Length": "~ 0 (Nomex)",
+      "1-g Spread Rate": "n/a (Nomex)",
+      "Camera 1": "S7C1",
+      "Camera 2": "n/a"
+    },
+    "saffireIIData": {
+      "sourceSampleId": "2-7",
+      "rawMaterialDescription": "PMMA & Nomex",
+      "normalizedMaterial": null,
+      "materialStatus": "NORMALIZED",
+      "materialConfiguration": {
+        "type": "MULTI_MATERIAL",
+        "components": [
+          {
+            "material": "PMMA",
+            "thicknessRaw": "0.85 mm",
+            "thicknessMm": 0.85,
+            "lengthRaw": "5 cm",
+            "lengthCm": 5
+          },
+          {
+            "material": "NOMEX",
+            "thicknessRaw": "0.37 mm",
+            "thicknessMm": 0.37,
+            "lengthRaw": "24 cm",
+            "lengthCm": 24
+          }
+        ],
+        "parsingNote": "Component pairing follows positional correspondence in the source thickness and length strings; raw source fields remain authoritative."
+      },
+      "sampleThickness": {
+        "rawValue": "0.85 and 0.37 mm",
+        "parsedValue": null,
+        "unit": "mm",
+        "status": "TEXT_STATUS",
+        "sourceField": "Samle Thickness",
+        "sourceHeader": "Samle Thickness"
+      },
+      "sampleLength": {
+        "rawValue": "5 and 24 cm",
+        "parsedValue": null,
+        "unit": "cm",
+        "status": "TEXT_STATUS",
+        "sourceField": "Sample Length",
+        "sourceHeader": "Sample Length"
+      },
+      "sampleWidth": {
+        "rawValue": "5 cm",
+        "parsedValue": 5,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Width (cm)",
+        "sourceHeader": "Sample Width (cm)"
+      },
+      "airflowCmS": {
+        "rawValue": "20 cm/s",
+        "parsedValue": 20,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)",
+        "sourceHeader": "Air Flow (cm/s)"
+      },
+      "oxygenMeasurement": {
+        "rawValue": "~ 22.1",
+        "unit": "%",
+        "measurementMethod": "DERIVED_SOURCE_MEASUREMENT",
+        "sourceField": "Percent O2 (Note 1)",
+        "status": "APPROXIMATE",
+        "approximateValue": 22.1
+      },
+      "ignitionPowerW": {
+        "rawValue": "80 W",
+        "parsedValue": 80,
+        "unit": "W",
+        "status": "EXACT",
+        "sourceField": "Ignition Power (W)",
+        "sourceHeader": "Ignition Power (W)"
+      },
+      "ignitionTimeS": {
+        "rawValue": "9.2 s",
+        "parsedValue": 9.2,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Ignition Time (s)",
+        "sourceHeader": "Ignition Time (s)"
+      },
+      "burnTime": {
+        "rawValue": "140 s",
+        "parsedValue": 140,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Burn Time (s)",
+        "sourceHeader": "Burn Time (s)"
+      },
+      "flowDirection": "Concurrent",
+      "flowDirectionRaw": "Concurrent",
+      "microgravityBurnLength": {
+        "rawValue": "5 cm & 0 (note 2)",
+        "parsedValue": null,
+        "unit": "cm",
+        "status": "TEXT_STATUS",
+        "sourceField": "?-g Burn Length",
+        "sourceHeader": "?-g Burn Length"
+      },
+      "microgravitySpreadMeasurement": {
+        "rawValue": "n/a (Nomex)",
+        "parsedValue": null,
+        "unit": "mm/s",
+        "status": "TEXT_STATUS",
+        "sourceField": "?-g Spread Length",
+        "sourceHeader": "?-g Spread Length"
+      },
+      "normalGravityReference": {
+        "burnLength": {
+          "rawValue": "~ 0 (Nomex)",
+          "parsedValue": null,
+          "unit": "cm",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Burn Length",
+          "sourceHeader": "1-g Burn Length"
+        },
+        "spreadRate": {
+          "rawValue": "n/a (Nomex)",
+          "parsedValue": null,
+          "unit": "mm/s",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Spread Rate",
+          "sourceHeader": "1-g Spread Rate"
+        }
+      },
+      "camera1Identifier": "S7C1",
+      "camera2Identifier": "n/a",
+      "sourceNotes": [
+        {
+          "noteId": "Note 1",
+          "rawText": "Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS.",
+          "referencedByRunIds": [
+            "2-7"
+          ],
+          "referencedFields": [
+            "Percent O2 (Note 1)"
+          ],
+          "sourceRow": 13,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 13,
+            "rawExperimentId": "Note 1",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        },
+        {
+          "noteId": "Note 2",
+          "rawText": "The PMMA portion was completely consumed but the Nomex was not ignited.",
+          "referencedByRunIds": [
+            "2-7"
+          ],
+          "referencedFields": [
+            "?-g Burn Length",
+            "?-g Spread Length"
+          ],
+          "sourceRow": 14,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 14,
+            "rawExperimentId": "Note 2",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        }
+      ],
+      "componentObservations": [
+        {
+          "component": "PMMA",
+          "observation": "COMPLETELY_CONSUMED",
+          "noteId": "Note 2"
+        },
+        {
+          "component": "NOMEX",
+          "observation": "NOT_IGNITED",
+          "noteId": "Note 2"
+        }
+      ]
+    }
+  },
+  {
+    "id": "2-8",
+    "investigationId": "saffire-ii",
+    "sourceExperimentId": "2-8",
+    "title": "SAFFIRE-II Experimental Table 2-8",
+    "family": "SAFFIRE-II",
+    "material": "PMMA",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 20
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-99",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+    },
+    "provenance": {
+      "investigationId": "PSI-99",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "sourceRow": 9,
+      "rawExperimentId": "2-8",
+      "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Samle Thickness",
+        "Sample Length",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2 (Note 1)",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "?-g Burn Length",
+        "?-g Spread Length",
+        "1-g Burn Length",
+        "1-g Spread Rate",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Exact SAFFIRE-II Experimental Table mapping; low-g and 1-g fields remain separate.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample Number": "2-8",
+      "Material": "PMMA",
+      "Samle Thickness": "See Fig. 5",
+      "Sample Length": "29 cm",
+      "Sample Width (cm)": "5 cm",
+      "Air Flow (cm/s)": "20 cm/s",
+      "Percent O2 (Note 1)": "22.1 to 22.0",
+      "Ignition Power (W)": "97 W",
+      "Ignition Time (s)": "30 s",
+      "Burn Time (s)": "600 s",
+      "Flow Direction": "Concurrent",
+      "?-g Burn Length": "~ 10 cm (note 3)",
+      "?-g Spread Length": "Note 4",
+      "1-g Burn Length": "Complete",
+      "1-g Spread Rate": "Acceleratory",
+      "Camera 1": "S8C1",
+      "Camera 2": "n/a"
+    },
+    "saffireIIData": {
+      "sourceSampleId": "2-8",
+      "rawMaterialDescription": "PMMA",
+      "normalizedMaterial": "PMMA",
+      "materialStatus": "NORMALIZED",
+      "materialConfiguration": {
+        "type": "SINGLE_MATERIAL"
+      },
+      "sampleThickness": {
+        "rawValue": "See Fig. 5",
+        "parsedValue": null,
+        "unit": "mm",
+        "status": "REFERENCE_NOTE",
+        "sourceField": "Samle Thickness",
+        "sourceHeader": "Samle Thickness"
+      },
+      "sampleLength": {
+        "rawValue": "29 cm",
+        "parsedValue": 29,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Length",
+        "sourceHeader": "Sample Length"
+      },
+      "sampleWidth": {
+        "rawValue": "5 cm",
+        "parsedValue": 5,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Width (cm)",
+        "sourceHeader": "Sample Width (cm)"
+      },
+      "airflowCmS": {
+        "rawValue": "20 cm/s",
+        "parsedValue": 20,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)",
+        "sourceHeader": "Air Flow (cm/s)"
+      },
+      "oxygenMeasurement": {
+        "rawValue": "22.1 to 22.0",
+        "unit": "%",
+        "measurementMethod": "DERIVED_SOURCE_MEASUREMENT",
+        "sourceField": "Percent O2 (Note 1)",
+        "status": "RANGE",
+        "minValue": 22.1,
+        "maxValue": 22,
+        "originalOrder": [
+          22.1,
+          22
+        ]
+      },
+      "ignitionPowerW": {
+        "rawValue": "97 W",
+        "parsedValue": 97,
+        "unit": "W",
+        "status": "EXACT",
+        "sourceField": "Ignition Power (W)",
+        "sourceHeader": "Ignition Power (W)"
+      },
+      "ignitionTimeS": {
+        "rawValue": "30 s",
+        "parsedValue": 30,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Ignition Time (s)",
+        "sourceHeader": "Ignition Time (s)"
+      },
+      "burnTime": {
+        "rawValue": "600 s",
+        "parsedValue": 600,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Burn Time (s)",
+        "sourceHeader": "Burn Time (s)"
+      },
+      "flowDirection": "Concurrent",
+      "flowDirectionRaw": "Concurrent",
+      "microgravityBurnLength": {
+        "rawValue": "~ 10 cm (note 3)",
+        "parsedValue": null,
+        "unit": "cm",
+        "status": "TEXT_STATUS",
+        "sourceField": "?-g Burn Length",
+        "sourceHeader": "?-g Burn Length"
+      },
+      "microgravitySpreadMeasurement": {
+        "rawValue": "Note 4",
+        "parsedValue": null,
+        "unit": "mm/s",
+        "status": "TEXT_STATUS",
+        "sourceField": "?-g Spread Length",
+        "sourceHeader": "?-g Spread Length"
+      },
+      "normalGravityReference": {
+        "burnLength": {
+          "rawValue": "Complete",
+          "parsedValue": null,
+          "unit": "cm",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Burn Length",
+          "sourceHeader": "1-g Burn Length"
+        },
+        "spreadRate": {
+          "rawValue": "Acceleratory",
+          "parsedValue": null,
+          "unit": "mm/s",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Spread Rate",
+          "sourceHeader": "1-g Spread Rate"
+        }
+      },
+      "camera1Identifier": "S8C1",
+      "camera2Identifier": "n/a",
+      "sourceNotes": [
+        {
+          "noteId": "Note 1",
+          "rawText": "Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS.",
+          "referencedByRunIds": [
+            "2-8"
+          ],
+          "referencedFields": [
+            "Percent O2 (Note 1)"
+          ],
+          "sourceRow": 13,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 13,
+            "rawExperimentId": "Note 1",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        },
+        {
+          "noteId": "Note 3",
+          "rawText": "This is the length of fuel with significant visible damage.",
+          "referencedByRunIds": [
+            "2-8"
+          ],
+          "referencedFields": [
+            "?-g Burn Length"
+          ],
+          "sourceRow": 15,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 15,
+            "rawExperimentId": "Note 3",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        },
+        {
+          "noteId": "Note 4",
+          "rawText": "The flames remain anchored at the base of the sample which has a very slow regression rate (0.01 to 0.04 mm/s)",
+          "referencedByRunIds": [
+            "2-8"
+          ],
+          "referencedFields": [
+            "?-g Burn Length",
+            "?-g Spread Length"
+          ],
+          "sourceRow": 16,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 16,
+            "rawExperimentId": "Note 4",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        }
+      ],
+      "componentObservations": []
+    }
+  },
+  {
+    "id": "2-9",
+    "investigationId": "saffire-ii",
+    "sourceExperimentId": "2-9",
+    "title": "SAFFIRE-II Experimental Table 2-9",
+    "family": "SAFFIRE-II",
+    "material": "Unknown",
+    "environment": "International Space Station (ISS) investigation context",
+    "parameters": {
+      "airflowCmS": 20
+    },
+    "observations": {},
+    "outcome": "UNKNOWN",
+    "evidenceAssets": [],
+    "source": {
+      "repositoryName": "NASA Physical Sciences Informatics",
+      "investigationId": "PSI-99",
+      "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+    },
+    "provenance": {
+      "investigationId": "PSI-99",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "sourceRow": 10,
+      "rawExperimentId": "2-9",
+      "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Samle Thickness",
+        "Sample Length",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2 (Note 1)",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "?-g Burn Length",
+        "?-g Spread Length",
+        "1-g Burn Length",
+        "1-g Spread Rate",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Exact SAFFIRE-II Experimental Table mapping; low-g and 1-g fields remain separate.",
+      "fieldTransformations": {}
+    },
+    "dataStatus": "REAL_NASA_DATA",
+    "normalizationWarnings": [],
+    "rawRecord": {
+      "Sample Number": "2-9",
+      "Material": "",
+      "Samle Thickness": "1 cm",
+      "Sample Length": "29 cm",
+      "Sample Width (cm)": "5 cm",
+      "Air Flow (cm/s)": "20 cm/s",
+      "Percent O2 (Note 1)": "22.0 to 21.9",
+      "Ignition Power (W)": "97 W",
+      "Ignition Time (s)": "30 s",
+      "Burn Time (s)": "900 s",
+      "Flow Direction": "Concurrent",
+      "?-g Burn Length": "~ 10 cm (note 4)",
+      "?-g Spread Length": "Note 4",
+      "1-g Burn Length": "Complete",
+      "1-g Spread Rate": "Acceleratory",
+      "Camera 1": "S9C1",
+      "Camera 2": "n/a"
+    },
+    "saffireIIData": {
+      "sourceSampleId": "2-9",
+      "rawMaterialDescription": null,
+      "normalizedMaterial": null,
+      "materialStatus": "NOT_REPORTED",
+      "materialConfiguration": {
+        "type": "NOT_REPORTED"
+      },
+      "sampleThickness": {
+        "rawValue": "1 cm",
+        "parsedValue": 10,
+        "unit": "mm",
+        "status": "EXACT",
+        "sourceField": "Samle Thickness",
+        "sourceHeader": "Samle Thickness"
+      },
+      "sampleLength": {
+        "rawValue": "29 cm",
+        "parsedValue": 29,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Length",
+        "sourceHeader": "Sample Length"
+      },
+      "sampleWidth": {
+        "rawValue": "5 cm",
+        "parsedValue": 5,
+        "unit": "cm",
+        "status": "EXACT",
+        "sourceField": "Sample Width (cm)",
+        "sourceHeader": "Sample Width (cm)"
+      },
+      "airflowCmS": {
+        "rawValue": "20 cm/s",
+        "parsedValue": 20,
+        "unit": "cm/s",
+        "status": "EXACT",
+        "sourceField": "Air Flow (cm/s)",
+        "sourceHeader": "Air Flow (cm/s)"
+      },
+      "oxygenMeasurement": {
+        "rawValue": "22.0 to 21.9",
+        "unit": "%",
+        "measurementMethod": "DERIVED_SOURCE_MEASUREMENT",
+        "sourceField": "Percent O2 (Note 1)",
+        "status": "RANGE",
+        "minValue": 22,
+        "maxValue": 21.9,
+        "originalOrder": [
+          22,
+          21.9
+        ]
+      },
+      "ignitionPowerW": {
+        "rawValue": "97 W",
+        "parsedValue": 97,
+        "unit": "W",
+        "status": "EXACT",
+        "sourceField": "Ignition Power (W)",
+        "sourceHeader": "Ignition Power (W)"
+      },
+      "ignitionTimeS": {
+        "rawValue": "30 s",
+        "parsedValue": 30,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Ignition Time (s)",
+        "sourceHeader": "Ignition Time (s)"
+      },
+      "burnTime": {
+        "rawValue": "900 s",
+        "parsedValue": 900,
+        "unit": "s",
+        "status": "EXACT",
+        "sourceField": "Burn Time (s)",
+        "sourceHeader": "Burn Time (s)"
+      },
+      "flowDirection": "Concurrent",
+      "flowDirectionRaw": "Concurrent",
+      "microgravityBurnLength": {
+        "rawValue": "~ 10 cm (note 4)",
+        "parsedValue": null,
+        "unit": "cm",
+        "status": "TEXT_STATUS",
+        "sourceField": "?-g Burn Length",
+        "sourceHeader": "?-g Burn Length"
+      },
+      "microgravitySpreadMeasurement": {
+        "rawValue": "Note 4",
+        "parsedValue": null,
+        "unit": "mm/s",
+        "status": "TEXT_STATUS",
+        "sourceField": "?-g Spread Length",
+        "sourceHeader": "?-g Spread Length"
+      },
+      "normalGravityReference": {
+        "burnLength": {
+          "rawValue": "Complete",
+          "parsedValue": null,
+          "unit": "cm",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Burn Length",
+          "sourceHeader": "1-g Burn Length"
+        },
+        "spreadRate": {
+          "rawValue": "Acceleratory",
+          "parsedValue": null,
+          "unit": "mm/s",
+          "status": "TEXT_STATUS",
+          "sourceField": "1-g Spread Rate",
+          "sourceHeader": "1-g Spread Rate"
+        }
+      },
+      "camera1Identifier": "S9C1",
+      "camera2Identifier": "n/a",
+      "sourceNotes": [
+        {
+          "noteId": "Note 1",
+          "rawText": "Derived from measured CO2 production and referenced to initial O2 concentration reported by ISS.",
+          "referencedByRunIds": [
+            "2-9"
+          ],
+          "referencedFields": [
+            "Percent O2 (Note 1)"
+          ],
+          "sourceRow": 13,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 13,
+            "rawExperimentId": "Note 1",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        },
+        {
+          "noteId": "Note 4",
+          "rawText": "The flames remain anchored at the base of the sample which has a very slow regression rate (0.01 to 0.04 mm/s)",
+          "referencedByRunIds": [
+            "2-9"
+          ],
+          "referencedFields": [
+            "?-g Burn Length",
+            "?-g Spread Length"
+          ],
+          "sourceRow": 16,
+          "provenance": {
+            "investigationId": "PSI-99",
+            "sourceRepository": "NASA Physical Sciences Informatics",
+            "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+            "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+            "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+            "sourceRow": 16,
+            "rawExperimentId": "Note 4",
+            "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+            "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+            "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+            "originalFields": [
+              "Sample Number",
+              "Material",
+              "Samle Thickness",
+              "Sample Length",
+              "Sample Width (cm)",
+              "Air Flow (cm/s)",
+              "Percent O2 (Note 1)",
+              "Ignition Power (W)",
+              "Ignition Time (s)",
+              "Burn Time (s)",
+              "Flow Direction",
+              "?-g Burn Length",
+              "?-g Spread Length",
+              "1-g Burn Length",
+              "1-g Spread Rate",
+              "Camera 1",
+              "Camera 2"
+            ],
+            "ingestionNote": "Source note preserved separately from experiment records.",
+            "fieldTransformations": {}
+          }
+        }
+      ],
+      "componentObservations": []
+    }
+  }
+]

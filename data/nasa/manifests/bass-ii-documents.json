@@ -1,0 +1,14 @@
+{
+  "investigationId": "PSI-25",
+  "documents": [
+    {
+      "documentId": "20210011385",
+      "fileName": "TM-20210011385.pdf",
+      "title": "Burning and Suppression of Solids–II (BASS-II) Summary Report",
+      "documentType": "NASA Technical Report",
+      "sourceRepository": "NASA Technical Reports Server",
+      "sourceUrl": "https://ntrs.nasa.gov/citations/20210011385",
+      "localPath": "src/data/nasa/raw/bass-ii/documents/TM-20210011385.pdf"
+    }
+  ]
+}

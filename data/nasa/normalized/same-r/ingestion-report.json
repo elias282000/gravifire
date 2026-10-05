@@ -1,0 +1,73 @@
+{
+  "investigation": "PSI-101",
+  "family": "SAME-R",
+  "timestamp": "2026-09-30T15:35:55.903Z",
+  "sourceFilesProcessed": [
+    "PSI-101_Experimental table_SAME-R.csv"
+  ],
+  "rawRows": 109,
+  "validRecords": 109,
+  "rejectedRecords": 0,
+  "uniqueSourceExperimentIdCount": 108,
+  "duplicateSourceExperimentIdCount": 1,
+  "duplicateIdentityGroups": [
+    {
+      "sourceExperimentId": "57",
+      "sourceRunKeys": [
+        "LAMPWICK::57",
+        "TEFLON::57"
+      ],
+      "sampleTypes": [
+        "Lampwick",
+        "Teflon"
+      ]
+    }
+  ],
+  "sampleTypeCounts": {
+    "Kapton": 29,
+    "Silicone": 22,
+    "Lampwick": 20,
+    "Teflon": 18,
+    "Pyrell": 20
+  },
+  "numericCoverage": {
+    "inletVelocityCmS": 109,
+    "rtR0": 109,
+    "duration": 68,
+    "primaryAgingTime": 67,
+    "primaryMixingTime": 67,
+    "netAgingTime": 104
+  },
+  "ranges": {
+    "inletVelocityCmS": {
+      "min": 0,
+      "max": 8.1
+    },
+    "rtR0": {
+      "min": 1.22,
+      "max": 1.48
+    },
+    "duration": {
+      "min": 60,
+      "max": 120
+    },
+    "primaryAgingTime": {
+      "min": 1,
+      "max": 720
+    },
+    "primaryMixingTime": {
+      "min": 8,
+      "max": 8
+    },
+    "netAgingTime": {
+      "min": 21,
+      "max": 1923
+    }
+  },
+  "netAgingNotApplicableCount": 5,
+  "aSuffixCount": 42,
+  "materialNormalizationCount": 109,
+  "emptyRows": 0,
+  "unknownRows": 0,
+  "warnings": []
+}

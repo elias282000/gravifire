@@ -1,0 +1,92 @@
+[
+  {
+    "sourceIdentifier": "F1C1/F1C2",
+    "description": "Pre-test flow visulation data for sample 2-1",
+    "relatedSample": "2-1",
+    "cameraIdentifiers": [
+      "F1C1",
+      "F1C2"
+    ],
+    "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+    "sourceRow": 11,
+    "sha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+    "provenance": {
+      "investigationId": "PSI-99",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "sourceRow": 11,
+      "rawExperimentId": "F1C1/F1C2",
+      "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Samle Thickness",
+        "Sample Length",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2 (Note 1)",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "?-g Burn Length",
+        "?-g Spread Length",
+        "1-g Burn Length",
+        "1-g Spread Rate",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Pre-test flow visualization record preserved separately.",
+      "fieldTransformations": {}
+    }
+  },
+  {
+    "sourceIdentifier": "F2C1/F2C2",
+    "description": "Pre-test flow visulation data for sample 2-2",
+    "relatedSample": "2-2",
+    "cameraIdentifiers": [
+      "F2C1",
+      "F2C2"
+    ],
+    "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+    "sourceRow": 12,
+    "sha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+    "provenance": {
+      "investigationId": "PSI-99",
+      "sourceRepository": "NASA Physical Sciences Informatics",
+      "sourceUrl": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+      "sourceFile": "PSI-99_Experimental table_SAFFIRE-2.csv",
+      "sourceSha256": "3c24390b9ef86f3d1ebaab911a1a3cc95a8759aebf42062371370e6d4b31b8ac",
+      "sourceRow": 12,
+      "rawExperimentId": "F2C1/F2C2",
+      "parserVersion": "saffire-ii-experimental-table-parser@1.0.0",
+      "normalizerVersion": "saffire-ii-experimental-table-normalizer@1.0.0",
+      "ingestionTimestamp": "2026-09-30T14:12:37.762Z",
+      "originalFields": [
+        "Sample Number",
+        "Material",
+        "Samle Thickness",
+        "Sample Length",
+        "Sample Width (cm)",
+        "Air Flow (cm/s)",
+        "Percent O2 (Note 1)",
+        "Ignition Power (W)",
+        "Ignition Time (s)",
+        "Burn Time (s)",
+        "Flow Direction",
+        "?-g Burn Length",
+        "?-g Spread Length",
+        "1-g Burn Length",
+        "1-g Spread Rate",
+        "Camera 1",
+        "Camera 2"
+      ],
+      "ingestionNote": "Pre-test flow visualization record preserved separately.",
+      "fieldTransformations": {}
+    }
+  }
+]
