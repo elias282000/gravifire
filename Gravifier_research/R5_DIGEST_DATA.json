@@ -1,0 +1,435 @@
+{
+ "verdict_table": [
+  {
+   "tc_id": "TC-PDMS-01",
+   "verdict": "CONTRADICTED",
+   "confidence": "MODERATE",
+   "grade": "BOUND",
+   "refusal": false,
+   "n_confirm": 0,
+   "n_contradict": 3,
+   "runs": [
+    "SAFFIRE2-S1",
+    "SAFFIRE2-S2",
+    "SAFFIRE2-S3"
+   ],
+   "first_source": "PSI-99_Experimental table_SAFFIRE-2.csv#row2"
+  },
+  {
+   "tc_id": "TC-PDMS-02",
+   "verdict": "SUPPORTED",
+   "confidence": "MODERATE",
+   "grade": "BOUND",
+   "refusal": false,
+   "n_confirm": 3,
+   "n_contradict": 0,
+   "runs": [
+    "SAFFIRE2-S1",
+    "SAFFIRE2-S2",
+    "SAFFIRE2-S3"
+   ],
+   "first_source": "PSI-99_Experimental table_SAFFIRE-2.csv#row2"
+  },
+  {
+   "tc_id": "TC-PDMS-03",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "refusal": true,
+   "n_confirm": 0,
+   "n_contradict": 0,
+   "runs": [],
+   "first_source": "PSI-99_Experimental table_SAFFIRE-2.csv#row2"
+  },
+  {
+   "tc_id": "TC-SIBAL-LG-01",
+   "verdict": "SUPPORTED",
+   "confidence": "HIGH",
+   "grade": null,
+   "refusal": false,
+   "n_confirm": 5,
+   "n_contradict": 0,
+   "runs": [
+    "SAFFIRE1-S1",
+    "SAFFIRE2-S5",
+    "SAFFIRE2-S6"
+   ],
+   "first_source": "PSI-98_Experimental table_SAFFIRE-1.csv#row2"
+  },
+  {
+   "tc_id": "TC-SIBAL-SCALE-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "refusal": true,
+   "n_confirm": 0,
+   "n_contradict": 0,
+   "runs": [],
+   "first_source": "PSI-25_Experimental table_BASS-II.csv#row102"
+  },
+  {
+   "tc_id": "TC-PMMA-THICK-01",
+   "verdict": "SUPPORTED",
+   "confidence": "MODERATE",
+   "grade": "BOUND",
+   "refusal": false,
+   "n_confirm": 2,
+   "n_contradict": 0,
+   "runs": [
+    "SAFFIRE2-S8",
+    "SAFFIRE2-S9"
+   ],
+   "first_source": "SAFFIRE2-S8 table row + review \u00a77.1"
+  },
+  {
+   "tc_id": "TC-NOMEX-01",
+   "verdict": "CONTRADICTED",
+   "confidence": "MODERATE",
+   "grade": "BOUND",
+   "refusal": false,
+   "n_confirm": 0,
+   "n_contradict": 1,
+   "runs": [
+    "SAFFIRE2-S7"
+   ],
+   "first_source": "PSI-99_Experimental table_SAFFIRE-2.csv#row8"
+  },
+  {
+   "tc_id": "TC-SAF1-S1-01",
+   "verdict": "SUPPORTED",
+   "confidence": "HIGH",
+   "grade": null,
+   "refusal": false,
+   "n_confirm": 5,
+   "n_contradict": 0,
+   "runs": [
+    "SAFFIRE1-S1",
+    "SAFFIRE2-S5",
+    "SAFFIRE2-S6"
+   ],
+   "first_source": "PSI-98_Experimental table_SAFFIRE-1.csv#row2"
+  },
+  {
+   "tc_id": "TC-SAF1-S2-01",
+   "verdict": "CONTRADICTED",
+   "confidence": "MODERATE",
+   "grade": null,
+   "refusal": false,
+   "n_confirm": 0,
+   "n_contradict": 1,
+   "runs": [
+    "SAFFIRE1-S2"
+   ],
+   "first_source": "PSI-98_Experimental table_SAFFIRE-1.csv#row3"
+  },
+  {
+   "tc_id": "TC-BASS-SIBAL-01",
+   "verdict": "CONTRADICTED",
+   "confidence": "MODERATE",
+   "grade": null,
+   "refusal": false,
+   "n_confirm": 0,
+   "n_contradict": 1,
+   "runs": [
+    "BASS-37"
+   ],
+   "first_source": "PSI-26_Science Documents_As Run_Test Matrix.xlsx#row41"
+  },
+  {
+   "tc_id": "TC-BASS-SIBAL-02",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "refusal": false,
+   "n_confirm": 0,
+   "n_contradict": 0,
+   "runs": [],
+   "first_source": "BASS review (GRAVIFIRE_BASS_PSI-26_Deep_Research.md) SS6.3 + SS6.5; Ferkul 2012/2013"
+  },
+  {
+   "tc_id": "TC-BASS-SUPPRESS-01",
+   "verdict": "CONTRADICTED",
+   "confidence": "MODERATE",
+   "grade": null,
+   "refusal": false,
+   "n_confirm": 0,
+   "n_contradict": 2,
+   "runs": [],
+   "first_source": "L1 store: test_observations"
+  },
+  {
+   "tc_id": "TC-BASS-SPHERE-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "refusal": false,
+   "n_confirm": 0,
+   "n_contradict": 0,
+   "runs": [],
+   "first_source": "BASS review SS6.6; Endo 2020"
+  },
+  {
+   "tc_id": "TC-BASS2-FILM-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "refusal": false,
+   "n_confirm": 0,
+   "n_contradict": 0,
+   "runs": [],
+   "first_source": "BASS-II review SS4.1-4.2; Bhattacharjee 2016 (x3)"
+  },
+  {
+   "tc_id": "TC-BASS2-ROD-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "refusal": false,
+   "n_confirm": 0,
+   "n_contradict": 0,
+   "runs": [],
+   "first_source": "BASS-II review SS4.3; Olson & Ferkul 2017"
+  },
+  {
+   "tc_id": "TC-PARTIAL-G-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "refusal": true,
+   "n_confirm": 0,
+   "n_contradict": 0,
+   "runs": [],
+   "first_source": "PSI-25_Experimental table_BASS-II.csv#row102"
+  },
+  {
+   "tc_id": "TC-EXPLORATION-O2-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "LOW",
+   "grade": null,
+   "refusal": true,
+   "n_confirm": 0,
+   "n_contradict": 0,
+   "runs": [],
+   "first_source": "PSI-99_Experimental table_SAFFIRE-2.csv#row9"
+  },
+  {
+   "tc_id": "TC-BASS-WAX-01",
+   "verdict": "INSUFFICIENT",
+   "confidence": "MODERATE",
+   "grade": null,
+   "refusal": false,
+   "n_confirm": 1,
+   "n_contradict": 6,
+   "runs": [
+    "BASS-68",
+    "BASS-69",
+    "BASS-72",
+    "BASS-73",
+    "BASS-74",
+    "BASS-78"
+   ],
+   "first_source": "PSI-26_Science Documents_As Run_Test Matrix.xlsx#row74"
+  }
+ ],
+ "verdict_mix": {
+  "SUPPORTED": 4,
+  "CONTRADICTED": 5,
+  "INSUFFICIENT": 9,
+  "refusals": 4
+ },
+ "blind_holdout": {
+  "rows": [
+   {
+    "tc_id": "TC-PDMS-01",
+    "blind": "INSUFFICIENT",
+    "blind_conf": "LOW",
+    "truth": "CONTRADICTED",
+    "truth_conf": "MODERATE",
+    "classification": "CORRECT_REFUSAL"
+   },
+   {
+    "tc_id": "TC-PDMS-02",
+    "blind": "INSUFFICIENT",
+    "blind_conf": "LOW",
+    "truth": "SUPPORTED",
+    "truth_conf": "MODERATE",
+    "classification": "CORRECT_REFUSAL"
+   },
+   {
+    "tc_id": "TC-SIBAL-LG-01",
+    "blind": "SUPPORTED",
+    "blind_conf": "HIGH",
+    "truth": "SUPPORTED",
+    "truth_conf": "HIGH",
+    "classification": "AGREE"
+   },
+   {
+    "tc_id": "TC-PMMA-THICK-01",
+    "blind": "INSUFFICIENT",
+    "blind_conf": "LOW",
+    "truth": "SUPPORTED",
+    "truth_conf": "MODERATE",
+    "classification": "CORRECT_REFUSAL"
+   },
+   {
+    "tc_id": "TC-NOMEX-01",
+    "blind": "INSUFFICIENT",
+    "blind_conf": "MODERATE",
+    "truth": "CONTRADICTED",
+    "truth_conf": "MODERATE",
+    "classification": "CORRECT_REFUSAL"
+   }
+  ],
+  "false_SUPPORTED": 0.0,
+  "correct_refusals": 4,
+  "missed": 0
+ },
+ "epistemic_grid_tested_cells": {
+  "('candle', 'high_gt25', 'normal_20_22', 'small')": 4,
+  "('candle', 'unknown_flow', 'normal_20_22', 'small')": 1,
+  "('nomex_blend', 'high_gt25', 'enriched_gt22', 'small')": 2,
+  "('nomex_blend', 'high_gt25', 'normal_20_22', 'small')": 6,
+  "('nomex_blend', 'unknown_flow', 'unknown_o2', 'small')": 1,
+  "('pdms_silicone', 'moderate_5_25', 'normal_20_22', 'large')": 4,
+  "('pmma_nomex', 'moderate_5_25', 'normal_20_22', 'large')": 1,
+  "('pmma_rod', 'high_gt25', 'depleted_lt18', 'small')": 18,
+  "('pmma_rod', 'high_gt25', 'low_18_20', 'small')": 8,
+  "('pmma_rod', 'high_gt25', 'normal_20_22', 'small')": 2,
+  "('pmma_rod', 'low_1_5', 'depleted_lt18', 'small')": 6,
+  "('pmma_rod', 'low_1_5', 'low_18_20', 'small')": 1,
+  "('pmma_rod', 'low_1_5', 'normal_20_22', 'small')": 2,
+  "('pmma_rod', 'moderate_5_25', 'depleted_lt18', 'small')": 7,
+  "('pmma_rod', 'moderate_5_25', 'normal_20_22', 'small')": 3,
+  "('pmma_rod', 'unknown_flow', 'depleted_lt18', 'small')": 4,
+  "('pmma_rod', 'unknown_flow', 'low_18_20', 'small')": 2,
+  "('pmma_rod', 'very_low_lt1', 'normal_20_22', 'small')": 1,
+  "('pmma_slab', 'high_gt25', 'depleted_lt18', 'small')": 1,
+  "('pmma_slab', 'high_gt25', 'low_18_20', 'small')": 3,
+  "('pmma_slab', 'high_gt25', 'normal_20_22', 'small')": 27,
+  "('pmma_slab', 'low_1_5', 'depleted_lt18', 'small')": 1,
+  "('pmma_slab', 'low_1_5', 'low_18_20', 'small')": 4,
+  "('pmma_slab', 'low_1_5', 'normal_20_22', 'small')": 3,
+  "('pmma_slab', 'moderate_5_25', 'normal_20_22', 'small')": 1,
+  "('pmma_slab', 'unknown_flow', 'depleted_lt18', 'small')": 2,
+  "('pmma_slab', 'unknown_flow', 'normal_20_22', 'small')": 2,
+  "('pmma_slab', 'unknown_flow', 'unknown_o2', 'small')": 1,
+  "('pmma_slab', 'very_low_lt1', 'depleted_lt18', 'small')": 2,
+  "('pmma_slab', 'very_low_lt1', 'normal_20_22', 'small')": 1,
+  "('pmma_sphere', 'high_gt25', 'depleted_lt18', 'small')": 3,
+  "('pmma_sphere', 'high_gt25', 'enriched_gt22', 'small')": 5,
+  "('pmma_sphere', 'high_gt25', 'normal_20_22', 'small')": 18,
+  "('pmma_sphere', 'low_1_5', 'depleted_lt18', 'small')": 2,
+  "('pmma_sphere', 'low_1_5', 'normal_20_22', 'small')": 1,
+  "('pmma_sphere', 'unknown_flow', 'depleted_lt18', 'small')": 2,
+  "('pmma_sphere', 'unknown_flow', 'enriched_gt22', 'small')": 1,
+  "('pmma_sphere', 'unknown_flow', 'normal_20_22', 'small')": 8,
+  "('pmma_sphere', 'unknown_flow', 'unknown_o2', 'small')": 2,
+  "('pmma_sphere', 'very_low_lt1', 'depleted_lt18', 'small')": 6,
+  "('pmma_sphere', 'very_low_lt1', 'normal_20_22', 'small')": 2,
+  "('pmma_thick', 'moderate_5_25', 'normal_20_22', 'large')": 2,
+  "('sibal_fabric', 'high_gt25', 'depleted_lt18', 'small')": 2,
+  "('sibal_fabric', 'high_gt25', 'low_18_20', 'small')": 4,
+  "('sibal_fabric', 'high_gt25', 'normal_20_22', 'small')": 14,
+  "('sibal_fabric', 'low_1_5', 'depleted_lt18', 'small')": 7,
+  "('sibal_fabric', 'low_1_5', 'low_18_20', 'small')": 2,
+  "('sibal_fabric', 'moderate_5_25', 'normal_20_22', 'large')": 4,
+  "('sibal_fabric', 'unknown_flow', 'depleted_lt18', 'small')": 5,
+  "('sibal_fabric', 'unknown_flow', 'enriched_gt22', 'small')": 2,
+  "('sibal_fabric', 'unknown_flow', 'low_18_20', 'small')": 1,
+  "('sibal_fabric', 'unknown_flow', 'normal_20_22', 'small')": 2,
+  "('spherical_section', 'high_gt25', 'depleted_lt18', 'small')": 1,
+  "('spherical_section', 'low_1_5', 'depleted_lt18', 'small')": 1,
+  "('thin_pmma_film', 'high_gt25', 'depleted_lt18', 'small')": 3,
+  "('thin_pmma_film', 'high_gt25', 'normal_20_22', 'small')": 9,
+  "('thin_pmma_film', 'low_1_5', 'depleted_lt18', 'small')": 2,
+  "('thin_pmma_film', 'low_1_5', 'normal_20_22', 'small')": 5,
+  "('thin_pmma_film', 'very_low_lt1', 'depleted_lt18', 'small')": 1,
+  "('thin_pmma_film', 'very_low_lt1', 'normal_20_22', 'small')": 2,
+  "('ultem_sheet', 'high_gt25', 'enriched_gt22', 'small')": 1,
+  "('ultem_sheet', 'high_gt25', 'normal_20_22', 'small')": 1,
+  "('wax_slab', 'high_gt25', 'normal_20_22', 'small')": 2,
+  "('wax_slab', 'low_1_5', 'depleted_lt18', 'small')": 4,
+  "('wax_slab', 'low_1_5', 'normal_20_22', 'small')": 2,
+  "('wax_slab', 'unknown_flow', 'depleted_lt18', 'small')": 1,
+  "('wax_slab', 'unknown_flow', 'normal_20_22', 'small')": 2,
+  "('wax_slab', 'unknown_flow', 'unknown_o2', 'small')": 1,
+  "('wax_slab', 'very_low_lt1', 'depleted_lt18', 'small')": 1,
+  "('wax_slab', 'very_low_lt1', 'normal_20_22', 'small')": 6
+ },
+ "n_tested_cells": 70,
+ "n_families": 13,
+ "next_experiment_ranking": [
+  {
+   "cell": {
+    "family": "pdms_silicone",
+    "flow_bucket": "moderate_5_25",
+    "o2_bucket": "enriched_gt22",
+    "scale": "large"
+   },
+   "claims_unblocked": [
+    "TC-PDMS-03"
+   ],
+   "family_has_any_data": true
+  },
+  {
+   "cell": {
+    "family": "sibal_fabric",
+    "flow_bucket": "low_1_5",
+    "o2_bucket": "normal_20_22",
+    "scale": "large"
+   },
+   "claims_unblocked": [
+    "TC-SIBAL-SCALE-01"
+   ],
+   "family_has_any_data": true
+  },
+  {
+   "cell": {
+    "family": "sibal_fabric",
+    "flow_bucket": "low_1_5",
+    "o2_bucket": "normal_20_22",
+    "scale": "small"
+   },
+   "claims_unblocked": [
+    "TC-BASS-SIBAL-02"
+   ],
+   "family_has_any_data": true
+  },
+  {
+   "cell": {
+    "family": "sibal_fabric",
+    "flow_bucket": "moderate_5_25",
+    "o2_bucket": "normal_20_22",
+    "scale": "partial_gravity"
+   },
+   "claims_unblocked": [
+    "TC-PARTIAL-G-01"
+   ],
+   "family_has_any_data": true
+  },
+  {
+   "cell": {
+    "family": "pmma_thick",
+    "flow_bucket": "moderate_5_25",
+    "o2_bucket": "enriched_gt22",
+    "scale": "large"
+   },
+   "claims_unblocked": [
+    "TC-EXPLORATION-O2-01"
+   ],
+   "family_has_any_data": true
+  },
+  {
+   "cell": {
+    "family": "wax_slab",
+    "flow_bucket": null,
+    "o2_bucket": "normal_20_22",
+    "scale": "small"
+   },
+   "claims_unblocked": [
+    "TC-BASS-WAX-01"
+   ],
+   "family_has_any_data": true
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+PASS  BASS-II runs = 129 (review audited 129)
+PASS  BASS test runs from table = 121 (table 122 rows, 1 housekeeping -> 121 combustion)
+PASS  BASS matrix-only TEST rows = 0 (0: extras are annotations, is_test=0)
+PASS  SAFFIRE-I combustion runs = 2 (review: 2)
+PASS  SAFFIRE-II combustion runs = 9 (review: 9)
+PASS  BASS runs with as-run-matrix conditions = 116
+PASS  planned test points ingested = 54 (planned layer live)
+PASS  evidence items missing provenance = 0 (must be 0)
+PASS  runs missing provenance = 0 (must be 0)
+PASS  probe SAFFIRE2-S5.ug_spread_length: raw='2.1 mm/s' norm=2.1 flags=PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|UNIT_EMBEDDED|VALUE_HAS_RATE_UNIT_IN_LENGTH_COLUMN|SOURCE_SCHEMA_DEFECT
+PASS  probe SAFFIRE2-S5.ug_spread_rate_published: raw='2.1 mm/s' norm=2.1 flags=INTERPRETED_FROM_MISLABELED_CELL|PUBLISHED_VALUE
+PASS  probe SAFFIRE2-S5.thickness: raw='037 mm' norm=None flags=UNIT_EMBEDDED|AMBIGUOUS_NUMERIC
+PASS  probe SAFFIRE1-S1.thickness: raw='0.37' norm=0.37 flags=UNIT_CONFLICT|CM_VS_MM_STANDING_TRAP
+PASS  probe SAFFIRE2-S1.ug_spread_length: raw='nan' norm=None flags=PUBLISHED_VALUE|NASA_DERIVED|MOJIBAKE_MU|MISSING
+PASS  probe SAFFIRE2-S4.g1_spread_rate: raw='0.6 mm/s' norm=0.6 flags=PUBLISHED_VALUE|GROUND_TEST_1G|UNIT_EMBEDDED
+PASS  probe SAFFIRE2-S5.g1_spread_rate: raw='Acceleratory' norm=None flags=PUBLISHED_VALUE|GROUND_TEST_1G|DESCRIPTOR_VALUE|NON_NUMERIC
+PASS  display fields missing DISPLAY_NOT_CALIBRATED = 0 (must be 0)
+PASS  sensor series ingested = 11 (11 expected)
+PASS  image sets cataloged = 17

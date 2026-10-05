@@ -1,6 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# Next.js / pnpm application
 /node_modules
 /.pnp
 .pnp.*
@@ -9,33 +7,46 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
-# testing
 /coverage
-
-# next.js
 /.next/
 /out/
-
-# production
 /build
+*.tsbuildinfo
+next-env.d.ts
 
-# misc
-.DS_Store
+# Environment, credentials, and local settings
+.env*
+settings.local.json
+*.key
 *.pem
 
-# debug
+# Logs and local tooling
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
+.zcode/
+.DS_Store
+Thumbs.db
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Python tooling
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Target-repository raw-download policy. Tracked manifests, small reference
+# assets, experimental tables, and research handover files remain versioned.
+psidata/PSI-*/
+!psidata/PSI-25/
+!psidata/PSI-26/
+psidata/PSI-25/*
+!psidata/PSI-25/Representative Image(s)/
+!psidata/PSI-25/metadata/
+!psidata/PSI-25/Reference Data/
+!psidata/PSI-25/Experimental table/
+psidata/PSI-26/*
+!psidata/PSI-26/metadata/
+psidata/download_log.tsv
+Gravifier_research/evidence_store/anchors/

@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GRAVIFIRE
 
-## Getting Started
+GRAVIFIRE is a Next.js application that combines a playable Mission Control
+campaign with a provenance-aware NASA fire-experiment evidence system. The
+Mission Control scenario is fictional; the referenced NASA experimental data
+and research artifacts are real source material.
 
-First, run the development server:
+## Application
+
+The current application includes:
+
+- Mission Control and the M0, M1, M4, and M6 campaign missions
+- Aegis Evidence Dossier, Field Manual, Gap Log, and Challenge integration
+- NASA Experiment Explorer, Virtual Lab, Ask GRAVIFIRE, Fire Landscape, and
+  recommendation interfaces
+- Deterministic evidence binding, validation, and scientific-boundary refusal
+
+Run locally with pnpm:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Useful checks:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm test
+pnpm lint
+pnpm build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Primary routes include `/mission-control`, `/mission-control/dossier`,
+`/experiments`, `/lab`, `/ask`, `/landscape`, `/recommend`, and `/challenge`.
 
-## Learn More
+## Integrated research repository
 
-To learn more about Next.js, take a look at the following resources:
+The merge also preserves the target repository's research and data trees:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `Gravifier_research/` — research reports, evidence stores, validation,
+  handover bundle, provenance records, and research outputs
+- `psidata/` — PSI manifests, download tooling, tracked reference material,
+  and experimental tables
+- `Setup docs/`, `Study Materials/`, `Daily doc/`, and `Scripts/` — project
+  planning, study, operational, and presentation documentation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The verified handover bundle is at
+`Gravifier_research/R7_HANDOVER/`. Its `verify_bundle.py` script can be run
+with Python when the local research environment is available.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+NASA datasets remain under their original terms. Raw downloads and local
+secrets are intentionally ignored; tracked research artifacts are not removed
+by the application build.

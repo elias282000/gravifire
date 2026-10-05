@@ -1,0 +1,68 @@
+{
+ "checks": [
+  {
+   "claim": "S5 ug spread rate 2.1 mm/s (table + Li 2019)",
+   "resolution": "FULL",
+   "chain": "store: PSI-99_Experimental table_SAFFIRE-2.csv#row6 raw='2.1 mm/s'",
+   "artifact": "our measurement: Theil-Sen 2.18 mm/s (+4.0%), window-rate 2.03 (-3.1%)"
+  },
+  {
+   "claim": "S6 ug spread rate 2.6 mm/s (table + Li 2019)",
+   "resolution": "FULL",
+   "chain": "store: PSI-99_Experimental table_SAFFIRE-2.csv#row7 raw='2.6 mm/s'",
+   "artifact": "our measurement: Theil-Sen 2.64 mm/s (+1.6%)"
+  },
+  {
+   "claim": "S8/S9 anchored regression 0.01-0.04 mm/s (Olson & Jomaas 2019)",
+   "resolution": "PARTIAL",
+   "chain": "store rows + review SS7.1; raws '~ 10 cm (note 3)' / '~ 10 cm (note 4)'",
+   "artifact": "no independent image measurement this phase (R5 candidate: S9C1 frames held)"
+  },
+  {
+   "claim": "SAFFIRE-I S1 burn time 420 s (PSI-98 table)",
+   "resolution": "FULL",
+   "chain": "store: PSI-98_Experimental table_SAFFIRE-1.csv#row2 norm=420.0",
+   "artifact": "our S1C1 imagery: 8015 tracked frames, rate 1.96 mm/s (+12.3% vs published 1.7-1.8)"
+  },
+  {
+   "claim": "SAFFIRE-I S2 early extinction 70 s (table + review SS10.3)",
+   "resolution": "PARTIAL",
+   "chain": "store: burn_time=70.0 vs S1 420; flags ''",
+   "artifact": "verdict engine used it in TC-SAF1-S2-01 (CONTRADICTED, concordant)"
+  },
+  {
+   "claim": "PDMS x4 ignited but no sustained propagation (Niehaus 2015; SS16.1)",
+   "resolution": "FULL",
+   "chain": "store ug_burn_length rows: ['SAFFIRE2-S1', 'SAFFIRE2-S2', 'SAFFIRE2-S3', 'SAFFIRE2-S4']",
+   "artifact": "our imagery check: all four STALL_CONFIRMED_NO_SUSTAINED_SPREAD (longest luminous episode 12.7 s vs SIBAL S5 142.7 s)"
+  },
+  {
+   "claim": "BASS table 122 rows = 121 tests + 1 housekeeping (review: unresolved)",
+   "resolution": "FULL",
+   "chain": "store: 121 BASS test runs; duplicate as-run keys suffixed+flagged",
+   "artifact": "review's open count question closed from primary source (R2)"
+  },
+  {
+   "claim": "BASS-II 129 validated records (review SS3.1)",
+   "resolution": "FULL",
+   "chain": "store: 129 runs reconciled 129/129",
+   "artifact": "R2 exit check PASS"
+  },
+  {
+   "claim": "N2 suppressant jet can enhance combustion (Takahashi 2013; SS7.3)",
+   "resolution": "PARTIAL",
+   "chain": "store: 13 GN2/dilution operator-log rows (TEXT_MINED, PRIMARY_OPERATOR_LOG)",
+   "artifact": "used by engine: TC-BASS-SUPPRESS-01 CONTRADICTED (concordant)"
+  },
+  {
+   "claim": "SIBAL non-monotonic opposed spread (Ferkul; SS6.3)",
+   "resolution": "PARTIAL",
+   "chain": "store: 12 BASS SIBAL runs with conditions; lit register entry sibal_bass",
+   "artifact": "per-run spread rates NOT held (video upstream only) -> engine honestly returns INSUFFICIENT (TC-BASS-SIBAL-02)"
+  }
+ ],
+ "resolution_rate_FULL": 0.6,
+ "FULL": 6,
+ "PARTIAL": 4,
+ "FAIL": 0
+}
